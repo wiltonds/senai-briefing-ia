@@ -1,0 +1,898 @@
+{
+  "atendimento/2025/AC.json": {
+    "coletado_em_utc": "2026-11-25T13:11:20+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "414fff53915890a6b7b160a326b37f4c7326bfb80736a1782bc1869496cc427a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-AC&entidade=SENAI"
+  },
+  "atendimento/2025/AL.json": {
+    "coletado_em_utc": "2026-11-25T13:11:21+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "607c6c9b325be02bd49ae68688b58e88c97020c00bcd715e4ca77d2060fa47fc",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-AL&entidade=SENAI"
+  },
+  "atendimento/2025/AM.json": {
+    "coletado_em_utc": "2026-11-25T13:11:25+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "aac073165142d40b131b02e3e8761853db45807bce2e0369f124dd419968001d",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-AM&entidade=SENAI"
+  },
+  "atendimento/2025/AP.json": {
+    "coletado_em_utc": "2026-11-25T13:11:23+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "337dc71b0a307210d84035129d7dfe0aafff91dc13d94e6d3bef2c8827733c35",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-AP&entidade=SENAI"
+  },
+  "atendimento/2025/BA.json": {
+    "coletado_em_utc": "2026-11-25T13:11:27+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "fca32631bb3f64287c103d5475fe74a62e8fd0d9c3d058a4b452579dcbb4c0e2",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-BA&entidade=SENAI"
+  },
+  "atendimento/2025/CE.json": {
+    "coletado_em_utc": "2026-11-25T13:11:29+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "f601c67e79f953563d54cd9f5f3c9967129ad1ee2be9031e1710254fbc0c0f5e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-CE&entidade=SENAI"
+  },
+  "atendimento/2025/DF.json": {
+    "coletado_em_utc": "2026-11-25T13:11:30+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "1fe48906f9ecb2057513400b55d31c7f96deb1a0f4999bae37b986cf5dd3c947",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-DF&entidade=SENAI"
+  },
+  "atendimento/2025/DN.json": {
+    "coletado_em_utc": "2026-11-25T13:12:07+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "7abc8cfccae90f8a053d85c436baddd5dbbe41500a425499edd5a4dbe7150632",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-DN&entidade=SENAI"
+  },
+  "atendimento/2025/ES.json": {
+    "coletado_em_utc": "2026-11-25T13:11:32+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "3c772a106bd8611158433482da5080f47f082475e4d0544ea97e905c6dc644bc",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-ES&entidade=SENAI"
+  },
+  "atendimento/2025/GO.json": {
+    "coletado_em_utc": "2026-11-25T13:11:34+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "05d340dca89f6ac625e315f99b8397a4a59ac9ee65a7e9003af343250fc8485f",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-GO&entidade=SENAI"
+  },
+  "atendimento/2025/MA.json": {
+    "coletado_em_utc": "2026-11-25T13:11:36+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "c78f8a664c2414f79c3dba77421470e021322825ae153117da9883dc02dec14a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-MA&entidade=SENAI"
+  },
+  "atendimento/2025/MG.json": {
+    "coletado_em_utc": "2026-11-25T13:11:41+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "1159ad42ac51c9de04a4ac60a2e6246bec7161ea0fcc923b763296db87581f01",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-MG&entidade=SENAI"
+  },
+  "atendimento/2025/MS.json": {
+    "coletado_em_utc": "2026-11-25T13:11:39+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "51eac37e4ffd897b1436fb5075fb05f383f6884cb3fa567ea28c0bf3971b0771",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-MS&entidade=SENAI"
+  },
+  "atendimento/2025/MT.json": {
+    "coletado_em_utc": "2026-11-25T13:11:38+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "305d2d3bd6eb9e0f172e201a9152eeeb8a9f263c16665e2e7d0418e5f81ce1b9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-MT&entidade=SENAI"
+  },
+  "atendimento/2025/PA.json": {
+    "coletado_em_utc": "2026-11-25T13:11:43+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "2d6d597765b2476ea9431610ddd72f8af6d1d5ad750985d64006a7c73fd48d44",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-PA&entidade=SENAI"
+  },
+  "atendimento/2025/PB.json": {
+    "coletado_em_utc": "2026-11-25T13:11:45+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "495c36b1b157eed1f15ed9cf68b19080c5d86e0706f07b3d41577cc5dcf7454d",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-PB&entidade=SENAI"
+  },
+  "atendimento/2025/PE.json": {
+    "coletado_em_utc": "2026-11-25T13:11:48+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "3a863186734b4385d531437c93cb00f45858d441a24aa000664b0cae8a733515",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-PE&entidade=SENAI"
+  },
+  "atendimento/2025/PI.json": {
+    "coletado_em_utc": "2026-11-25T13:11:50+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "17c950dc037cdfd78f0936f1931f3978771fb32e0c9acca8dd167711df343c1e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-PI&entidade=SENAI"
+  },
+  "atendimento/2025/PR.json": {
+    "coletado_em_utc": "2026-11-25T13:11:47+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "74da7c5b4621b27339cac43430e4f3ace6fbeec1aa0204670c602edf3db1a265",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-PR&entidade=SENAI"
+  },
+  "atendimento/2025/RJ.json": {
+    "coletado_em_utc": "2026-11-25T13:11:52+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "90d342babcf9c0e4a5a38ebf8c63883a5eede6ce5c14b6e3d75b95e3b96ba200",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-RJ&entidade=SENAI"
+  },
+  "atendimento/2025/RN.json": {
+    "coletado_em_utc": "2026-11-25T13:11:54+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "7822ef4e8b433079c974de823f89c9c4c4bb7e3233f6fe09c98b32a6f437cf7d",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-RN&entidade=SENAI"
+  },
+  "atendimento/2025/RO.json": {
+    "coletado_em_utc": "2026-11-25T13:11:57+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "415f19508164d1777f86983ec6d9aa56c5214f929df34ef013581f6749a3d0bc",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-RO&entidade=SENAI"
+  },
+  "atendimento/2025/RR.json": {
+    "coletado_em_utc": "2026-11-25T13:11:59+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "fe49201569a7f20c1bb2d43b1d91e96b59c7c80a6cf3eb2ccfaedc6fe0d443d4",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-RR&entidade=SENAI"
+  },
+  "atendimento/2025/RS.json": {
+    "coletado_em_utc": "2026-11-25T13:11:55+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "9138d9ac58f4f1a7b66c5d80cb46b4bdcdad2f331be77ba408b884b4a8286bbb",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-RS&entidade=SENAI"
+  },
+  "atendimento/2025/SC.json": {
+    "coletado_em_utc": "2026-11-25T13:12:00+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "dba36ca277f6d282ca2826c6e36a26b41666fd957d55e405bc0c1e61d7176546",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-SC&entidade=SENAI"
+  },
+  "atendimento/2025/SE.json": {
+    "coletado_em_utc": "2026-11-25T13:12:04+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "9707c1f16cc8ca3ea2ac656b745abb1aa120dd8c29531a8f47fff0ea55f37ffd",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-SE&entidade=SENAI"
+  },
+  "atendimento/2025/SP.json": {
+    "coletado_em_utc": "2026-11-25T13:12:02+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "9049cb059f9515f517c66d4789a305745a3972e80dda1c2221850c0f86441a1b",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-SP&entidade=SENAI"
+  },
+  "atendimento/2025/TO.json": {
+    "coletado_em_utc": "2026-11-25T13:12:06+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "518be93b60dc6ba96bd69d29a86af1c10294707e3930d8bc4ef11e45de836578",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-TO&entidade=SENAI"
+  },
+  "atendimento/2026/AC.json": {
+    "coletado_em_utc": "2026-11-25T13:12:09+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "c25a406e373c91e0c9de1a6819e9ad0256fd9b92fb3211da481c4d4520236046",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-AC&entidade=SENAI"
+  },
+  "atendimento/2026/AL.json": {
+    "coletado_em_utc": "2026-11-25T13:12:11+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "42cb21f1f2e9665c30499b04964b0a1c2abd4c9d5a33af7e99259a02825d3d72",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-AL&entidade=SENAI"
+  },
+  "atendimento/2026/AM.json": {
+    "coletado_em_utc": "2026-11-25T13:12:14+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "949fb0fafc340248f3af082e475bba5fb6c6b1afa96c56d832738c5650d50be5",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-AM&entidade=SENAI"
+  },
+  "atendimento/2026/AP.json": {
+    "coletado_em_utc": "2026-11-25T13:12:13+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "8c969ad9065eba9be4e33b4f9cd997e26756f5758a8808a21b69428c24bdb2e9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-AP&entidade=SENAI"
+  },
+  "atendimento/2026/BA.json": {
+    "coletado_em_utc": "2026-11-25T13:12:16+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "52fa5ab8545748ba18ea503ddc6ec868329383f44c171bfc902e1e0973364759",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-BA&entidade=SENAI"
+  },
+  "atendimento/2026/CE.json": {
+    "coletado_em_utc": "2026-11-25T13:12:18+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "df0c06fe05b30e47b4018a386339d881057bd39c315ef415c353151807a0d069",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-CE&entidade=SENAI"
+  },
+  "atendimento/2026/DF.json": {
+    "coletado_em_utc": "2026-11-25T13:12:20+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "f5abc3108adddc92760bae893996da9c0c9bd14453fb4d83daf26cdb4728bed7",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-DF&entidade=SENAI"
+  },
+  "atendimento/2026/DN.json": {
+    "coletado_em_utc": "2026-11-25T13:12:56+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "8dd091ebf45afc7af48f91bcb19c82d1c737d0462b0ca7474641cd74aec51a73",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-DN&entidade=SENAI"
+  },
+  "atendimento/2026/ES.json": {
+    "coletado_em_utc": "2026-11-25T13:12:21+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "6b4d3aef43512110c46cbbc0519a9211c2343adde806b09f707231a40dc0f78c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-ES&entidade=SENAI"
+  },
+  "atendimento/2026/GO.json": {
+    "coletado_em_utc": "2026-11-25T13:12:23+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "254651763f62e9e3a8e003821728ad4233b5b2bae0092abf780a27664eca4ea3",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-GO&entidade=SENAI"
+  },
+  "atendimento/2026/MA.json": {
+    "coletado_em_utc": "2026-11-25T13:12:25+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "352d661072c5bfd7fcc5f63bc40c4c1b1db6d698b12cc36aea91b01a57365511",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-MA&entidade=SENAI"
+  },
+  "atendimento/2026/MG.json": {
+    "coletado_em_utc": "2026-11-25T13:12:30+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "ed6b8cc4086d05825e4a8f466d40e260adedd1aee5fcbb632c712ad13f5a81ed",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-MG&entidade=SENAI"
+  },
+  "atendimento/2026/MS.json": {
+    "coletado_em_utc": "2026-11-25T13:12:28+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "bf6234aa461cfb8acf0779a3fe78ffceda14da3ebf9858d9dd57e3ff0ed54061",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-MS&entidade=SENAI"
+  },
+  "atendimento/2026/MT.json": {
+    "coletado_em_utc": "2026-11-25T13:12:27+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "a03a919a66bbd1b2c31e31e9142d84b8b6c7d1014e227b967a53f140e83bf0d9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-MT&entidade=SENAI"
+  },
+  "atendimento/2026/PA.json": {
+    "coletado_em_utc": "2026-11-25T13:12:32+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "d379e02a484a1383e9ca06e344020b570bdbf7e58683a68186ecd111b5601534",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-PA&entidade=SENAI"
+  },
+  "atendimento/2026/PB.json": {
+    "coletado_em_utc": "2026-11-25T13:12:33+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "56613eea8141a88853bc59d377cc029f35ebc05518b2498a79c9e9e208126e53",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-PB&entidade=SENAI"
+  },
+  "atendimento/2026/PE.json": {
+    "coletado_em_utc": "2026-11-25T13:12:37+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "3da445ed1093827b4497e0a53faaf3ab750e94645a95f92bb30db6add992e88a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-PE&entidade=SENAI"
+  },
+  "atendimento/2026/PI.json": {
+    "coletado_em_utc": "2026-11-25T13:12:39+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "12ff8bcd37b9e5ad1d9dd43da7b2df797b64c0b9794ecb9d9252d05495b31893",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-PI&entidade=SENAI"
+  },
+  "atendimento/2026/PR.json": {
+    "coletado_em_utc": "2026-11-25T13:12:35+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "b356fcc43fb74e87ac600e88df0d519691ccafbdf19704a588b6690dad53f89b",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-PR&entidade=SENAI"
+  },
+  "atendimento/2026/RJ.json": {
+    "coletado_em_utc": "2026-11-25T13:12:40+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "64d3d9693be4c257da4c0f8823145055caa018e6c2a79f80fe06d8aa9b060d84",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-RJ&entidade=SENAI"
+  },
+  "atendimento/2026/RN.json": {
+    "coletado_em_utc": "2026-11-25T13:12:42+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "f6f75e53ed1ea873b9f89e16785f99f6d83fa0d8e099ff269b469f2518a93671",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-RN&entidade=SENAI"
+  },
+  "atendimento/2026/RO.json": {
+    "coletado_em_utc": "2026-11-25T13:12:46+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "89a92af2ccb710fb79e443a1e7021dfd0690bc15f0c7de71f81a7f1737ec9446",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-RO&entidade=SENAI"
+  },
+  "atendimento/2026/RR.json": {
+    "coletado_em_utc": "2026-11-25T13:12:47+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "c8c18b29563e17919e0a495b753bd850437d31353b773a4ad53f59d6f28807dc",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-RR&entidade=SENAI"
+  },
+  "atendimento/2026/RS.json": {
+    "coletado_em_utc": "2026-11-25T13:12:44+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "1bc3b6f5ed338e156cb1021a5224b0ed4404823f22a959b1fdf800f6a70ca22a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-RS&entidade=SENAI"
+  },
+  "atendimento/2026/SC.json": {
+    "coletado_em_utc": "2026-11-25T13:12:49+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "fb0f839bf01038add16aa51c5c3368938424594162a4da8732edb23396283d09",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-SC&entidade=SENAI"
+  },
+  "atendimento/2026/SE.json": {
+    "coletado_em_utc": "2026-11-25T13:12:53+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "0458c71e6aa5cbad783dc5081cb6cb593bc311dd53f038b858b603d75532cc86",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-SE&entidade=SENAI"
+  },
+  "atendimento/2026/SP.json": {
+    "coletado_em_utc": "2026-11-25T13:12:51+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "d226b2602b4bc4bd63892f219eb3ace99b1b30dd8232251078ccb322fa3443eb",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-SP&entidade=SENAI"
+  },
+  "atendimento/2026/TO.json": {
+    "coletado_em_utc": "2026-11-25T13:12:54+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "27fce8e62794fca47a0a9135ac19345ab07c9c1d73c5fd88ee0ab0676e9269ff",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-TO&entidade=SENAI"
+  },
+  "pes/2025/AC.json": {
+    "coletado_em_utc": "2026-11-25T13:06:55+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "4723d30ccca0616b50c75f6516f5f71d8d650d7e4f7f01385c1f8f7ee1449ac1",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-AC&entidade=SENAI"
+  },
+  "pes/2025/AL.json": {
+    "coletado_em_utc": "2026-11-25T13:07:00+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "2fff58ee704404fc853a7a9f22896a4134121aa2176a68e8a5f80f1e1fd7a5e0",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-AL&entidade=SENAI"
+  },
+  "pes/2025/AM.json": {
+    "coletado_em_utc": "2026-11-25T13:07:08+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "355568fe77c6a89d0aa7838e3a67bc0d18664f28b9bcc03d92f040b7d3a00183",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-AM&entidade=SENAI"
+  },
+  "pes/2025/AP.json": {
+    "coletado_em_utc": "2026-11-25T13:07:04+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "5c18fbbdd0494b05aba814ca69a8b5cf54cbeba2537a6e662162cb462564cb8e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-AP&entidade=SENAI"
+  },
+  "pes/2025/BA.json": {
+    "coletado_em_utc": "2026-11-25T13:07:12+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "67f729bf51d7388d1eaa5aed1b89ca5959af37d36e5d7b832f8598fe05912c61",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-BA&entidade=SENAI"
+  },
+  "pes/2025/CE.json": {
+    "coletado_em_utc": "2026-11-25T13:07:16+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "704c90256bca99312972db8fada938f0f69e6bd8b332316f8fb160f697db0d3c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-CE&entidade=SENAI"
+  },
+  "pes/2025/DF.json": {
+    "coletado_em_utc": "2026-11-25T13:07:20+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "d8abd01b687ee3da6873819b5787e5f7b7f2cad1e68eaa245e8647366e45236c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-DF&entidade=SENAI"
+  },
+  "pes/2025/DN.json": {
+    "coletado_em_utc": "2026-11-25T13:09:21+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "19ab8605b64a0b2e84b1394d95ce1a10797f3b250baa64d1e8565cfe501252c9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-DN&entidade=SENAI"
+  },
+  "pes/2025/ES.json": {
+    "coletado_em_utc": "2026-11-25T13:07:24+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "e392032f118e93b321eca3c925ecb6c75427bfc957d7873009eecf60ef14254f",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-ES&entidade=SENAI"
+  },
+  "pes/2025/GO.json": {
+    "coletado_em_utc": "2026-11-25T13:07:28+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "dc082703463c3ebab390e0b56b8a3b4381eedbed59520771a508b52890f5d829",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-GO&entidade=SENAI"
+  },
+  "pes/2025/MA.json": {
+    "coletado_em_utc": "2026-11-25T13:07:32+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "3c21ac3847d57b519cd5d842af46cdc7fbcc8c45caac5edaf12e73197859e6e4",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-MA&entidade=SENAI"
+  },
+  "pes/2025/MG.json": {
+    "coletado_em_utc": "2026-11-25T13:08:21+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "6d3d1f24a48256772e497b3f1946c0baddec5505ae0e6ee81d9770df39522792",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-MG&entidade=SENAI"
+  },
+  "pes/2025/MS.json": {
+    "coletado_em_utc": "2026-11-25T13:08:16+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "78132ef6ff110e7f64e9a0f3cceb8ace677aac1fa5b66aa0e22e61a8f8d6ee2c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-MS&entidade=SENAI"
+  },
+  "pes/2025/MT.json": {
+    "coletado_em_utc": "2026-11-25T13:08:12+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "bb1aadde8e82352c3bbe3775660fae2cbe73af80aad27dfedfb1987e3faa86ea",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-MT&entidade=SENAI"
+  },
+  "pes/2025/PA.json": {
+    "coletado_em_utc": "2026-11-25T13:08:25+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "b235b4380855cbdfb6c8e82c62b39c4a5f7bcc2a2c38688b6b697361f386b10e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-PA&entidade=SENAI"
+  },
+  "pes/2025/PB.json": {
+    "coletado_em_utc": "2026-11-25T13:08:29+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "066409da70df01680f9ffb5b8178a562262c961ee46789110e7389cbc170f291",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-PB&entidade=SENAI"
+  },
+  "pes/2025/PE.json": {
+    "coletado_em_utc": "2026-11-25T13:08:37+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "453087871e8caa644517389dfc6edece142f0300da31a8cd37a099a2f3b80dbd",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-PE&entidade=SENAI"
+  },
+  "pes/2025/PI.json": {
+    "coletado_em_utc": "2026-11-25T13:08:41+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "611ef14228cae505587b93dd6101683c206c23065c83ea48bb5cf20e381af546",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-PI&entidade=SENAI"
+  },
+  "pes/2025/PR.json": {
+    "coletado_em_utc": "2026-11-25T13:08:33+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "00d66f236277c9949fd7255bdd462881bdc9d751655c453ad9bccd17fbf2f54c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-PR&entidade=SENAI"
+  },
+  "pes/2025/RJ.json": {
+    "coletado_em_utc": "2026-11-25T13:08:45+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "28f9d09f85211af62aca57600aa6a853c7e0ae2cec4ef1e0fbccf7ea7468fcd9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-RJ&entidade=SENAI"
+  },
+  "pes/2025/RN.json": {
+    "coletado_em_utc": "2026-11-25T13:08:49+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "05f49f201af8a74c7e88f83b543f01f78fc1ccee68dc29bf3a2063aaba2923d9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-RN&entidade=SENAI"
+  },
+  "pes/2025/RO.json": {
+    "coletado_em_utc": "2026-11-25T13:08:57+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "47816ca9c1ff276072aff7fe3d00a484d51dc26c78730e2dee64852ae86d8f2c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-RO&entidade=SENAI"
+  },
+  "pes/2025/RR.json": {
+    "coletado_em_utc": "2026-11-25T13:09:01+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "f4cbb737c972e75500419dd7f19b02a9ce214c84786595c2948d765d6ffd3d5e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-RR&entidade=SENAI"
+  },
+  "pes/2025/RS.json": {
+    "coletado_em_utc": "2026-11-25T13:08:53+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "e4b452e0998ac1a298306db513de660d02e4d28b7846cd16b71b702af5041f1b",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-RS&entidade=SENAI"
+  },
+  "pes/2025/SC.json": {
+    "coletado_em_utc": "2026-11-25T13:09:05+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "3bb08b367a8a8a91a396c2cd5d4e4d5f02eca0e047f35b5fe2b82ba5ba42d63f",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-SC&entidade=SENAI"
+  },
+  "pes/2025/SE.json": {
+    "coletado_em_utc": "2026-11-25T13:09:13+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "da56c6320b0de566a5249cd8569d1b372945ab74f0cc405ff4151b911d2d46b8",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-SE&entidade=SENAI"
+  },
+  "pes/2025/SP.json": {
+    "coletado_em_utc": "2026-11-25T13:09:09+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "e7c286843c8f0c9c4318e5714f5234501c6bf2ac9de728d0e91f4dc95d742914",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-SP&entidade=SENAI"
+  },
+  "pes/2025/TO.json": {
+    "coletado_em_utc": "2026-11-25T13:09:17+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "7600033843c333ef5bf6d5aa1e9c940fe0de63fa0873aa7c8be0a100ff20a4be",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-TO&entidade=SENAI"
+  },
+  "pes/2026/AC.json": {
+    "coletado_em_utc": "2026-11-25T13:09:25+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "14b70ac0309f9b28ce9c4b1648533b4130c1029c29b59422d695fa01750f92fa",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-AC&entidade=SENAI"
+  },
+  "pes/2026/AL.json": {
+    "coletado_em_utc": "2026-11-25T13:09:29+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "8c40cbe916ba5d5df101e7f638cf0cc499254a075b118671278d463c5c3f8aaf",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-AL&entidade=SENAI"
+  },
+  "pes/2026/AM.json": {
+    "coletado_em_utc": "2026-11-25T13:09:37+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "4532963173b36616965a6f00529cefad57d14083abf2451daa9f1a4d985f2743",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-AM&entidade=SENAI"
+  },
+  "pes/2026/AP.json": {
+    "coletado_em_utc": "2026-11-25T13:09:33+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "9d428dd34d3d8521cbd188a8908a1cb1636aede6b9e9b40b6461aa06507c2aa9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-AP&entidade=SENAI"
+  },
+  "pes/2026/BA.json": {
+    "coletado_em_utc": "2026-11-25T13:09:41+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "03bd7a65391802964d68dfe4826fc08b1b5a04942a89186bf32737cb33ffb17f",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-BA&entidade=SENAI"
+  },
+  "pes/2026/CE.json": {
+    "coletado_em_utc": "2026-11-25T13:09:45+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "2248646153bec1e6aca9dcf3d7bfa63b40471389278c0f51facf6b7289636854",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-CE&entidade=SENAI"
+  },
+  "pes/2026/DF.json": {
+    "coletado_em_utc": "2026-11-25T13:09:49+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "414cdfa5332ff05bd65dc2065b4bab964cefd1ce62aeb1aa423f340638166d97",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-DF&entidade=SENAI"
+  },
+  "pes/2026/DN.json": {
+    "coletado_em_utc": "2026-11-25T13:11:15+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "87f74f91b998dd8aab20f2c49239ab0e5c862d0683d61084b9ec53b30585d1c9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-DN&entidade=SENAI"
+  },
+  "pes/2026/ES.json": {
+    "coletado_em_utc": "2026-11-25T13:09:53+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "6dd813403c372c9a5a7fd68b567291b89a3b92ff3774087b371f9f50755d6d71",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-ES&entidade=SENAI"
+  },
+  "pes/2026/GO.json": {
+    "coletado_em_utc": "2026-11-25T13:09:58+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "705ddd51d067d616d8a2f08eabb0a349dea527d8a2c533d83c9a85584cf9ec3d",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-GO&entidade=SENAI"
+  },
+  "pes/2026/MA.json": {
+    "coletado_em_utc": "2026-11-25T13:10:02+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "54de69d556558816e9872243bc467d8f39ea60bb93f660a61b2637a46d823f10",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-MA&entidade=SENAI"
+  },
+  "pes/2026/MG.json": {
+    "coletado_em_utc": "2026-11-25T13:10:14+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "41240f31acd60306446e18ee656ba1a41246a16ade5c71f5e5811e18946f201d",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-MG&entidade=SENAI"
+  },
+  "pes/2026/MS.json": {
+    "coletado_em_utc": "2026-11-25T13:10:10+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "61ec10e5b71b8983c201e68649620574626c07ec8d08138d3473670119a7c53b",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-MS&entidade=SENAI"
+  },
+  "pes/2026/MT.json": {
+    "coletado_em_utc": "2026-11-25T13:10:06+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "2b9b5970b68b5daf42db0dff5814d0dff3fd3dc5760244f96685660839f2355e",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-MT&entidade=SENAI"
+  },
+  "pes/2026/PA.json": {
+    "coletado_em_utc": "2026-11-25T13:10:18+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "1137d5afc8e53edf9fdf410d92ec03dacb87422ec85668238dc4445392a525da",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-PA&entidade=SENAI"
+  },
+  "pes/2026/PB.json": {
+    "coletado_em_utc": "2026-11-25T13:10:23+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "4375b11bb991fa09fcc51988fbcc5f8b378b06833c934d26f03716382b1a5091",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-PB&entidade=SENAI"
+  },
+  "pes/2026/PE.json": {
+    "coletado_em_utc": "2026-11-25T13:10:31+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "63669f2c5fbd596943bee018d53f80c49c0f3b64e49d47c08edb612342c1e67a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-PE&entidade=SENAI"
+  },
+  "pes/2026/PI.json": {
+    "coletado_em_utc": "2026-11-25T13:10:35+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "cf6d5069f341c70b72526032d51c52d20af78da09ae2468c6ca6c5ca6b92c5b5",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-PI&entidade=SENAI"
+  },
+  "pes/2026/PR.json": {
+    "coletado_em_utc": "2026-11-25T13:10:27+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "3044880a7c344c99f2f99cd43866729c78a4eae2815dd409cf396052f64cad26",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-PR&entidade=SENAI"
+  },
+  "pes/2026/RJ.json": {
+    "coletado_em_utc": "2026-11-25T13:10:39+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "f45773e89dda1909f9523573416e0422f47a216096c000f0e45b6947ca0e76ee",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-RJ&entidade=SENAI"
+  },
+  "pes/2026/RN.json": {
+    "coletado_em_utc": "2026-11-25T13:10:43+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "4fef2344856ab59cfabfc426f7aa2f2b691ea345c8a5261041a2a5ae2f1de093",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-RN&entidade=SENAI"
+  },
+  "pes/2026/RO.json": {
+    "coletado_em_utc": "2026-11-25T13:10:51+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "ed795209a38fcd6f58f4098a63a18197bcdc29a120922cfcfd27cf384d3df4b3",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-RO&entidade=SENAI"
+  },
+  "pes/2026/RR.json": {
+    "coletado_em_utc": "2026-11-25T13:10:55+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "bb49c298484f6a737e6d63221153ca543997ecee1ea468ae8026bace5f6e3ef7",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-RR&entidade=SENAI"
+  },
+  "pes/2026/RS.json": {
+    "coletado_em_utc": "2026-11-25T13:10:47+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "d10b11d7c68cc66e3dab9098bc1ced2a83101b36c0af046302a3055e879c09bd",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-RS&entidade=SENAI"
+  },
+  "pes/2026/SC.json": {
+    "coletado_em_utc": "2026-11-25T13:10:59+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "c018da6079773ffefb7e8acaf4e8a742d240e5ef4df2be6d0316da5fdd7f6acb",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-SC&entidade=SENAI"
+  },
+  "pes/2026/SE.json": {
+    "coletado_em_utc": "2026-11-25T13:11:08+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "93c28af8739279d99c2fc9bfe954575aa9527b7a98efdae541dc1e960a25e6a0",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-SE&entidade=SENAI"
+  },
+  "pes/2026/SP.json": {
+    "coletado_em_utc": "2026-11-25T13:11:03+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "ccbb07fb8f534f44aed5893b362614d41d98f7d7fa958aca79cd7c1708d487d2",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-SP&entidade=SENAI"
+  },
+  "pes/2026/TO.json": {
+    "coletado_em_utc": "2026-11-25T13:11:12+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "1fe324713c8458ecaf38c042f847b2239bd9afc2048e002554753f7c6fd2d03a",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-TO&entidade=SENAI"
+  }
+}
