@@ -13,7 +13,7 @@ Entregar, para um Superintendente / Diretor Regional, uma síntese executiva dos
 | Usar dados públicos oficiais do portal | Somente Plano Estratégico Sistêmico, Atendimento Social, Relatório de Gestão DN e Mapa Estratégico | Fonte citada em cada número |
 | Narrativa simples para Diretor/Superintendente | Briefing com 1 mensagem central + **Destaques / Pontos de atenção / Recomendações práticas** | PDF de até 4 páginas |
 | Automatizar leitura e mineração de texto | Leitura do PDF do Relatório de Gestão (por página) + coleta das APIs do portal | Pipeline em Python |
-| Síntese via IA Generativa | LLM redige a narrativa a partir de fatos estruturados | App Streamlit |
+| Síntese via IA Generativa | LLM redige a narrativa a partir de fatos estruturados | App web (FastAPI + site estático) |
 | Forma segura e sem alucinações | Números calculados por código; LLM só redige; validador bloqueia número sem fonte; revisão humana | Painel de auditoria no app + teste do validador |
 
 ## 3. Público e tom
@@ -67,7 +67,7 @@ Modo offline: retrato dos dados guardado e verificado por hash SHA-256 (a demons
 | Quando | Entregável |
 |---|---|
 | Qua | SPEC aprovado · camada de dados (coleta, normalização, qualidade) |
-| Qui | Ficha de fatos · mineração do PDF · redator LLM e validador · app Streamlit |
+| Qui | Ficha de fatos · mineração do PDF · redator LLM e validador · app web (FastAPI + site estático) |
 | Sex manhã | Briefing nacional (PDF de até 4 páginas) gerado pelo pipeline · vídeo de 3 min · README |
 
 ## 10. Critérios de pronto

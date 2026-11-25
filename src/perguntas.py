@@ -41,7 +41,9 @@ from src.redator import (
     _uso,
     sha256_arquivo,
 )
+from src.produto import FONTE_CRUZ, FONTE_PES
 from src.validador import (
+    HORIZONTES,
     JARGAO_PROIBIDO,
     NUMEROS_SEMPRE_PERMITIDOS,
     RE_CAUSAL,
@@ -62,6 +64,7 @@ VERSAO_PROMPT = "v1"
 
 MAX_PALAVRAS_RESPOSTA = 70
 RECUSA = "Os dados oficiais disponíveis não permitem responder com segurança."
+PERGUNTA_ACAO = "O que fazer agora?"  # resposta deve citar ao menos um de HORIZONTES
 
 CATALOGO_BR: tuple[tuple[str, str], ...] = (
     ("P1", "Qual é o principal problema hoje?"),
@@ -69,7 +72,7 @@ CATALOGO_BR: tuple[tuple[str, str], ...] = (
     ("P3", "Vamos bater as metas de 2026?"),
     ("P4", "Volume alto significa bom resultado?"),
     ("P5", "Quão confiáveis são esses números?"),
-    ("P6", "O que fazer nos próximos 90 dias?"),
+    ("P6", PERGUNTA_ACAO),
 )
 CATALOGO_DR: tuple[tuple[str, str], ...] = (
     ("P1", "Qual é o principal problema hoje?"),
@@ -77,7 +80,7 @@ CATALOGO_DR: tuple[tuple[str, str], ...] = (
     ("P3", "Vamos bater as metas de 2026?"),
     ("P4", "Volume alto significa bom resultado?"),
     ("P5", "Quão confiáveis são esses números?"),
-    ("P6", "O que fazer nos próximos 90 dias?"),
+    ("P6", PERGUNTA_ACAO),
 )
 
 
@@ -198,6 +201,9 @@ def validar_resposta(item: Any, pergunta: str, frases: dict[str, str]) -> list[s
             erros.append(f"Contém o termo técnico proibido '{termo}'.")
     for ref in RE_CODIGO_INDICADOR.findall(resposta):
         erros.append(f"Cita o indicador pelo código ('{ref}'); use o nome do indicador.")
+    if pergunta == PERGUNTA_ACAO and not any(h in resposta for h in HORIZONTES):
+        erros.append("A resposta deve indicar o horizonte, escrito exatamente como "
+                     + " ou ".join(f"'{h}'" for h in HORIZONTES) + ".")
     return erros
 
 
@@ -226,6 +232,25 @@ def validar_lote(lista: list, pendentes: dict[str, str], frases: dict[str, str]
 
 
 # ---------------------------------------------------------------- saída
+def fonte_legivel(fonte: dict[str, Any] | None) -> str:
+    """Fonte do fato em texto para o leitor (padrão dos KPIs de ``src.produto``)."""
+    if not isinstance(fonte, dict):
+        return "Fonte: dados oficiais do SENAI"
+    arquivo = str(fonte.get("arquivo", ""))
+    paginas = ", ".join(map(str, fonte.get("pagina_pdf") or []))
+    if fonte.get("tipo") == "pdf":
+        return f"Fonte: Relatório de Gestão {mod_fatos.ANO_FECHADO}" + (f", p. {paginas} do PDF" if paginas else "")
+    if fonte.get("tipo") == "regra" or "qualidade" in arquivo:
+        return "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+    if "cruzamento" in arquivo:
+        return FONTE_CRUZ
+    if "projecao" in arquivo or f"/pes/{mod_fatos.ANO_PROJECAO}/" in arquivo:
+        return (f"Fonte: Plano Estratégico Sistêmico {mod_fatos.ANO_PROJECAO} (Portal da Transparência); "
+                "projeção para dezembro, no ritmo atual")
+    sufixo_pdf = f"; confirmado no Relatório de Gestão, p. {paginas} do PDF" if paginas else ""
+    return FONTE_PES + sufixo_pdf
+
+
 def publicar(aprovadas: dict[str, dict], fatos: list[dict], escopo: str) -> list[dict]:
     """Respostas na ordem do catálogo, com texto e fonte de cada fato citado."""
     por_id = {f["id"]: f for f in fatos}
@@ -236,7 +261,7 @@ def publicar(aprovadas: dict[str, dict], fatos: list[dict], escopo: str) -> list
         r = aprovadas[pid]
         saida.append({
             **r,
-            "fatos": [{"id": f, "texto": por_id[f]["frase"], "fonte": por_id[f].get("fonte")}
+            "fatos": [{"id": f, "texto": por_id[f]["frase"], "fonte": fonte_legivel(por_id[f].get("fonte"))}
                       for f in r["fatos"]],
         })
     return saida

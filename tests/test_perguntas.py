@@ -16,8 +16,12 @@ def _item(resposta: str, fatos: list[str], pid: str = "P1", pergunta: str = PERG
     return {"id": pid, "pergunta": pergunta, "resposta": resposta, "fatos": fatos}
 
 
+RESPOSTA_OK = "A ocupação de egressos ficou em 39,8%, abaixo da meta de 45,0%."
+RESPOSTA_ACAO = "DN e DR revisam o plano de ocupação no horizonte imediato (4º tri/2026)."
+
+
 def _todas(escopo: str = "BR", **sobrescreve: dict) -> list[dict]:
-    base = [_item("A ocupação de egressos ficou em 39,8%, abaixo da meta de 45,0%.", ["F001"], pid, p)
+    base = [_item(RESPOSTA_ACAO if p == P.PERGUNTA_ACAO else RESPOSTA_OK, ["F001"], pid, p)
             for pid, p in P.catalogo(escopo)]
     return [sobrescreve.get(i["id"], i) for i in base]
 
@@ -79,6 +83,40 @@ def test_schema_reprova(item):
     assert P.validar_resposta(item, PERGUNTA, FRASES)
 
 
+def test_pergunta_acao_exige_horizonte():
+    assert P.validar_resposta(_item(RESPOSTA_ACAO, ["F001"], "P6", P.PERGUNTA_ACAO), P.PERGUNTA_ACAO, FRASES) == []
+    proximo = "Revisar metas no próximo ciclo de planejamento."
+    assert P.validar_resposta(_item(proximo, ["F001"], "P6", P.PERGUNTA_ACAO), P.PERGUNTA_ACAO, FRASES) == []
+    erros = P.validar_resposta(_item("Revisar metas já.", ["F001"], "P6", P.PERGUNTA_ACAO), P.PERGUNTA_ACAO, FRASES)
+    assert any("horizonte" in e for e in erros)
+    assert P.validar_resposta(_item(P.RECUSA, [], "P6", P.PERGUNTA_ACAO), P.PERGUNTA_ACAO, FRASES) == []
+
+
+def test_catalogo_sem_numero_na_pergunta_de_acao():
+    assert dict(P.catalogo("BR"))["P6"] == dict(P.catalogo("AL"))["P6"] == "O que fazer agora?"
+
+
+@pytest.mark.parametrize("fonte, esperado", [
+    ({"tipo": "api", "arquivo": "data/raw/pes/2025/DN.json", "pagina_pdf": ["31", "73"]},
+     "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência); "
+     "confirmado no Relatório de Gestão, p. 31, 73 do PDF"),
+    ({"tipo": "api", "arquivo": "data/processed/diag_dr.csv"},
+     "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"),
+    ({"tipo": "api", "arquivo": "data/processed/cruzamento_volume_resultado.csv"},
+     "Cruzamento: Atendimento Social × Plano Estratégico, 2025"),
+    ({"tipo": "pdf", "arquivo": "x.pdf", "pagina_pdf": ["31"]}, "Fonte: Relatório de Gestão 2025, p. 31 do PDF"),
+    ({"tipo": "regra", "arquivo": "data/processed/qualidade_achados.csv"},
+     "Fonte: verificação de qualidade dos dados do Portal da Transparência"),
+])
+def test_fonte_legivel(fonte, esperado):
+    assert P.fonte_legivel(fonte) == esperado
+
+
+def test_fonte_legivel_projecao():
+    assert "projeção para dezembro" in P.fonte_legivel({"tipo": "api", "arquivo": "data/raw/pes/2026/AL.json"})
+    assert "2026" in P.fonte_legivel({"tipo": "api", "arquivo": "data/processed/projecao_resumo.csv"})
+
+
 def test_catalogo_dr_troca_pergunta_2():
     assert dict(P.catalogo("AL"))["P2"] == "Como meu DR está frente ao Brasil?"
     assert len(P.catalogo("BR")) == len(P.catalogo("AL")) == 6
@@ -104,7 +142,8 @@ def test_gera_tudo_aprovado_com_fonte(dirs):
     assert len(cliente.chamadas) == 1 and len(doc["perguntas"]) == 6 and doc["removidas"] == []
     salvo = json.loads((dirs["app_data_dir"] / "perguntas_BR.json").read_text(encoding="utf-8"))
     fato = salvo["perguntas"][0]["fatos"][0]
-    assert fato == {"id": "F001", "texto": FRASES["F001"], "fonte": {"tipo": "api", "arquivo": "x.json"}}
+    assert fato == {"id": "F001", "texto": FRASES["F001"],
+                    "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"}
     log = json.loads(next(dirs["logs_dir"].glob("perguntas_BR_*.json")).read_text(encoding="utf-8"))
     assert {"prompt_sha256", "fatos_sha256", "saida_sha256"} <= set(log)
 
