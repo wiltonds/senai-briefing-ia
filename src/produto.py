@@ -2,8 +2,9 @@
 
 Gera ``outputs/app_data/{escopo}.json`` para BR e para os 27 DRs, e
 ``outputs/app_data/regioes.json``. Lê só ``data/processed``, o manifest da
-coleta, ``outputs/briefing_{escopo}.json`` e (para o nome do revisor) o PDF
-executivo já gerado. Gera a figura volume x resultado com ``src.render_pdf``
+coleta, ``outputs/briefing_{escopo}.json``, (para o nome do revisor) o PDF
+executivo já gerado e, para ``meta.verificacao``, os logs mais recentes de cada
+escopo em ``logs/`` e as marcas ``[revisao-humana]`` de ``DECISOES.md``. Gera a figura volume x resultado com ``src.render_pdf``
 quando ela ainda não existe.
 
 Regras:
@@ -57,6 +58,9 @@ MANIFEST_PATH = RAIZ / "data" / "raw" / "manifest.json"
 OUTPUTS_DIR = RAIZ / "outputs"
 APP_DATA_DIR = OUTPUTS_DIR / "app_data"
 FIGS_DIR = OUTPUTS_DIR / "figs"
+LOGS_DIR = RAIZ / "logs"
+DECISOES_PATH = RAIZ / "DECISOES.md"
+MARCA_REVISAO_HUMANA = "[revisao-humana]"
 ENCODING_CSV = "utf-8-sig"
 
 ESCOPOS: tuple[str, ...] = (ESCOPO_BR,) + UFS
@@ -237,6 +241,7 @@ class Contexto:
         self.figs_dir = figs_dir
         self.cruz = dados["cruzamento_volume_resultado"]
         self.proj = dados["projecao_2026"]
+        self.verificacao: dict[str, Any] | None = None  # preenchido por gerar_tudo
 
     def pes(self, uf: str, cod: str) -> pd.Series | None:
         """Linha válida do PES 2025 (farol) de uma unidade e indicador."""
@@ -524,6 +529,64 @@ def grafico(ctx: Contexto, escopo: str) -> dict[str, str]:
     return {"figura": f"figs/{arquivo}", "manchete": manchete(ctx, escopo)}
 
 
+def _logs_da_edicao(logs_dir: Path, prefixo: str) -> list[dict[str, Any]]:
+    """Log mais recente de cada escopo (``{prefixo}_{escopo}_{timestamp}.json``)."""
+    ultimos: dict[str, Path] = {}
+    for p in sorted(logs_dir.glob(f"{prefixo}_*_*.json")):  # timestamp ordena por nome
+        partes = p.stem.split("_")
+        if len(partes) == 3:
+            ultimos[partes[1]] = p
+    logs = []
+    for p in ultimos.values():
+        try:
+            logs.append(json.loads(p.read_text(encoding="utf-8")))
+        except (OSError, json.JSONDecodeError) as exc:
+            logger.warning("Log ignorado (%s): %s", p.name, exc)
+    return logs
+
+
+def _plural(n: int, singular: str, plural: str) -> str:
+    return f"{fmt_int(n)} {singular if n == 1 else plural}"
+
+
+def verificacao_da_edicao(logs_dir: Path = LOGS_DIR,
+                          decisoes_path: Path = DECISOES_PATH) -> dict[str, Any]:
+    """Resumo das verificações da edição, a partir dos logs e do DECISOES.md.
+
+    - ``respostas_refeitas``: perguntas reprovadas pelo validador em alguma
+      tentativa e aprovadas depois (log mais recente de cada escopo);
+    - ``briefings_refeitos``: briefings aprovados após ao menos uma reprovação;
+    - ``respostas_descartadas``: perguntas que saíram do catálogo;
+    - ``divergencias_revisao_humana``: linhas de DECISOES.md com ``[revisao-humana]``;
+    - ``texto``: frase pronta para a página.
+    """
+    refeitas = descartadas = 0
+    for log in _logs_da_edicao(logs_dir, "perguntas"):
+        aprovadas = set(log.get("aprovadas") or [])
+        reprovadas = {pid for t in log.get("tentativas", []) if isinstance(t.get("erros"), dict)
+                      for pid in t["erros"] if pid in aprovadas}
+        refeitas += len(reprovadas)
+        descartadas += len(log.get("removidas") or [])
+    briefings = sum(1 for log in _logs_da_edicao(logs_dir, "geracao")
+                    if log.get("status") == "aprovado" and len(log.get("tentativas", [])) > 1)
+    divergencias = 0
+    if decisoes_path.is_file():
+        divergencias = sum(MARCA_REVISAO_HUMANA in l
+                           for l in decisoes_path.read_text(encoding="utf-8").splitlines())
+
+    texto = (f"Nesta edição, o verificador reprovou e a IA refez "
+             f"{_plural(refeitas, 'resposta', 'respostas')} e {_plural(briefings, 'briefing', 'briefings')}")
+    if descartadas:
+        texto += f"; {_plural(descartadas, 'resposta foi descartada', 'respostas foram descartadas')}"
+    texto += (f". A revisão humana registrou "
+              f"{_plural(divergencias, 'divergência entre fatos', 'divergências entre fatos')}, "
+              f"{'corrigida' if divergencias == 1 else 'corrigidas'} na origem.")
+    # Contagens como texto pt-BR: o JSON do produto não tem número cru (só pct_barra).
+    return {"respostas_refeitas": fmt_int(refeitas), "briefings_refeitos": fmt_int(briefings),
+            "respostas_descartadas": fmt_int(descartadas),
+            "divergencias_revisao_humana": fmt_int(divergencias), "texto": texto}
+
+
 def montar_meta(ctx: Contexto, escopo: str) -> dict[str, Any]:
     """Metadados do escopo."""
     return {
@@ -533,6 +596,7 @@ def montar_meta(ctx: Contexto, escopo: str) -> dict[str, Any]:
         "data_coleta": render_pdf.coleta_mais_recente(ctx.manifest_path),
         "revisado_por": revisor_do_pdf(escopo, ctx.outputs_dir),
         "tem_pdf": (ctx.outputs_dir / f"Executive_Briefing_SENAI_{escopo}.pdf").exists(),
+        "verificacao": ctx.verificacao,
     }
 
 
@@ -675,10 +739,12 @@ def _json_default(obj: Any) -> Any:
 
 def gerar_tudo(processed_dir: Path = PROCESSED_DIR, manifest_path: Path = MANIFEST_PATH,
                outputs_dir: Path = OUTPUTS_DIR, app_data_dir: Path = APP_DATA_DIR,
-               figs_dir: Path = FIGS_DIR) -> list[Path]:
+               figs_dir: Path = FIGS_DIR, logs_dir: Path = LOGS_DIR,
+               decisoes_path: Path = DECISOES_PATH) -> list[Path]:
     """Gera os 28 JSON de escopo e ``regioes.json``; devolve os caminhos gravados."""
     ctx = Contexto(carregar_dados(processed_dir, manifest_path), ler_atendimento(processed_dir),
                    manifest_path, outputs_dir, figs_dir)
+    ctx.verificacao = verificacao_da_edicao(logs_dir, decisoes_path)
     gravados = [_gravar(montar_escopo(ctx, e), app_data_dir / f"{e}.json") for e in ESCOPOS]
     gravados.append(_gravar(montar_regioes(ctx), app_data_dir / "regioes.json"))
     return gravados

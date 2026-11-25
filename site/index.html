@@ -45,6 +45,7 @@
         <div><strong>3. A IA só redige.</strong> Usa apenas fatos conferidos; não calcula nem pesquisa fora.</div>
         <div><strong>4. Verificação e revisão.</strong> Todo número é checado na fonte e um analista revisa.</div>
       </div>
+      <p id="confianca-verificacao" class="confianca-verificacao" hidden></p>
     </section>
 
     <section id="estado" class="cartao estado" role="status" aria-live="polite"></section>
@@ -62,6 +63,23 @@
       <section id="visao-dr" class="cartao visao-dr" hidden></section>
 
       <div id="briefing-blocos" class="briefing"></div>
+
+      <section id="perguntas" class="cartao perguntas" aria-labelledby="perguntas-titulo">
+        <h2 id="perguntas-titulo">Perguntas verificadas</h2>
+        <p class="perguntas-sub">Respostas preparadas a partir dos dados oficiais e conferidas número a número antes de publicar. Não é um chat livre.</p>
+        <div id="perguntas-corpo"></div>
+        <button type="button" id="btn-porque" class="btn-link perguntas-porque" aria-expanded="false" aria-controls="perguntas-explica">Por que não posso perguntar qualquer coisa?</button>
+        <div id="perguntas-explica" class="perguntas-explica" hidden>
+          <p>Um assistente livre pode inventar números. Aqui:</p>
+          <ol>
+            <li>a IA recebe somente os indicadores oficiais calculados pelo sistema;</li>
+            <li>cada frase cita o fato de origem;</li>
+            <li>um verificador confere todo número contra a fonte e descarta a resposta se não bater;</li>
+            <li>uma pessoa revisa antes de publicar.</li>
+          </ol>
+          <p>Por isso o conjunto de perguntas é fechado e auditável.</p>
+        </div>
+      </section>
     </div>
 
     <footer id="rodape" class="rodape">Fontes: Plano Estratégico Sistêmico e Atendimento Social (Portal da Transparência SENAI); Relatório de Gestão SENAI 2025.</footer>

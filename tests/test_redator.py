@@ -114,9 +114,9 @@ def test_caminho_prompt_por_versao(tmp_path):
         redator.caminho_prompt("v9", tmp_path)
 
 
-def test_padrao_e_v3_e_max_tokens():
-    assert redator.VERSAO_PROMPT_PADRAO == "v3"
-    assert redator.PROMPT_PATH.name == "briefing_v3.md"
+def test_padrao_e_v4_e_max_tokens():
+    assert redator.VERSAO_PROMPT_PADRAO == "v4"
+    assert redator.PROMPT_PATH.name == "briefing_v4.md"
     assert redator.PROMPT_PATH.exists()
     assert redator.MAX_TOKENS == 6000
 
@@ -147,3 +147,11 @@ def test_v3_e_v2_mais_regra_de_ordem():
     assert v3.startswith("# Prompt: Executive Briefing SENAI (v3)")
     assert v2.split("\n", 1)[1].rstrip() in v3
     assert "o primeiro item é o que aparece em destaque na tela" in v3
+
+
+def test_v4_e_v3_mais_regra_de_indice():
+    v3 = (redator.PROMPTS_DIR / "briefing_v3.md").read_text(encoding="utf-8")
+    v4 = (redator.PROMPTS_DIR / "briefing_v4.md").read_text(encoding="utf-8")
+    assert v4.startswith("# Prompt: Executive Briefing SENAI (v4)")
+    assert v3.split("\n", 1)[1].rstrip() in v4
+    assert "índice mediano nacional" in v4 and "ficou em X%" in v4

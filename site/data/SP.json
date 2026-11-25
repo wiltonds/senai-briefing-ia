@@ -4,10 +4,77 @@
     "nome": "São Paulo",
     "mes_referencia": "setembro de 2026",
     "data_coleta": "25/11/2026 14:23 (UTC)",
-    "revisado_por": null,
-    "tem_pdf": false
+    "revisado_por": "Wilton Costa",
+    "tem_pdf": true,
+    "verificacao": {
+      "respostas_refeitas": "2",
+      "briefings_refeitos": "3",
+      "respostas_descartadas": "0",
+      "divergencias_revisao_humana": "1",
+      "texto": "Nesta edição, o verificador reprovou e a IA refez 2 respostas e 3 briefings. A revisão humana registrou 1 divergência entre fatos, corrigida na origem."
+    }
   },
-  "briefing": null,
+  "briefing": {
+    "mensagem_central": "SP entrega volume e resultado: matrículas com índice de 114,1% e empregabilidade de egressos com índice de 110,2%. A atenção está na fidelização de alunos (índice de 85,4%) e em três indicadores críticos que pedem correção de rota em 2026.",
+    "destaques": [
+      {
+        "titulo": "Empregabilidade de egressos acima da meta",
+        "texto": "Empregabilidade de egressos no setor industrial: realizado de 49,6% para meta de 45,0%, índice de 110,2%. O índice mediano nacional é de 75,2% e o índice mediano da região Sudeste, de 109,6%. Volume e resultado caminham juntos em SP."
+      },
+      {
+        "titulo": "Juventude, tecnologia e inovação bem acima da meta",
+        "texto": "Jovens egressos empregados na indústria: índice de 225,3%. Estudantes usuários de tecnologias educacionais: índice de 273,8%. Consultorias de produtividade: índice de 172,4%. Pesquisa aplicada: índice de 194,8%. Todos acima dos índices medianos nacionais."
+      },
+      {
+        "titulo": "2026 no ritmo em frentes centrais",
+        "texto": "Pela projeção linear de 2026, consultorias de produtividade têm índice projetado de 111,9%, empresas atendidas por STI de 109,2% e matrículas do atendimento social de 109,5%. Pesquisa aplicada já atingiu a meta."
+      }
+    ],
+    "pontos_atencao": [
+      {
+        "titulo": "Fidelização de alunos abaixo da meta",
+        "texto": "Fidelização de alunos: realizado de 18,2% para meta de 21,3%, índice de 85,4%. As matrículas têm índice de 114,1%, mas a permanência fica atrás. O índice mediano nacional é de 85,4% e o da região Sudeste, de 90,2%."
+      },
+      {
+        "titulo": "Três indicadores críticos",
+        "texto": "Capacitação digital e ambiental de colaboradores: índice de 8,5% (realizado de 0,7% para meta de 8,2%). Gratuidade para áreas técnicas e estratégicas: índice de 79,7%. Envio de dados ao Data Lake Nacional: índice de 50,0%."
+      },
+      {
+        "titulo": "Metas de 2026 abaixo do já entregue",
+        "texto": "São 11 metas de 2026 abaixo do realizado de 2025. Exemplos: egressos empregados, meta de 40,0% ante realizado de 49,6%; jovens egressos, meta de 14,4% ante 43,7%. Hipótese: parte das metas está subcalibrada."
+      },
+      {
+        "titulo": "Receitas de serviços e empresas atendidas",
+        "texto": "Receitas de serviços e convênios: índice de 86,3% (R$ 62,2 mi para meta de R$ 72,1 mi). Empresas industriais atendidas por STI: índice de 93,0%, frente a um índice mediano nacional de 109,5%."
+      }
+    ],
+    "recomendacoes": [
+      {
+        "titulo": "Proteger a empregabilidade e atacar a fidelização",
+        "texto": "DN e DR definem um plano de fidelização de alunos para alcançar a meta de 21,3%, preservando a empregabilidade de egressos, hoje com índice de 110,2%.",
+        "quem": "DN e DR",
+        "quando": "imediato (4º tri/2026)"
+      },
+      {
+        "titulo": "Corrigir a rota dos indicadores críticos",
+        "texto": "DR prioriza envio de dados ao Data Lake Nacional, capacitação de colaboradores e gratuidade para áreas técnicas. DN orienta e ajuda a confirmar o realizado de receitas de serviços e convênios, publicado como \"R$ - 0\" em 2026.",
+        "quem": "DN e DR",
+        "quando": "imediato (4º tri/2026)"
+      },
+      {
+        "titulo": "Calibrar as metas de 2026",
+        "texto": "DN e DR revisam as 11 metas de 2026 abaixo do realizado de 2025 ou registram justificativa, começando por egressos empregados e jovens egressos empregados.",
+        "quem": "DN e DR",
+        "quando": "próximo ciclo de planejamento"
+      },
+      {
+        "titulo": "Acompanhamento consultivo sem trilha de apoio",
+        "texto": "SP tem 3 indicadores críticos e não está no grupo de apoio (4 ou mais críticos). DN mantém diálogo consultivo sobre esses três indicadores e reavalia a necessidade de apoio no próximo ciclo.",
+        "quem": "DN",
+        "quando": "próximo ciclo de planejamento"
+      }
+    ]
+  },
   "kpis": [
     {
       "rotulo": "Matrículas (volume)",

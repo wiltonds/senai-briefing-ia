@@ -61,6 +61,7 @@ main { max-width: 1160px; margin: 0 auto; padding: 20px 24px 48px; display: flex
 .confianca h2 { margin: 0; font-size: 16px; font-weight: 700; color: var(--verde-texto); }
 .confianca-pontos { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; line-height: 1.45; color: var(--texto-2); }
 .confianca-pontos > div { flex: 1 1 220px; }
+.confianca-verificacao { margin: 0; font-size: 13px; line-height: 1.45; color: var(--texto-2); border-top: 1px solid var(--verde-borda); padding-top: 10px; }
 
 .estado { font-size: 16px; color: var(--texto-2); padding: 28px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 .estado-erro { border-color: #E3B4B4; }
@@ -114,6 +115,29 @@ h2.sec { margin: 0; font-size: 16px; color: var(--marinho); display: flex; align
 .btn-ver-mais { align-self: flex-start; font-size: 14px; font-weight: 600; background: none; border: none; color: var(--marinho); cursor: pointer; min-height: 44px; padding: 0 4px; text-decoration: underline; text-underline-offset: 3px; }
 .btn-ver-mais:hover { color: var(--marinho-escuro); }
 
+/* Perguntas verificadas */
+.perguntas { display: flex; flex-direction: column; gap: 12px; }
+.perguntas h2 { margin: 0; font-size: 16px; color: var(--marinho); }
+.perguntas-sub { margin: 0; font-size: 14px; line-height: 1.45; color: var(--texto-2); }
+.perguntas-vazio { margin: 0; font-size: 14px; color: var(--texto-3); }
+.perguntas-lista { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn-pergunta { font-size: 14px; font-weight: 600; text-align: left; background: #FFFFFF; color: var(--marinho); border: 1px solid var(--marinho); border-radius: 999px; padding: 8px 16px; min-height: 44px; cursor: pointer; }
+.btn-pergunta:hover { background: #F7F9FC; }
+.btn-pergunta[aria-expanded="true"] { background: var(--marinho); color: #FFFFFF; }
+.perg-resposta { border: 1px solid var(--borda); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; background: var(--fundo); }
+.perg-resposta h3 { margin: 0; font-size: 15px; color: var(--marinho); }
+.perg-texto { margin: 0; font-size: 15px; line-height: 1.5; color: var(--texto); }
+.perg-rodape { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.selo-verificada { font-size: 12px; font-weight: 600; color: var(--verde-texto); background: var(--verde-fundo); border: 1px solid var(--verde-borda); border-radius: 999px; padding: 4px 10px; }
+.perg-base { list-style: none; margin: 0; padding: 0; }
+.perg-base li { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-top: 1px solid var(--borda); }
+.perg-fato { font-size: 14px; line-height: 1.45; color: var(--texto-2); }
+.perg-fonte { font-size: 12px; color: var(--texto-mudo); }
+.perguntas-porque { align-self: flex-start; padding: 0 4px; }
+.perguntas-explica { font-size: 14px; line-height: 1.5; color: var(--texto-2); }
+.perguntas-explica p { margin: 0 0 6px; }
+.perguntas-explica ol { margin: 0 0 6px; padding-left: 20px; }
+
 /* Visão Brasil */
 .visao-br { display: flex; flex-direction: column; gap: 16px; }
 .visao-cab { display: flex; flex-direction: column; gap: 6px; }
@@ -161,6 +185,7 @@ footer.rodape { font-size: 12px; color: var(--texto-mudo); }
   .btn { justify-content: center; }
   .kpis, .br-corpo, .numeros, .drs, .visao-dr, .confianca-pontos { flex-direction: column; }
   .briefing { grid-template-columns: minmax(0, 1fr); }
+  .perguntas-lista { flex-direction: column; }
   .kpi, .mapa-col, .reg-col, .numero, .dr, .visao-dr img, .visao-dr-texto, .confianca-pontos > div { flex: 0 0 auto; width: 100%; max-width: none; }
   .msg-central p { font-size: 18px; }
 }

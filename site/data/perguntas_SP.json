@@ -1,0 +1,172 @@
+{
+  "escopo": "SP",
+  "modelo": "claude-sonnet-5-5",
+  "versao_prompt": "v4",
+  "gerado_em_utc": "2026-11-25T20:02:05+00:00",
+  "verificado_em": "25/11/2026",
+  "perguntas": [
+    {
+      "id": "P1",
+      "pergunta": "Qual é o principal problema hoje?",
+      "resposta": "O ponto mais urgente é a capacitação de colaboradores nas competências digitais e ambientais, com índice de 8,5% e situação crítica. Outros dois indicadores críticos são o envio de dados ao Data Lake Nacional, com índice de 50,0%, e a destinação da gratuidade para áreas técnicas e estratégicas, com índice de 79,7%. SP tem 3 críticos e 6 de 12 atingidos.",
+      "fatos": [
+        {
+          "id": "F019",
+          "texto": "Indicador 13.1 (Percentual de colaboradores capacitados nas competências digitais e ambientais), 2025: meta 8,2%, realizado 0,7%, índice 8,5%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F017",
+          "texto": "Indicador 12 (Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)), 2025: meta 2, realizado 1, índice 50,0%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F021",
+          "texto": "Indicador 14.1 (Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria), 2025: meta 29,1%, realizado 23,2%, índice 79,7%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F025",
+          "texto": "SP: 6 atingidos, 3 em atenção e 3 críticos, de 12 indicadores com dado (6 de 12 atingidos).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "pergunta": "Como meu DR está frente ao Brasil?",
+      "resposta": "SP está acima do índice mediano nacional em resultados centrais. Na ocupação de egressos, o índice é de 110,2%, contra índice mediano nacional de 75,2%. Em consultorias de produtividade, o índice é de 172,4%, contra 100,0%. Há pontos abaixo: capacitação de colaboradores, com índice de 8,5% contra índice mediano nacional de 130,8%, e receitas de serviços e convênios, com índice de 86,3% contra 122,0%.",
+      "fatos": [
+        {
+          "id": "F002",
+          "texto": "Indicador 1: índice de SP 110,2%; mediana nacional dos DRs 75,2%; mediana da região Sudeste 109,6%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F004",
+          "texto": "Indicador 2.1: índice de SP 172,4%; mediana nacional dos DRs 100,0%; mediana da região Sudeste 103,3%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F020",
+          "texto": "Indicador 13.1: índice de SP 8,5%; mediana nacional dos DRs 130,8%; mediana da região Sudeste 178,2%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F024",
+          "texto": "Indicador 14.2: índice de SP 86,3%; mediana nacional dos DRs 122,0%; mediana da região Sudeste 129,7%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "pergunta": "Vamos bater as metas de 2026?",
+      "resposta": "Em vários indicadores, sim, se o ritmo atual se mantiver. O índice projetado é de 111,9% em consultorias de produtividade, 104,6% em descarbonização e 109,2% em empresas industriais atendidas por STI. Em pesquisa aplicada, a meta já foi atingida, com índice projetado de 226,7%. Ressalvas: a projeção não considera sazonalidade, e as receitas de serviços e convênios ficaram sem projeção.",
+      "fatos": [
+        {
+          "id": "F029",
+          "texto": "Projeção 2026 de SP — indicador 2.1 (Expansão de consultorias com aumento de produtividade): meta 1.802, realizado até o mês 9: 1.512; índice projetado 111,9%; situação: no ritmo; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F030",
+          "texto": "Projeção 2026 de SP — indicador 2.2 (Expansão de consultorias com impacto em descarbonização): meta 181, realizado até o mês 9: 142; índice projetado 104,6%; situação: no ritmo; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F031",
+          "texto": "Projeção 2026 de SP — indicador 2.3 (Expansão de projetos ativos de pesquisa aplicada): meta 120, realizado até o mês 9: 204; índice projetado 226,7%; situação: meta já atingida; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F032",
+          "texto": "Projeção 2026 de SP — indicador 6 (Empresas industriais atendidas por STI): meta 8.134, realizado até o mês 9: 6.661; índice projetado 109,2%; situação: no ritmo; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F035",
+          "texto": "SP ficou fora da projeção 2026 do indicador 14.2: realizado publicado \"R$ - 0\", tratado como zero suspeito.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "pergunta": "Volume alto significa bom resultado?",
+      "resposta": "Em SP, o volume veio acompanhado de resultado: índice de matrículas de 114,1% e índice de empregabilidade de 110,2%. O ponto de atenção é a fidelização, com índice de 85,4%. Volume alto não garante resultado por si só. Aqui, a leitura combinada é de volume e resultado adequados.",
+      "fatos": [
+        {
+          "id": "F027",
+          "texto": "SP: índice de matrículas 114,1%, índice de empregabilidade 110,2%, índice de fidelização 85,4%; leitura: volume ok, resultado ok.",
+          "fonte": "Cruzamento: Atendimento Social × Plano Estratégico, 2025"
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "pergunta": "Quão confiáveis são esses números?",
+      "resposta": "São confiáveis com ressalvas. Há 11 metas de 2026 abaixo do realizado anterior, o que pede revisão de calibração. Em receitas de serviços e convênios, o índice publicado diverge e há um zero suspeito em 2026. Na gratuidade, há 2 ocorrências de unidade absoluta com valor percentual. Empresas atendidas diferem entre fontes, com 2 ocorrências.",
+      "fatos": [
+        {
+          "id": "F048",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior) em SP: ocorrências: 11; itens: 1 (2026), 2.1 (2026), 2.3 (2026), 3 (2026), 6 (2026), 7 (2026), EDUCAÇÃO PARA O TRABALHO (2026), EDUCAÇÃO SUPERIOR (2026), FORMAÇÃO INICIAL E CONTINUADA (2026), QUANTIDADE DE EMPRESAS ATENDIDAS (2026), TOTAL (2026); recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F044",
+          "texto": "Regra Q04 (Índice publicado divergente) em SP: ocorrências: 1; itens: 14.2 (2025).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F045",
+          "texto": "Regra Q07 (Zero suspeito) em SP: ocorrências: 1; itens: 14.2 (2026).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F043",
+          "texto": "Regra Q03 (Unidade absoluta com valor percentual) em SP: ocorrências: 2; itens: 14.1 (2025), 14.1 (2026).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F047",
+          "texto": "Regra Q10 (Empresas atendidas diferem entre fontes) em SP: ocorrências: 2; itens: 6 x QUANTIDADE DE EMPRESAS ATENDIDAS (2025), 6 x QUANTIDADE DE EMPRESAS ATENDIDAS (2026).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "pergunta": "O que fazer agora?",
+      "resposta": "1) imediato (4º tri/2026): priorizar a capacitação digital e ambiental (índice de 8,5%), as etapas de envio ao Data Lake Nacional (índice de 50,0%) e a gratuidade em áreas técnicas (índice de 79,7%). 2) imediato (4º tri/2026): validar o realizado de receitas de serviços e convênios. 3) próximo ciclo de planejamento: revisar as 11 metas de 2026 abaixo do já entregue.",
+      "fatos": [
+        {
+          "id": "F019",
+          "texto": "Indicador 13.1 (Percentual de colaboradores capacitados nas competências digitais e ambientais), 2025: meta 8,2%, realizado 0,7%, índice 8,5%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F017",
+          "texto": "Indicador 12 (Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)), 2025: meta 2, realizado 1, índice 50,0%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F021",
+          "texto": "Indicador 14.1 (Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria), 2025: meta 29,1%, realizado 23,2%, índice 79,7%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F035",
+          "texto": "SP ficou fora da projeção 2026 do indicador 14.2: realizado publicado \"R$ - 0\", tratado como zero suspeito.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F048",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior) em SP: ocorrências: 11; itens: 1 (2026), 2.1 (2026), 2.3 (2026), 3 (2026), 6 (2026), 7 (2026), EDUCAÇÃO PARA O TRABALHO (2026), EDUCAÇÃO SUPERIOR (2026), FORMAÇÃO INICIAL E CONTINUADA (2026), QUANTIDADE DE EMPRESAS ATENDIDAS (2026), TOTAL (2026); recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        }
+      ]
+    }
+  ],
+  "removidas": []
+}

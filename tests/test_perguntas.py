@@ -1,6 +1,7 @@
 """Testes de src.perguntas — nunca chamam a API: usam um cliente falso."""
 
 import json
+import re
 
 import pytest
 
@@ -140,6 +141,7 @@ def test_gera_tudo_aprovado_com_fonte(dirs):
     cliente = ClienteFalso([json.dumps(_todas(), ensure_ascii=False)])
     doc = P.gerar_perguntas("BR", cliente, **dirs)
     assert len(cliente.chamadas) == 1 and len(doc["perguntas"]) == 6 and doc["removidas"] == []
+    assert re.fullmatch(r"\d{2}/\d{2}/\d{4}", doc["verificado_em"])
     salvo = json.loads((dirs["app_data_dir"] / "perguntas_BR.json").read_text(encoding="utf-8"))
     fato = salvo["perguntas"][0]["fatos"][0]
     assert fato == {"id": "F001", "texto": FRASES["F001"],
@@ -182,3 +184,9 @@ def test_recusa_publicada_sem_fatos(dirs):
 def test_dry_run_nao_chama_api(dirs):
     info = P.dry_run("BR", outputs_dir=dirs["outputs_dir"], prompt_path=dirs["prompt_path"])
     assert info["n_fatos"] == len(FATOS) and info["n_perguntas"] == 6
+
+
+def test_prompt_padrao_v4_com_regra_de_indice():
+    assert P.PROMPT_PATH.name == "perguntas_v4.md" and P.VERSAO_PROMPT == "v4"
+    texto = P.PROMPT_PATH.read_text(encoding="utf-8")
+    assert "índice mediano nacional" in texto and "ficou em X%" in texto

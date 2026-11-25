@@ -39,6 +39,9 @@
     aberto: null,    // índice do KPI com detalhe aberto
     regiao: null,    // região selecionada no mapa (null = Brasil)
     expandido: {},   // colunas do briefing abertas ("Ver mais")
+    perguntas: null, // JSON de perguntas_{escopo} (null = ainda não há)
+    pergunta: null,  // id da pergunta aberta
+    base: false,     // lista de fatos ("Ver base") aberta
     pedido: 0        // descarta respostas antigas
   };
 
@@ -47,12 +50,14 @@
       escopos: function () { return '/api/escopos'; },
       escopo: function (e) { return '/api/escopo/' + encodeURIComponent(e); },
       regioes: function () { return '/api/regioes'; },
+      perguntas: function (e) { return '/api/perguntas/' + encodeURIComponent(e); },
       pdf: function (e) { return '/api/pdf/' + encodeURIComponent(e); }
     },
     estatico: {
       escopos: function () { return 'data/escopos.json'; },
       escopo: function (e) { return 'data/' + encodeURIComponent(e) + '.json'; },
       regioes: function () { return 'data/regioes.json'; },
+      perguntas: function (e) { return 'data/perguntas_' + encodeURIComponent(e) + '.json'; },
       pdf: function (e) { return 'pdf/Executive_Briefing_SENAI_' + encodeURIComponent(e) + '.pdf'; }
     }
   };
@@ -123,7 +128,10 @@
     var meu = ++estado.pedido;
     var mudou = escopo !== estado.escopo;
     estado.escopo = escopo;
-    if (mudou) { estado.aberto = null; estado.regiao = null; estado.expandido = {}; }
+    if (mudou) {
+      estado.aberto = null; estado.regiao = null; estado.expandido = {};
+      estado.perguntas = null; estado.pergunta = null; estado.base = false;
+    }
     $('escopo').value = escopo;
     mostrarCarregando();
 
@@ -134,6 +142,12 @@
       estado.doc = res[0];
       if (res[1]) estado.regioes = res[1];
       renderizar();
+      // Opcional e só depois do escopo: com a API já confirmada, 404 = "ainda não há" (não troca o modo).
+      buscarDado('perguntas', escopo).then(function (p) {
+        if (meu !== estado.pedido) return;
+        estado.perguntas = p;
+        renderPerguntas();
+      }, function () { /* sem arquivo: fica a mensagem "ainda não há" */ });
     }).catch(function (err) {
       if (meu !== estado.pedido) return;
       mostrarErro(err);
@@ -202,6 +216,9 @@
       pdf.hidden = true;
     }
     $('confianca-coleta').textContent = meta.data_coleta ? ' em ' + meta.data_coleta : '';
+    var verif = $('confianca-verificacao');
+    verif.textContent = meta.verificacao && meta.verificacao.texto ? meta.verificacao.texto : '';
+    verif.hidden = !verif.textContent;
 
     var rod = $('rodape');
     rod.textContent = 'Fontes: Plano Estratégico Sistêmico e Atendimento Social (Portal da Transparência SENAI); Relatório de Gestão SENAI 2025.'
@@ -219,6 +236,7 @@
     renderBriefingBlocos(d.briefing);
     renderVisaoBR();
     renderVisaoDR();
+    renderPerguntas();
     $('estado').hidden = true;
     $('conteudo').hidden = false;
   }
@@ -330,7 +348,65 @@
     alvo.appendChild(colunaBriefing('destaques', 'Destaques', 'atingido', b.destaques, simples));
     alvo.appendChild(colunaBriefing('atencao', 'Pontos de atenção', 'atencao', b.pontos_atencao, simples));
     alvo.appendChild(colunaBriefing('recs', 'Recomendações práticas', null, b.recomendacoes, rec));
-    // Passo 3: a seção "Pergunte ao briefing" entra depois destas colunas.
+  }
+
+  // ------------------------------------------------------------------ perguntas verificadas
+  /** Botões das perguntas; ao abrir, resposta + selo + "Ver base". Só exibe o que vem do JSON. */
+  function renderPerguntas(focarId) {
+    var corpo = limpar($('perguntas-corpo'));
+    var doc = estado.perguntas;
+    var lista = doc && Array.isArray(doc.perguntas) ? doc.perguntas : [];
+    if (!lista.length) {
+      corpo.appendChild(el('p', { class: 'perguntas-vazio' }, estado.escopo === 'BR'
+        ? 'Ainda não há respostas verificadas para o Brasil.'
+        : 'Ainda não há respostas verificadas para este Departamento Regional.'));
+      return;
+    }
+    var aberta = lista.filter(function (p) { return p.id === estado.pergunta; })[0] || null;
+
+    corpo.appendChild(el('div', { class: 'perguntas-lista', role: 'group', 'aria-label': 'Perguntas' },
+      lista.map(function (p) {
+        var ativa = !!aberta && aberta.id === p.id;
+        return el('button', {
+          type: 'button', id: 'perg-' + p.id, class: 'btn-pergunta',
+          'aria-expanded': ativa ? 'true' : 'false', 'aria-controls': 'perg-resposta',
+          onclick: function () {
+            estado.pergunta = ativa ? null : p.id;
+            estado.base = false;
+            renderPerguntas('perg-' + p.id);
+          }
+        }, p.pergunta);
+      })));
+
+    var painel = el('div', { id: 'perg-resposta', class: 'perg-resposta', role: 'region',
+      'aria-live': 'polite', 'aria-label': 'Resposta' });
+    painel.hidden = !aberta;
+    if (aberta) {
+      var fatos = Array.isArray(aberta.fatos) ? aberta.fatos : [];
+      painel.appendChild(el('h3', null, aberta.pergunta));
+      painel.appendChild(el('p', { class: 'perg-texto' }, aberta.resposta));
+      var rodape = el('div', { class: 'perg-rodape' },
+        el('span', { class: 'selo-verificada' },
+          doc.verificado_em ? '\u2713 Verificada em ' + doc.verificado_em : '\u2713 Verificada'));
+      if (fatos.length) {
+        rodape.appendChild(el('button', {
+          type: 'button', id: 'perg-btn-base', class: 'btn-link', 'aria-expanded': estado.base ? 'true' : 'false',
+          'aria-controls': 'perg-base',
+          onclick: function () { estado.base = !estado.base; renderPerguntas('perg-btn-base'); }
+        }, estado.base ? 'Ocultar base' : 'Ver base'));
+      }
+      painel.appendChild(rodape);
+      if (fatos.length) {
+        var base = el('ul', { id: 'perg-base', class: 'perg-base', 'aria-label': 'Fatos de origem' },
+          fatos.map(function (f) {
+            return el('li', null, el('span', { class: 'perg-fato' }, f.texto), el('span', { class: 'perg-fonte' }, f.fonte));
+          }));
+        base.hidden = !estado.base;
+        painel.appendChild(base);
+      }
+    }
+    corpo.appendChild(painel);
+    if (focarId && $(focarId)) $(focarId).focus();
   }
 
   // ------------------------------------------------------------------ visão Brasil
@@ -426,6 +502,11 @@
     var painel = $('confianca');
     painel.hidden = !painel.hidden;
     this.setAttribute('aria-expanded', painel.hidden ? 'false' : 'true');
+  });
+  $('btn-porque').addEventListener('click', function () {
+    var caixa = $('perguntas-explica');
+    caixa.hidden = !caixa.hidden;
+    this.setAttribute('aria-expanded', caixa.hidden ? 'false' : 'true');
   });
   window.addEventListener('hashchange', function () { if (estado.escopos) carregar(); });
 

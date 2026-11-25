@@ -5,6 +5,7 @@ Rotas:
 - ``GET /api/escopos``: BR e os 27 DRs, com nome por extenso.
 - ``GET /api/escopo/{escopo}``: ``site/data/{escopo}.json`` (escopo validado).
 - ``GET /api/regioes``: ``site/data/regioes.json``.
+- ``GET /api/perguntas/{escopo}``: ``site/data/perguntas_{escopo}.json`` (404 se não houver).
 - ``GET /api/pdf/{escopo}``: ``site/pdf/Executive_Briefing_SENAI_{escopo}.pdf``, se existir.
 - ``/figs``: arquivos de ``site/figs``.
 - ``GET /app.js``, ``GET /styles.css`` (e ``/static``): arquivos da página.
@@ -108,6 +109,12 @@ def dados_escopo(escopo: str) -> Any:
 def regioes() -> Any:
     """Resumo por região."""
     return ler_json("regioes")
+
+
+@app.get("/api/perguntas/{escopo}")
+def perguntas(escopo: str) -> Any:
+    """Perguntas verificadas do escopo (respostas pré-geradas e validadas)."""
+    return ler_json(f"perguntas_{validar_escopo(escopo)}")
 
 
 @app.get("/api/pdf/{escopo}")

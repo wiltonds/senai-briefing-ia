@@ -1,0 +1,156 @@
+{
+  "escopo": "AL",
+  "modelo": "claude-sonnet-5-5",
+  "versao_prompt": "v1",
+  "gerado_em_utc": "2026-11-25T19:34:38+00:00",
+  "perguntas": [
+    {
+      "id": "P1",
+      "pergunta": "Qual é o principal problema hoje?",
+      "resposta": "O resultado: AL tem 6 indicadores críticos e 5 de 12 atingidos. O mais grave é a expansão das receitas de serviços e convênios, com realizado de -R$ 2,5 mi e índice de -25,2%. Também preocupa a taxa de ocupação de egressos no setor industrial: realizado 30,4%, frente à meta de 45,0%.",
+      "fatos": [
+        {
+          "id": "F028",
+          "texto": "AL (Nordeste): 6 indicadores críticos; 5 de 12 atingidos. Críticos: 1 (67,6%); 2.1 (77,3%); 4.2 (77,3%); 12 (66,7%); 14.1 (68,9%); 14.2 (-25,2%).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F023",
+          "texto": "Indicador 14.2 (Expansão das receitas de serviços e convênios), 2025: meta R$ 10,0 mi, realizado -R$ 2,5 mi, índice -25,2%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F001",
+          "texto": "Indicador 1 (Taxa de ocupação de egressos no setor industrial), 2025: meta 45,0%, realizado 30,4%, índice 67,6%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "pergunta": "Como meu DR está frente ao Brasil?",
+      "resposta": "O quadro é misto. Em descarbonização, AL tem índice de 160,0% (mediana nacional dos DRs: 93,8%). Em empresas industriais atendidas por STI, 133,5% (mediana: 109,5%). Em ocupação de egressos, 67,6% (mediana: 75,2%). Em receitas de serviços e convênios, -25,2% (mediana: 122,0%). Há espaço para apoio consultivo do DN nessas frentes.",
+      "fatos": [
+        {
+          "id": "F006",
+          "texto": "Indicador 2.2: índice de AL 160,0%; mediana nacional dos DRs 93,8%; mediana da região Nordeste 86,6%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F014",
+          "texto": "Indicador 6: índice de AL 133,5%; mediana nacional dos DRs 109,5%; mediana da região Nordeste 114,1%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F002",
+          "texto": "Indicador 1: índice de AL 67,6%; mediana nacional dos DRs 75,2%; mediana da região Nordeste 67,6%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F024",
+          "texto": "Indicador 14.2: índice de AL -25,2%; mediana nacional dos DRs 122,0%; mediana da região Nordeste 83,0%.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "pergunta": "Vamos bater as metas de 2026?",
+      "resposta": "Na maioria, tudo indica que sim; em receitas, não. Consultorias de produtividade projetam 101,6% e empresas atendidas por STI, 117,5%. Descarbonização e pesquisa aplicada já atingiram a meta. Receitas de serviços e convênios têm risco alto: índice projetado de 16,7% e aceleração necessária de 20,9x o ritmo atual. A projeção é linear e ignora sazonalidade.",
+      "fatos": [
+        {
+          "id": "F029",
+          "texto": "Projeção 2026 de AL — indicador 2.1 (Expansão de consultorias com aumento de produtividade): meta 63, realizado até o mês 9: 48; índice projetado 101,6%; situação: no ritmo; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F032",
+          "texto": "Projeção 2026 de AL — indicador 6 (Empresas industriais atendidas por STI): meta 379, realizado até o mês 9: 334; índice projetado 117,5%; situação: no ritmo; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F030",
+          "texto": "Projeção 2026 de AL — indicador 2.2 (Expansão de consultorias com impacto em descarbonização): meta 6, realizado até o mês 9: 15; índice projetado 333,3%; situação: meta já atingida; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F031",
+          "texto": "Projeção 2026 de AL — indicador 2.3 (Expansão de projetos ativos de pesquisa aplicada): meta 4, realizado até o mês 9: 43; índice projetado 1.433,3%; situação: meta já atingida; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F033",
+          "texto": "Projeção 2026 de AL — indicador 14.2 (Expansão das receitas de serviços e convênios): meta R$ 14,0 mi, realizado até o mês 9: R$ 1,8 mi; índice projetado 16,7%; situação: risco alto; aceleração necessária de 20,9x o ritmo atual; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "pergunta": "Volume alto significa bom resultado?",
+      "resposta": "Não. Em AL, o volume está bom, mas o resultado está crítico. O índice de matrículas é 138,0%, enquanto o de empregabilidade é 67,6% e o de fidelização, 77,3%. Ou seja, matricular mais não garantiu que os egressos fossem empregados nem que os alunos permanecessem.",
+      "fatos": [
+        {
+          "id": "F027",
+          "texto": "AL: índice de matrículas 138,0%, índice de empregabilidade 67,6%, índice de fidelização 77,3%; leitura: volume ok, resultado crítico.",
+          "fonte": "Cruzamento: Atendimento Social × Plano Estratégico, 2025"
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "pergunta": "Quão confiáveis são esses números?",
+      "resposta": "Use com cautela. Há alertas de qualidade: 1 realizado negativo em receitas; 6 casos de índice acima de 200%, sinal de metas possivelmente subcalibradas; 10 metas de 2026 abaixo do realizado anterior; e 2 divergências entre fontes no número de empresas atendidas. Vale validar esses pontos antes de decisões definitivas.",
+      "fatos": [
+        {
+          "id": "F042",
+          "texto": "Regra Q05 (Realizado negativo) em AL: ocorrências: 1; itens: 14.2 (2025).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F043",
+          "texto": "Regra Q08 (Índice acima de 200%) em AL: ocorrências: 6; itens: 2.3 (2025), QUANTIDADE DE SERVIÇOS REALIZADOS (2025), 2.2 (2026), 2.3 (2026), EDUCAÇÃO PARA O TRABALHO (2026), EDUCAÇÃO PROFISSIONAL TÉCNICA DE NÍVEL MÉDIO (2026); recomendação: Avaliar se a meta está subcalibrada e revisar o planejamento.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F045",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior) em AL: ocorrências: 10; itens: 13.1 (2026), 2.2 (2026), 2.3 (2026), 6 (2026), EDUCAÇÃO PARA O TRABALHO (2026), EDUCAÇÃO PROFISSIONAL TÉCNICA DE NÍVEL MÉDIO (2026), FORMAÇÃO INICIAL E CONTINUADA (2026), QUANTIDADE DE EMPRESAS ATENDIDAS (2026), QUANTIDADE DE SERVIÇOS REALIZADOS (2026), TOTAL (2026); recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F044",
+          "texto": "Regra Q10 (Empresas atendidas diferem entre fontes) em AL: ocorrências: 2; itens: 6 x QUANTIDADE DE EMPRESAS ATENDIDAS (2025), 6 x QUANTIDADE DE EMPRESAS ATENDIDAS (2026).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "pergunta": "O que fazer agora?",
+      "resposta": "Priorize receita e empregabilidade. Primeiro, monte um plano de aceleração das receitas de serviços e convênios, com apoio do DN: imediato (4º tri/2026). Segundo, confira o registro do realizado negativo de receitas: imediato (4º tri/2026). Depois, revise as metas abaixo do já entregue ou registre justificativa: próximo ciclo de planejamento. Por fim, defina ações para empregabilidade de egressos: próximo ciclo de planejamento.",
+      "fatos": [
+        {
+          "id": "F033",
+          "texto": "Projeção 2026 de AL — indicador 14.2 (Expansão das receitas de serviços e convênios): meta R$ 14,0 mi, realizado até o mês 9: R$ 1,8 mi; índice projetado 16,7%; situação: risco alto; aceleração necessária de 20,9x o ritmo atual; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F042",
+          "texto": "Regra Q05 (Realizado negativo) em AL: ocorrências: 1; itens: 14.2 (2025).",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F045",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior) em AL: ocorrências: 10; itens: 13.1 (2026), 2.2 (2026), 2.3 (2026), 6 (2026), EDUCAÇÃO PARA O TRABALHO (2026), EDUCAÇÃO PROFISSIONAL TÉCNICA DE NÍVEL MÉDIO (2026), FORMAÇÃO INICIAL E CONTINUADA (2026), QUANTIDADE DE EMPRESAS ATENDIDAS (2026), QUANTIDADE DE SERVIÇOS REALIZADOS (2026), TOTAL (2026); recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F001",
+          "texto": "Indicador 1 (Taxa de ocupação de egressos no setor industrial), 2025: meta 45,0%, realizado 30,4%, índice 67,6%; farol crítico.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    }
+  ],
+  "removidas": []
+}

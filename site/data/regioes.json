@@ -440,7 +440,7 @@
       "titulo": "Sul: nenhum DR crítico em empregabilidade",
       "empregabilidade_mediana": "42,1%",
       "criticos_empregabilidade": "0 de 3",
-      "matriculas_mediana": "135,3%",
+      "matriculas_mediana": "135,2%",
       "numeros": [
         {
           "rotulo": "Empregabilidade (mediana)",
@@ -454,7 +454,7 @@
         },
         {
           "rotulo": "Matrículas (mediana)",
-          "valor": "135,3%",
+          "valor": "135,2%",
           "nota": "da meta"
         }
       ],

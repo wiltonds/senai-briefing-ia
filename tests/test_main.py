@@ -97,3 +97,10 @@ def test_app_nao_importa_src() -> None:
               "assert not [m for m in sys.modules if m == 'src' or m.startswith('src.')]")
     r = subprocess.run([sys.executable, "-c", codigo], cwd=main.RAIZ, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+def test_perguntas(cliente: TestClient) -> None:
+    (main.APP_DATA_DIR / "perguntas_BR.json").write_text(json.dumps({"perguntas": []}), encoding="utf-8")
+    assert cliente.get("/api/perguntas/br").json() == {"perguntas": []}
+    assert cliente.get("/api/perguntas/AL").status_code == 404
+    assert cliente.get("/api/perguntas/XX").status_code == 404

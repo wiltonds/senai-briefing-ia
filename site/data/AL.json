@@ -5,64 +5,71 @@
     "mes_referencia": "setembro de 2026",
     "data_coleta": "25/11/2026 14:23 (UTC)",
     "revisado_por": "Wilton Costa",
-    "tem_pdf": true
+    "tem_pdf": true,
+    "verificacao": {
+      "respostas_refeitas": "2",
+      "briefings_refeitos": "3",
+      "respostas_descartadas": "0",
+      "divergencias_revisao_humana": "1",
+      "texto": "Nesta edição, o verificador reprovou e a IA refez 2 respostas e 3 briefings. A revisão humana registrou 1 divergência entre fatos, corrigida na origem."
+    }
   },
   "briefing": {
-    "mensagem_central": "AL entrega volume acima da meta, com índice de matrículas de 138,0%, mas o resultado finalístico não acompanha: empregabilidade de egressos em 67,6% e fidelização em 77,3%. Dos 12 indicadores com dado, 5 estão atingidos e 6 estão críticos.",
+    "mensagem_central": "Alagoas entrega volume: o índice de matrículas é de 138,0%. O resultado finalístico não acompanha: empregabilidade de egressos tem índice de 67,6% e fidelização de alunos, índice de 77,3%.",
     "destaques": [
       {
         "titulo": "Volume de atendimento acima da meta",
-        "texto": "O índice de matrículas chega a 138,0%. As empresas industriais atendidas por STI somam 482, contra meta de 361 (índice 133,5%), acima da mediana nacional de 109,5%. A base de atendimento é sólida."
+        "texto": "O índice de matrículas é de 138,0%. As empresas industriais atendidas têm índice de 133,5%, acima do índice mediano nacional de 109,5%. O volume é uma base sólida para melhorar os resultados finalísticos."
       },
       {
-        "titulo": "Projeção 2026 favorável em consultorias e atendimento a empresas",
-        "texto": "Em projeção linear, as consultorias com aumento de produtividade chegam a 101,6% da meta de 2026, após 77,3% em 2025. As empresas industriais atendidas por STI projetam 117,5%. Ambas seguem no ritmo."
+        "titulo": "Pesquisa aplicada e descarbonização à frente da referência nacional",
+        "texto": "Projetos ativos de pesquisa aplicada têm índice de 1.166,7%, contra índice mediano nacional de 90,5%. Consultorias em descarbonização têm índice de 160,0%, contra índice mediano nacional de 93,8%."
       },
       {
-        "titulo": "Descarbonização e pesquisa aplicada acima da mediana nacional",
-        "texto": "Consultorias em descarbonização alcançam 160,0%, contra mediana nacional de 93,8%. Projetos de pesquisa aplicada chegam a 1.166,7%, contra 90,6%. Hipótese: parte desse resultado reflete metas subcalibradas."
+        "titulo": "Consultorias de produtividade em recuperação em 2026",
+        "texto": "Em 2025, o índice foi de 77,3%. Para 2026, a projeção linear indica índice projetado de 101,6%, no ritmo, sem considerar sazonalidade."
       }
     ],
     "pontos_atencao": [
       {
-        "titulo": "Resultado finalístico abaixo do volume",
-        "texto": "Empregabilidade de egressos atinge 67,6% da meta, contra 75,2% na mediana nacional; o realizado de 30,4% coincide com a mediana do Nordeste. Fidelização está em 77,3%, contra 85,5%."
+        "titulo": "Empregabilidade de egressos abaixo da meta",
+        "texto": "Meta de 45,0%, realizado de 30,4%, índice de 67,6%. O índice mediano nacional é de 75,2%. O índice mediano da região Nordeste é de 67,6%, igual ao de AL, o que sugere desafio compartilhado (hipótese)."
       },
       {
         "titulo": "Receitas de serviços e convênios em risco alto",
-        "texto": "As receitas fecharam 2025 em -R$ 2,5 mi, contra meta de R$ 10,0 mi. A projeção de 2026 é de 16,7% da meta e exige aceleração de 20,9x o ritmo atual."
+        "texto": "Em 2025, o realizado foi de -R$ 2,5 mi, com índice de -25,2%. Para 2026, a projeção linear indica índice projetado de 16,7% e exige aceleração de 20,9x o ritmo atual."
       },
       {
-        "titulo": "Metas 2026 abaixo do que já foi entregue",
-        "texto": "Em AL, 10 metas de 2026 ficam abaixo do realizado de 2025. Em pesquisa aplicada, a meta é 4 e o realizado foi 35; em descarbonização, 6 contra 8. Hipótese: metas subcalibradas."
+        "titulo": "Fidelização de alunos abaixo do esperado",
+        "texto": "Meta de 21,1%, realizado de 16,3%, índice de 77,3%. O índice mediano nacional é de 85,4% e o da região Nordeste, de 89,6%."
       },
       {
-        "titulo": "Gratuidade em áreas técnicas e envio de dados ao Data Lake",
-        "texto": "A destinação da gratuidade para áreas técnicas e estratégicas está em 12,2%, contra meta de 17,7% (mediana nacional 127,9%). O envio de dados ao Data Lake Nacional cumpre 2 de 3 etapas (índice 66,7%)."
+        "titulo": "Gratuidade em áreas técnicas e estratégicas",
+        "texto": "Meta de 17,7%, realizado de 12,2%, índice de 68,9%, contra índice mediano nacional de 127,9%. Hipótese: a menor destinação a áreas técnicas pode contribuir para a empregabilidade mais baixa."
       }
     ],
     "recomendacoes": [
       {
-        "titulo": "Converter volume em resultado: egressos e fidelização",
-        "texto": "DN e DR analisam, por curso, onde as matrículas não se convertem em emprego industrial nem em continuidade do aluno. Em seguida, definem ações de acompanhamento de egressos e de retenção.",
+        "titulo": "Priorizar empregabilidade e fidelização",
+        "texto": "DN e DR constroem juntos um plano de ação para empregabilidade de egressos e fidelização de alunos, com acompanhamento trimestral. O plano inclui testar a hipótese sobre a gratuidade em áreas técnicas.",
         "quem": "DN e DR",
         "quando": "imediato (4º tri/2026)"
       },
       {
-        "titulo": "Recuperar as receitas de serviços e convênios em 2026",
-        "texto": "O DR apresenta plano de recuperação das receitas, com carteira e cronograma mensal, e confere os dados de 2025. O DN acompanha como parceiro consultivo.",
+        "titulo": "Corrigir a rota das receitas em 2026",
+        "texto": "DR revisa o plano de receitas de serviços e convênios e confirma o registro do realizado negativo. DN apoia a análise, pois a meta de R$ 14,0 mi exige aceleração de 20,9x o ritmo atual.",
         "quem": "DN e DR",
         "quando": "imediato (4º tri/2026)"
       },
       {
-        "titulo": "Calibrar as metas de 2026",
-        "texto": "DN e DR revisam as metas de 2026 de pesquisa aplicada, descarbonização, empresas atendidas por STI e capacitação digital e ambiental, ou registram justificativa para mantê-las.",
+        "titulo": "Calibrar metas de 2026",
+        "texto": "DN e DR revisam as metas de 2026 abaixo do realizado de 2025 ou registram justificativa. Exemplos: pesquisa aplicada (meta 4, realizado 35) e colaboradores capacitados (meta 40,0%, realizado 66,0%).",
         "quem": "DN e DR",
         "quando": "próximo ciclo de planejamento"
       },
       {
-        "titulo": "Trilha de apoio do DN aos indicadores críticos",
-        "texto": "O DN oferece a AL trilha consultiva para os 6 indicadores críticos: empregabilidade, consultorias de produtividade, fidelização, envio de dados, gratuidade e receitas. O DR define as prioridades.",
+        "titulo": "Trilha de apoio consultiva do DN",
+        "texto": "DN oferece a AL uma trilha de apoio aos 6 indicadores críticos, incluindo o envio de dados ao Data Lake Nacional. DR define as prioridades da trilha.",
         "quem": "DN e DR",
         "quando": "imediato (4º tri/2026)"
       }

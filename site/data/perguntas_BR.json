@@ -1,0 +1,146 @@
+{
+  "escopo": "BR",
+  "modelo": "claude-sonnet-5-5",
+  "versao_prompt": "v1",
+  "gerado_em_utc": "2026-11-25T19:33:58+00:00",
+  "perguntas": [
+    {
+      "id": "P1",
+      "pergunta": "Qual é o principal problema hoje?",
+      "resposta": "O principal problema é a ocupação de egressos no setor industrial: realizado de 39,8% contra meta de 45,0%. Dos 26 DRs com dado, 14 estão em situação crítica. A fidelização de alunos também pede atenção: realizado de 17,7% contra meta de 20,8%.",
+      "fatos": [
+        {
+          "id": "F001",
+          "texto": "Indicador 1 (Taxa de ocupação de egressos no setor industrial), 2025: meta 45,0%, realizado 39,8%, índice 88,4%; farol atenção.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência); confirmado no Relatório de Gestão, p. 31, 73 do PDF"
+        },
+        {
+          "id": "F013",
+          "texto": "Indicador 1 (Taxa de ocupação de egressos no setor industrial): dos 26 DRs com dado, 14 críticos, 5 em atenção e 7 atingidos.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F006",
+          "texto": "Indicador 4.2 (Fidelização de alunos), 2025: meta 20,8%, realizado 17,7%, índice 85,1%; farol atenção.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência); confirmado no Relatório de Gestão, p. 47 do PDF"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "pergunta": "Quais DRs precisam de apoio prioritário?",
+      "resposta": "Dez de 27 DRs têm 4 ou mais indicadores críticos: AC, AL, AM, AP, BA, DF, MA, PA, RN e RR. O RN tem 7 indicadores críticos e AL tem 6. Sugere-se um diálogo consultivo com esses DRs para entender suas necessidades de apoio.",
+      "fatos": [
+        {
+          "id": "F028",
+          "texto": "10 de 27 DRs têm 4 ou mais indicadores críticos (AC, AL, AM, AP, BA, DF, MA, PA, RN, RR).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F037",
+          "texto": "RN (Nordeste): 7 indicadores críticos; 4 de 12 atingidos. Críticos: 1 (60,9%); 2.1 (64,5%); 2.2 (23,1%); 2.3 (77,3%); 4.2 (78,7%); 13.1 (3,0%); 14.2 (69,3%).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F030",
+          "texto": "AL (Nordeste): 6 indicadores críticos; 5 de 12 atingidos. Críticos: 1 (67,6%); 2.1 (77,3%); 4.2 (77,3%); 12 (66,7%); 14.1 (68,9%); 14.2 (-25,2%).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "pergunta": "Vamos bater as metas de 2026?",
+      "resposta": "Depende do indicador. Consultorias de produtividade estão em risco alto (índice projetado 78,8%). Consultorias de descarbonização estão no ritmo (117,3%), e pesquisa aplicada já atingiu a meta. Receitas de serviços e convênios têm consolidado incompleto. A projeção é linear e não considera sazonalidade.",
+      "fatos": [
+        {
+          "id": "F039",
+          "texto": "Projeção 2026 — indicador 2.1 (Expansão de consultorias com aumento de produtividade), com dados até o mês 9; base de 27 DRs; meta já atingida: 2; no ritmo: 3; exige aceleração: 0; risco alto: 22; aceleração mediana necessária de 3,9x o ritmo atual (entre os 22 DRs em risco alto ou que exigem aceleração); situação do DN: risco alto (índice projetado 78,8%); método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F040",
+          "texto": "Projeção 2026 — indicador 2.2 (Expansão de consultorias com impacto em descarbonização), com dados até o mês 9; base de 23 DRs; meta já atingida: 8; no ritmo: 4; exige aceleração: 4; risco alto: 7; aceleração mediana necessária de 2,4x o ritmo atual (entre os 11 DRs em risco alto ou que exigem aceleração); situação do DN: no ritmo (índice projetado 117,3%); método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F041",
+          "texto": "Projeção 2026 — indicador 2.3 (Expansão de projetos ativos de pesquisa aplicada), com dados até o mês 9; base de 19 DRs; meta já atingida: 13; no ritmo: 4; exige aceleração: 1; risco alto: 1; aceleração mediana necessária de 3,5x o ritmo atual (entre os 2 DRs em risco alto ou que exigem aceleração); situação do DN: meta já atingida (índice projetado 151,2%); método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F043",
+          "texto": "Projeção 2026 — indicador 14.2 (Expansão das receitas de serviços e convênios), com dados até o mês 9; base de 16 DRs; meta já atingida: 4; no ritmo: 1; exige aceleração: 1; risco alto: 10; aceleração mediana necessária de 3,7x o ritmo atual (entre os 11 DRs em risco alto ou que exigem aceleração); DRs fora da base por realizado zero suspeito: 11; situação do DN: consolidado incompleto; método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "pergunta": "Volume alto significa bom resultado?",
+      "resposta": "Não necessariamente. 23 DRs têm índice de matrículas maior ou igual a 100%, mas 13 deles têm índice de empregabilidade abaixo de 80%. A correlação entre os dois é de -0,26 (26 DRs) e não indica causa. Hipótese: o volume de matrículas não está alinhado à demanda de empregos da indústria.",
+      "fatos": [
+        {
+          "id": "F026",
+          "texto": "23 DRs têm índice de matrículas maior ou igual a 100%; destes, 13 têm índice de empregabilidade abaixo de 80% (AC, AL, DF, MA, MT, PA, PB, PE, PI, RN, RO, SE, TO).",
+          "fonte": "Cruzamento: Atendimento Social × Plano Estratégico, 2025"
+        },
+        {
+          "id": "F027",
+          "texto": "Correlação de Spearman entre o índice de matrículas e o índice de empregabilidade: -0,26 (26 DRs). Correlação não indica causa.",
+          "fonte": "Cruzamento: Atendimento Social × Plano Estratégico, 2025"
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "pergunta": "Quão confiáveis são esses números?",
+      "resposta": "Os números nacionais de 2025 são confiáveis: 12 de 12 valores foram confirmados no Relatório de Gestão. Há ressalvas nos dados dos DRs: 20 ocorrências de indicador não apurado, afetando 29 unidades, e 255 metas de 2026 abaixo do realizado anterior. Nas receitas de 2026, o total nacional difere da soma das unidades em -20,3%.",
+      "fatos": [
+        {
+          "id": "F064",
+          "texto": "12 de 12 valores nacionais de 2025 confirmados no Relatório de Gestão.",
+          "fonte": "Fonte: Relatório de Gestão 2025, p. 31, 43, 45, 47, 49, 50, 55, 59, 66, 67, 73, 75 do PDF"
+        },
+        {
+          "id": "F051",
+          "texto": "Regra Q01 (Indicador não apurado, gravidade alta): ocorrências: 20; unidades afetadas: 29; recomendação: Confirmar com a área responsável se o indicador foi descontinuado, ainda não foi apurado ou está com falha de carga no portal.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F063",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior, gravidade media): ocorrências: 255; unidades afetadas: 27; recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        },
+        {
+          "id": "F062",
+          "texto": "Regra Q12 (DN difere da soma das unidades, gravidade informativa): ocorrências: 1; unidades afetadas: 1; caso: indicador 14.2 (2026, até o mês 9): Realizado nacional (DN) de R$ 336,0 mi contra R$ 421,5 mi na soma dos DRs e do SENAI CETIQT (28 de 28 unidades com dado), diferença de -20,3%; recomendação: Conferir a regra de consolidação nacional antes de comparar DN com DRs.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "pergunta": "O que fazer agora?",
+      "resposta": "Primeiro, oferecer apoio consultivo aos 10 DRs com 4 ou mais indicadores críticos: imediato (4º tri/2026). Segundo, acelerar as consultorias de produtividade, hoje em risco alto: imediato (4º tri/2026). Terceiro, revisar as 255 metas de 2026 abaixo do realizado anterior: próximo ciclo de planejamento.",
+      "fatos": [
+        {
+          "id": "F028",
+          "texto": "10 de 27 DRs têm 4 ou mais indicadores críticos (AC, AL, AM, AP, BA, DF, MA, PA, RN, RR).",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)"
+        },
+        {
+          "id": "F039",
+          "texto": "Projeção 2026 — indicador 2.1 (Expansão de consultorias com aumento de produtividade), com dados até o mês 9; base de 27 DRs; meta já atingida: 2; no ritmo: 3; exige aceleração: 0; risco alto: 22; aceleração mediana necessária de 3,9x o ritmo atual (entre os 22 DRs em risco alto ou que exigem aceleração); situação do DN: risco alto (índice projetado 78,8%); método: linear (realizado/9*12); não considera sazonalidade.",
+          "fonte": "Fonte: Plano Estratégico Sistêmico 2026 (Portal da Transparência); projeção para dezembro, no ritmo atual"
+        },
+        {
+          "id": "F063",
+          "texto": "Regra Q13 (Meta abaixo do realizado anterior, gravidade media): ocorrências: 255; unidades afetadas: 27; recomendação: meta abaixo do já entregue: revisar calibração ou registrar justificativa.",
+          "fonte": "Fonte: verificação de qualidade dos dados do Portal da Transparência"
+        }
+      ]
+    }
+  ],
+  "removidas": []
+}

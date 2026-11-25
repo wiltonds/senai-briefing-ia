@@ -1,7 +1,7 @@
 """Pergunte ao briefing: respostas pré-geradas a um catálogo fixo de perguntas.
 
 Fluxo: lê a ficha ``outputs/fatos_{escopo}.json`` (gera com ``src.fatos`` se não
-existir) e ``prompts/perguntas_v1.md`` (system); faz 1 chamada por escopo com as
+existir) e ``prompts/perguntas_v4.md`` (system); faz 1 chamada por escopo com as
 6 perguntas do catálogo; valida cada resposta com as regras de ``src.validador``
 (números e UFs presentes nos fatos citados, causa só como hipótese, jargão,
 código de indicador) e mais: ≤70 palavras, ≥1 fato citado, fatos existentes.
@@ -58,9 +58,9 @@ RAIZ = Path(__file__).resolve().parents[1]
 OUTPUTS_DIR = RAIZ / "outputs"
 APP_DATA_DIR = OUTPUTS_DIR / "app_data"
 LOGS_DIR = RAIZ / "logs"
-PROMPT_PATH = RAIZ / "prompts" / "perguntas_v1.md"
+VERSAO_PROMPT = "v4"
+PROMPT_PATH = RAIZ / "prompts" / f"perguntas_{VERSAO_PROMPT}.md"
 ENV_PATH = RAIZ / ".env"
-VERSAO_PROMPT = "v1"
 
 MAX_PALAVRAS_RESPOSTA = 70
 RECUSA = "Os dados oficiais disponíveis não permitem responder com segurança."
@@ -340,6 +340,7 @@ def gerar_perguntas(
         "modelo": modelo,
         "versao_prompt": VERSAO_PROMPT,
         "gerado_em_utc": agora.isoformat(timespec="seconds"),
+        "verificado_em": agora.strftime("%d/%m/%Y"),  # texto pronto para o selo do front
         "perguntas": publicar(aprovadas, fatos, escopo),
         "removidas": list(pendentes),
     }

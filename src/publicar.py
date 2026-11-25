@@ -4,10 +4,14 @@ Conteúdo de ``site/`` (recriado do zero a cada publicação; entra no Git):
 - ``index.html``, ``app.js``, ``styles.css``: cópia de ``app/static``;
 - ``README.md``: cabeçalho do Spaces + descrição curta;
 - ``data/{escopo}.json`` (BR + 27 UFs) e ``data/regioes.json``: de ``outputs/app_data``;
+- ``data/perguntas_{escopo}.json``: os que existirem em ``outputs/app_data`` (opcionais);
 - ``data/escopos.json``: lista ``[{escopo, nome}]`` (a mesma de ``/api/escopos``);
 - ``figs/*.png``: de ``outputs/figs``;
 - ``pdf/Executive_Briefing_SENAI_{escopo}.pdf``: os que existirem em ``outputs/``;
 - ``MANIFESTO.json``: data/hora, revisor e sha256 de cada arquivo.
+
+Antes de copiar, ``src.revalidar`` confere briefings e perguntas contra a ficha de
+fatos atual; se algum texto estiver desatualizado, nada é publicado.
 
 Nada fora dessa seleção é copiado; ``verificar_site`` recusa a publicação se
 aparecer ``.env``, ``data/raw``, logs, ``src/``, ``tests/`` ou código Python.
@@ -28,6 +32,7 @@ from pathlib import Path
 from typing import Any
 
 from src.produto import ESCOPOS, NOMES
+from src.revalidar import revalidar
 
 logger = logging.getLogger("publicar")
 
@@ -99,6 +104,10 @@ def selecionar(outputs_dir: Path, static_dir: Path) -> list[tuple[Path, str]]:
     if faltando:
         raise ErroPublicacao("Nada publicado; faltam (rode python -m src.produto): "
                              + ", ".join(faltando))
+    for escopo in ESCOPOS:
+        origem = app_data / f"perguntas_{escopo}.json"
+        if origem.is_file():
+            itens.append((origem, f"data/{origem.name}"))
     for origem in sorted((outputs_dir / "figs").glob("*.png")):
         if origem.is_file():
             itens.append((origem, f"figs/{origem.name}"))
@@ -128,6 +137,13 @@ def publicar(revisado_por: str, outputs_dir: Path = OUTPUTS_DIR,
     if not revisor:
         raise ErroPublicacao("Informe quem revisou (--revisado-por).")
     itens = selecionar(outputs_dir, static_dir)
+    reprovados = revalidar(outputs_dir)
+    if reprovados:
+        for escopo, erros in reprovados.items():
+            for e in erros:
+                logger.error("Revalidação %s: %s", escopo, e)
+        raise ErroPublicacao("Nada publicado; texto desatualizado em "
+                             + ", ".join(reprovados) + "; regere o escopo.")
 
     if site_dir.exists():
         shutil.rmtree(site_dir)

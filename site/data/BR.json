@@ -5,7 +5,14 @@
     "mes_referencia": "setembro de 2026",
     "data_coleta": "25/11/2026 14:23 (UTC)",
     "revisado_por": "Wilton Costa",
-    "tem_pdf": true
+    "tem_pdf": true,
+    "verificacao": {
+      "respostas_refeitas": "2",
+      "briefings_refeitos": "3",
+      "respostas_descartadas": "0",
+      "divergencias_revisao_humana": "1",
+      "texto": "Nesta edição, o verificador reprovou e a IA refez 2 respostas e 3 briefings. A revisão humana registrou 1 divergência entre fatos, corrigida na origem."
+    }
   },
   "briefing": {
     "mensagem_central": "O SENAI entrega volume acima do planejado, mas a empregabilidade de egressos ficou em 39,8%, abaixo da meta de 45,0%. Dos 23 DRs com índice de matrículas maior ou igual a 100%, 13 têm índice de empregabilidade abaixo de 80%.",

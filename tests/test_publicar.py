@@ -136,3 +136,13 @@ def test_recusa_se_faltar_escopo(outputs: Path, static: Path, tmp_path: Path) ->
 def test_cli_exige_revisado_por() -> None:
     with pytest.raises(SystemExit):
         publicar.main([])
+
+
+def test_copia_perguntas_existentes(outputs: Path, static: Path, tmp_path: Path) -> None:
+    (outputs / "app_data" / "perguntas_BR.json").write_text('{"perguntas": []}', encoding="utf-8")
+    (outputs / "app_data" / "perguntas_XX.json").write_text("{}", encoding="utf-8")  # escopo inválido
+    site = tmp_path / "site"
+    m = publicar.publicar("A", outputs, site, static)
+    arquivos = _arquivos(site)
+    assert "data/perguntas_BR.json" in arquivos and "data/perguntas_XX.json" not in arquivos
+    assert "data/perguntas_BR.json" in {a["arquivo"] for a in m["arquivos"]}

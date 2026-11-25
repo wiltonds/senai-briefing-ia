@@ -210,3 +210,51 @@ def test_indicadores_dr_status_por_criticos(app_data: Path, uf: str, n_criticos:
 def test_status_por_criticos_limites() -> None:
     assert [status_por_criticos(n) for n in (0, 1, 3, 4, 9)] == [
         "atingido", "atencao", "atencao", "critico", "critico"]
+
+
+# --------------------------------------------------------------------------
+# meta.verificacao (logs da edição + DECISOES.md)
+# --------------------------------------------------------------------------
+
+def _log(pasta: Path, nome: str, doc: dict) -> None:
+    (pasta / nome).write_text(json.dumps(doc), encoding="utf-8")
+
+
+def test_verificacao_da_edicao_usa_log_mais_recente_e_marcas(tmp_path: Path) -> None:
+    from src.produto import verificacao_da_edicao
+    logs = tmp_path / "logs"
+    logs.mkdir()
+    # perguntas BR: log antigo (ignorado) e recente com P6 reprovada e refeita, P2 descartada
+    _log(logs, "perguntas_BR_20261125T100000Z.json",
+         {"aprovadas": ["P1"], "removidas": [], "tentativas": [{"erros": {"P1": ["x"]}}, {"erros": {}}]})
+    _log(logs, "perguntas_BR_20261125T200000Z.json",
+         {"aprovadas": ["P1", "P6"], "removidas": ["P2"],
+          "tentativas": [{"erros": {"P6": ["x"], "P2": ["y"]}}, {"erros": {"P2": ["y"]}}, {"erros": {"P2": ["y"]}}]})
+    _log(logs, "perguntas_SP_20261125T200000Z.json",
+         {"aprovadas": ["P1"], "removidas": [], "tentativas": [{"erros": {}}]})
+    # briefing: AL refeito (2 tentativas), SP aprovado de primeira, BR em contingência
+    _log(logs, "geracao_AL_20261125T200000Z.json", {"status": "aprovado", "tentativas": [{}, {}]})
+    _log(logs, "geracao_SP_20261125T200000Z.json", {"status": "aprovado", "tentativas": [{}]})
+    _log(logs, "geracao_BR_20261125T200000Z.json", {"status": "contingencia", "tentativas": [{}, {}, {}]})
+    decisoes = tmp_path / "DECISOES.md"
+    decisoes.write_text("| a | [revisao-humana] x | y | z |\n| b | sem marca | y | z |\n", encoding="utf-8")
+
+    v = verificacao_da_edicao(logs, decisoes)
+    assert (v["respostas_refeitas"], v["briefings_refeitos"], v["respostas_descartadas"],
+            v["divergencias_revisao_humana"]) == ("1", "1", "1", "1")
+    assert v["texto"] == ("Nesta edição, o verificador reprovou e a IA refez 1 resposta e 1 briefing; "
+                          "1 resposta foi descartada. A revisão humana registrou 1 divergência entre fatos, "
+                          "corrigida na origem.")
+
+
+def test_verificacao_sem_logs_nem_decisoes(tmp_path: Path) -> None:
+    from src.produto import verificacao_da_edicao
+    v = verificacao_da_edicao(tmp_path / "nao_existe", tmp_path / "nao_existe.md")
+    assert v["respostas_refeitas"] == v["divergencias_revisao_humana"] == "0"
+    assert "0 respostas e 0 briefings" in v["texto"]
+
+
+@pytest.mark.parametrize("escopo", ["BR", "SP"])
+def test_meta_traz_verificacao(app_data: Path, escopo: str) -> None:
+    verif = _ler(app_data, escopo)["meta"]["verificacao"]
+    assert isinstance(verif["texto"], str) and verif["texto"].startswith("Nesta edição")

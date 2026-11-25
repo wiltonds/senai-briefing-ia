@@ -1,61 +1,61 @@
 ﻿regiao,cod_indicador,indicador,n_drs,mediana_realizado,mediana_indice,n_criticos
-Centro-Oeste,1,Taxa de ocupação de egressos no setor industrial,4,32.3,71.78,2
-Centro-Oeste,2.1,Expansão de consultorias com aumento de produtividade,4,153.0,119.22,1
-Centro-Oeste,2.2,Expansão de consultorias com impacto em descarbonização,4,23.0,89.58,1
-Centro-Oeste,2.3,Expansão de projetos ativos de pesquisa aplicada,3,35.0,97.22,1
-Centro-Oeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",4,20.4,120.29,1
-Centro-Oeste,4.2,Fidelização de alunos,4,17.3,83.39,1
-Centro-Oeste,6,Empresas industriais atendidas por STI,4,526.5,113.87,0
-Centro-Oeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,4,17.3,162.49,1
+Centro-Oeste,1,Taxa de ocupação de egressos no setor industrial,4,32.3,71.77777777777777,2
+Centro-Oeste,2.1,Expansão de consultorias com aumento de produtividade,4,153.0,119.2205196535643,1
+Centro-Oeste,2.2,Expansão de consultorias com impacto em descarbonização,4,23.0,89.58333333333333,1
+Centro-Oeste,2.3,Expansão de projetos ativos de pesquisa aplicada,3,35.0,97.22222222222221,1
+Centro-Oeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",4,20.4,120.28805120910384,1
+Centro-Oeste,4.2,Fidelização de alunos,4,17.3,83.38888888888889,1
+Centro-Oeste,6,Empresas industriais atendidas por STI,4,526.5,113.87296037296036,0
+Centro-Oeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,4,17.299999999999997,162.49275362318838,1
 Centro-Oeste,12,Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço),4,3.0,125.0,1
-Centro-Oeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,3,53.5,89.17,1
-Centro-Oeste,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,4,29.0,152.66,0
-Centro-Oeste,14.2,Expansão das receitas de serviços e convênios,3,36913080.93,83.05,1
-Nordeste,1,Taxa de ocupação de egressos no setor industrial,9,30.4,67.56,7
-Nordeste,2.1,Expansão de consultorias com aumento de produtividade,9,57.0,95.79,3
-Nordeste,2.2,Expansão de consultorias com impacto em descarbonização,8,16.0,86.55,2
+Centro-Oeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,3,53.5,89.16666666666667,1
+Centro-Oeste,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,4,29.0,152.65636105188344,0
+Centro-Oeste,14.2,Expansão das receitas de serviços e convênios,3,36913080.93,83.0525409923701,1
+Nordeste,1,Taxa de ocupação de egressos no setor industrial,9,30.4,67.55555555555556,7
+Nordeste,2.1,Expansão de consultorias com aumento de produtividade,9,57.0,95.78947368421052,3
+Nordeste,2.2,Expansão de consultorias com impacto em descarbonização,8,16.0,86.54761904761904,2
 Nordeste,2.3,Expansão de projetos ativos de pesquisa aplicada,7,24.0,150.0,3
-Nordeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",9,26.2,135.05,1
-Nordeste,4.2,Fidelização de alunos,9,14.8,89.63,4
-Nordeste,6,Empresas industriais atendidas por STI,9,452.0,114.14,1
-Nordeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,9,16.5,203.7,0
+Nordeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",9,26.2,135.0515463917526,1
+Nordeste,4.2,Fidelização de alunos,9,14.8,89.63414634146342,4
+Nordeste,6,Empresas industriais atendidas por STI,9,452.0,114.14141414141415,1
+Nordeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,9,16.5,203.70370370370372,0
 Nordeste,12,Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço),9,2.0,100.0,2
-Nordeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,9,63.3,130.83,2
+Nordeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,9,63.3,130.83333333333334,2
 Nordeste,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,9,17.9,144.0,2
-Nordeste,14.2,Expansão das receitas de serviços e convênios,7,7375296.52,82.99,3
-Norte,1,Taxa de ocupação de egressos no setor industrial,6,25.9,62.68,5
-Norte,2.1,Expansão de consultorias com aumento de produtividade,7,44.0,94.74,2
-Norte,2.2,Expansão de consultorias com impacto em descarbonização,4,6.5,71.88,2
-Norte,2.3,Expansão de projetos ativos de pesquisa aplicada,3,2.0,58.33,2
-Norte,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",7,16.2,90.0,1
-Norte,4.2,Fidelização de alunos,7,19.5,83.47,3
-Norte,6,Empresas industriais atendidas por STI,7,79.0,109.72,2
-Norte,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,7,21.7,185.93,1
+Nordeste,14.2,Expansão das receitas de serviços e convênios,7,7375296.52,82.99084950362946,3
+Norte,1,Taxa de ocupação de egressos no setor industrial,6,25.9,62.682539682539684,5
+Norte,2.1,Expansão de consultorias com aumento de produtividade,7,44.0,94.73684210526315,2
+Norte,2.2,Expansão de consultorias com impacto em descarbonização,4,6.5,71.875,2
+Norte,2.3,Expansão de projetos ativos de pesquisa aplicada,3,2.0,58.333333333333336,2
+Norte,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",7,16.2,89.99999999999999,1
+Norte,4.2,Fidelização de alunos,7,19.5,83.47107438016529,3
+Norte,6,Empresas industriais atendidas por STI,7,79.0,109.72222222222223,2
+Norte,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,7,21.7,185.92964824120602,1
 Norte,12,Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço),7,1.0,50.0,4
 Norte,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,7,65.3,122.0,1
-Norte,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,7,22.4,132.1,1
-Norte,14.2,Expansão das receitas de serviços e convênios,6,2911493.76,163.61,2
-Sudeste,1,Taxa de ocupação de egressos no setor industrial,4,45.1,109.61,0
-Sudeste,2.1,Expansão de consultorias com aumento de produtividade,4,467.0,103.3,0
-Sudeste,2.2,Expansão de consultorias com impacto em descarbonização,4,92.5,109.78,1
-Sudeste,2.3,Expansão de projetos ativos de pesquisa aplicada,4,82.5,68.17,3
-Sudeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",4,40.8,210.31,0
-Sudeste,4.2,Fidelização de alunos,4,19.2,90.2,1
-Sudeste,6,Empresas industriais atendidas por STI,4,1431.5,94.06,0
-Sudeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,4,27.75,210.43,0
+Norte,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,7,22.4,132.0987654320988,1
+Norte,14.2,Expansão das receitas de serviços e convênios,6,2911493.7649999997,163.61162061421584,2
+Sudeste,1,Taxa de ocupação de egressos no setor industrial,4,45.1,109.61111111111111,0
+Sudeste,2.1,Expansão de consultorias com aumento de produtividade,4,467.0,103.29545454545453,0
+Sudeste,2.2,Expansão de consultorias com impacto em descarbonização,4,92.5,109.77842003853564,1
+Sudeste,2.3,Expansão de projetos ativos de pesquisa aplicada,4,82.5,68.1713277219658,3
+Sudeste,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",4,40.8,210.30927835051548,0
+Sudeste,4.2,Fidelização de alunos,4,19.2,90.20199629147433,1
+Sudeste,6,Empresas industriais atendidas por STI,4,1431.5,94.05950127116353,0
+Sudeste,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,4,27.75,210.42990654205607,0
 Sudeste,12,Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço),4,3.0,100.0,1
-Sudeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,4,38.85,178.17,1
-Sudeste,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,4,24.55,103.05,1
-Sudeste,14.2,Expansão das receitas de serviços e convênios,3,62223877.93,129.68,0
-Sul,1,Taxa de ocupação de egressos no setor industrial,3,42.1,93.56,0
-Sul,2.1,Expansão de consultorias com aumento de produtividade,3,502.0,101.01,0
-Sul,2.2,Expansão de consultorias com impacto em descarbonização,3,153.0,139.09,0
-Sul,2.3,Expansão de projetos ativos de pesquisa aplicada,3,104.0,113.69,0
-Sul,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",3,47.3,243.81,0
-Sul,4.2,Fidelização de alunos,3,16.7,74.56,2
-Sul,6,Empresas industriais atendidas por STI,3,2287.0,111.78,0
-Sul,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,3,14.6,169.77,1
+Sudeste,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,4,38.85,178.16666666666669,1
+Sudeste,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,4,24.549999999999997,103.0528096891976,1
+Sudeste,14.2,Expansão das receitas de serviços e convênios,3,62223877.93,129.6761558398752,0
+Sul,1,Taxa de ocupação de egressos no setor industrial,3,42.1,93.55555555555556,0
+Sul,2.1,Expansão de consultorias com aumento de produtividade,3,502.0,101.00603621730382,0
+Sul,2.2,Expansão de consultorias com impacto em descarbonização,3,153.0,139.0909090909091,0
+Sul,2.3,Expansão de projetos ativos de pesquisa aplicada,3,104.0,113.68821292775667,0
+Sul,3,"Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria",3,47.3,243.81443298969074,0
+Sul,4.2,Fidelização de alunos,3,16.7,74.55621301775149,2
+Sul,6,Empresas industriais atendidas por STI,3,2287.0,111.77707676130389,0
+Sul,7,Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI,3,14.6,169.76744186046514,1
 Sul,12,Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço),3,2.0,100.0,0
-Sul,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,2,58.55,161.54,0
-Sul,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,3,18.5,105.11,0
-Sul,14.2,Expansão das receitas de serviços e convênios,3,62353527.33,147.12,0
+Sul,13.1,Percentual de colaboradores capacitados nas competências digitais e ambientais,2,58.55,161.54166666666669,0
+Sul,14.1,Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria,3,18.5,105.11363636363636,0
+Sul,14.2,Expansão das receitas de serviços e convênios,3,62353527.33,147.11690327216854,0

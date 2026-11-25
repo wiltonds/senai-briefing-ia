@@ -5,7 +5,14 @@
     "mes_referencia": "setembro de 2026",
     "data_coleta": "25/11/2026 14:23 (UTC)",
     "revisado_por": null,
-    "tem_pdf": false
+    "tem_pdf": false,
+    "verificacao": {
+      "respostas_refeitas": "2",
+      "briefings_refeitos": "3",
+      "respostas_descartadas": "0",
+      "divergencias_revisao_humana": "1",
+      "texto": "Nesta edição, o verificador reprovou e a IA refez 2 respostas e 3 briefings. A revisão humana registrou 1 divergência entre fatos, corrigida na origem."
+    }
   },
   "briefing": null,
   "kpis": [

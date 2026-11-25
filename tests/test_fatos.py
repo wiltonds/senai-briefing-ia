@@ -270,8 +270,35 @@ def observacoes(fatos: list[dict], escopo: str) -> list[tuple[tuple[str, str, st
     return obs
 
 
+TODOS_ESCOPOS = ["BR", "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT",
+                 "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO"]
+
+
+def _divergentes(obs: list[tuple[tuple[str, str, str], str, str]]) -> dict:
+    por_chave: dict[tuple, dict[str, list[str]]] = {}
+    for chave, valor, fid in obs:
+        por_chave.setdefault(chave, {}).setdefault(valor, []).append(fid)
+    return {c: v for c, v in por_chave.items() if len(v) > 1}
+
+
 @requer_dados
-@pytest.mark.parametrize("escopo", ["BR", "AL"])
+def test_todos_os_escopos_e_validos(dados):
+    from src.fatos import ufs_validas
+    assert sorted(TODOS_ESCOPOS[1:]) == ufs_validas(dados)
+
+
+@requer_dados
+def test_mesmo_numero_mesmo_texto_entre_todas_as_fichas(dados):
+    """Mesmo indicador/ano/unidade => mesmo texto em BR + 27 DRs (ex.: SP 85,4% x 85,5%)."""
+    obs = []
+    for escopo in TODOS_ESCOPOS:
+        obs += [(c, v, f"{escopo}:{fid}") for c, v, fid in observacoes(gerar_fatos(dados, escopo), escopo)]
+    divergentes = _divergentes(obs)
+    assert not divergentes, f"mesmo (unidade, indicador, métrica) com textos diferentes: {divergentes}"
+
+
+@requer_dados
+@pytest.mark.parametrize("escopo", TODOS_ESCOPOS)
 def test_mesmo_numero_mesmo_texto_em_toda_a_ficha(dados, escopo):
     obs = observacoes(gerar_fatos(dados, escopo), escopo)
     por_chave: dict[tuple, dict[str, list[str]]] = {}
