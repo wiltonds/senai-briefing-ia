@@ -1,5 +1,6 @@
 # Projeto senai-briefing-ia
-Pipeline: coleta → normaliza → qualidade → diagnostico → projecao → (fatos → LLM → validador → app).
+Pipeline: coleta → normaliza → qualidade → diagnostico → projecao → (fatos → LLM → validador) → produto → app.
+App: `python -m src.produto` gera outputs/app_data; `uvicorn app.main:app` serve a página (app/static) e a API.
 Leia SPEC.md e DECISOES.md antes de mudanças relevantes.
 
 ## Convenções

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Briefing executivo SENAI</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F6F9}
+a{color:#1F3A5F}a:hover{color:#142840}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1B2430; min-height: 100vh; background: #F4F6F9">
+  <header style="background: #1F3A5F; color: #FFFFFF; padding: 16px 24px">
+    <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 19px; font-weight: 700">Inteligência de Gestão SENAI</div>
+        <div style="font-size: 13px; color: #C9D6E6">Briefing executivo e assistente com dados oficiais verificados</div>
+      </div>
+      <div style="font-size: 12px; color: #C9D6E6; border: 1px solid #6F88A8; border-radius: 999px; padding: 6px 12px">Dados até set/2026 · atualizado em 25/11/2026</div>
+    </div>
+  </header>
+
+  <main style="max-width: 1160px; margin: 0 auto; padding: 20px 24px 48px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end">
+        <sc-if value="{{ emDR }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ voltarBR }}" style="font-family: inherit; font-size: 14px; font-weight: 600; background: #FFFFFF; color: #1F3A5F; border: 1px solid #B8C2CF; border-radius: 8px; padding: 10px 14px; min-height: 44px; cursor: pointer">← Brasil</button>
+        </sc-if>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <label for="escopo" style="font-size: 12px; font-weight: 600; color: #4A5568">Ver o briefing de</label>
+          <select id="escopo" value="{{ escopo }}" onChange="{{ trocar }}" style="font-family: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid #B8C2CF; border-radius: 8px; background: #FFFFFF; min-width: 260px; min-height: 44px">
+              <sc-for list="{{ opcoes }}" as="o" hint-placeholder-count="28"><option value="{{ o.v }}">{{ o.n }}</option></sc-for>
+          </select>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button onClick="{{ alternarSelo }}" style="font-family: inherit; font-size: 14px; font-weight: 600; background: #E8F5E9; color: #1B5E20; border: 1px solid #A5D6A7; border-radius: 999px; padding: 10px 14px; min-height: 44px; cursor: pointer; display: flex; align-items: center; gap: 6px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Números verificados
+        </button>
+        <button style="font-family: inherit; font-size: 14px; font-weight: 600; background: #FFFFFF; color: #1F3A5F; border: 1px solid #B8C2CF; border-radius: 8px; padding: 10px 14px; min-height: 44px; cursor: pointer">Exportar PDF</button>
+      </div>
+    </div>
+
+    <sc-if value="{{ seloAberto }}" hint-placeholder-val="{{ false }}">
+      <section style="background: #FFFFFF; border: 1px solid #A5D6A7; border-radius: 12px; padding: 18px 22px; display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 16px; font-weight: 700; color: #1B5E20">Por que você pode confiar nestes números</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; line-height: 1.45; color: #374151">
+          <div style="flex: 1 1 220px"><strong>1. Dados oficiais.</strong> Coletados do Portal da Transparência (27 DRs e DN).</div>
+          <div style="flex: 1 1 220px"><strong>2. Conferência dupla.</strong> Números nacionais confirmados no Relatório de Gestão 2025 (12 de 12).</div>
+          <div style="flex: 1 1 220px"><strong>3. A IA só redige.</strong> Usa apenas fatos conferidos; não calcula nem pesquisa fora.</div>
+          <div style="flex: 1 1 220px"><strong>4. Verificação e revisão.</strong> Todo número é checado na fonte e um analista revisa.</div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ semDados }}" hint-placeholder-val="{{ false }}">
+      <section style="background: #FFFFFF; border-radius: 12px; padding: 28px; border: 1px solid #DCE3EC; font-size: 16px; color: #374151">Briefing de {{ nomeSel }} ainda não gerado neste protótipo. No produto, os 27 DRs ficam disponíveis, gerados pelo mesmo pipeline.</section>
+    </sc-if>
+
+    <sc-if value="{{ temDados }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <section style="background: #1F3A5F; color: #FFFFFF; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #C9D6E6">Mensagem central · {{ nome }}</div>
+          <p style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 500">{{ mensagem }}</p>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 8px">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px">
+            <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+              <button onClick="{{ k.abrir }}" style="flex: 1 1 230px; font-family: inherit; text-align: left; cursor: pointer; background: #FFFFFF; border-radius: 12px; padding: 14px 16px; border: {{ k.borda }}; display: flex; flex-direction: column; gap: 6px">
+                <span style="font-size: 13px; font-weight: 600; color: #4A5568">{{ k.rotulo }}</span>
+                <span title="{{ k.fonte }}" style="font-size: 30px; font-weight: 700; line-height: 1.1; text-decoration: underline dotted #9AA5B4; text-underline-offset: 6px">{{ k.valor }}</span>
+                <span style="font-size: 13px; color: #4A5568">{{ k.comparacao }}</span>
+                <span style="position: relative; display: block; height: 8px; background: #E7EBF0; border-radius: 4px; margin-top: 2px">
+                  <span style="position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; width: {{ k.largura }}; background: {{ k.cor }}"></span>
+                  <span style="position: absolute; top: -4px; bottom: -4px; width: 2px; background: #1B2430; left: 66%"></span>
+                </span>
+                <span style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600">
+                  <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 999px; background: {{ k.cor }}"></span>{{ k.status }}</span>
+                  <span style="color: #1F3A5F">{{ k.acao }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ temDetalhe }}" hint-placeholder-val="{{ false }}">
+            <div style="background: #FFFFFF; border: 1px solid #1F3A5F; border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; gap: 8px">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                <div style="font-size: 16px; font-weight: 700; color: #1F3A5F">{{ detalhe.titulo }}</div>
+                <button onClick="{{ fechar }}" style="font-family: inherit; font-size: 14px; background: none; border: none; color: #1F3A5F; cursor: pointer; min-height: 44px">Fechar</button>
+              </div>
+              <sc-for list="{{ detalhe.linhas }}" as="l" hint-placeholder-count="4">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 0; border-bottom: 1px solid #EEF1F5; font-size: 14px">
+                  <span style="display: flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; border-radius: 999px; background: {{ l.cor }}"></span>{{ l.nome }}</span>
+                  <span style="font-weight: 600">{{ l.valor }}</span>
+                </div>
+              </sc-for>
+              <div style="font-size: 12px; color: #6B7280">{{ detalhe.nota }}</div>
+            </div>
+          </sc-if>
+          <div style="font-size: 12px; color: #6B7280">Barra: resultado em relação à meta (o traço marca 100%). Clique em um cartão para ver o detalhe.</div>
+        </section>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+          <section style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; flex-wrap: wrap; gap: 14px">
+              <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+                <h2 style="margin: 0; font-size: 16px; color: #1F3A5F; display: flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; border-radius: 999px; background: #0aac23"></span>Destaques</h2>
+                <sc-for list="{{ destaques }}" as="d" hint-placeholder-count="3">
+                  <article style="background: #FFFFFF; border-radius: 10px; padding: 12px 14px; border: 1px solid #DCE3EC"><div style="font-size: 14px; font-weight: 600">{{ d.t }}</div><div style="font-size: 14px; line-height: 1.45; color: #4A5568; margin-top: 3px">{{ d.x }}</div></article>
+                </sc-for>
+              </div>
+              <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+                <h2 style="margin: 0; font-size: 16px; color: #1F3A5F; display: flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; border-radius: 999px; background: #fbb315"></span>Pontos de atenção</h2>
+                <sc-for list="{{ atencao }}" as="d" hint-placeholder-count="3">
+                  <article style="background: #FFFFFF; border-radius: 10px; padding: 12px 14px; border: 1px solid #DCE3EC"><div style="font-size: 14px; font-weight: 600">{{ d.t }}</div><div style="font-size: 14px; line-height: 1.45; color: #4A5568; margin-top: 3px">{{ d.x }}</div></article>
+                </sc-for>
+              </div>
+            </div>
+            <h2 style="margin: 4px 0 0; font-size: 16px; color: #1F3A5F">Recomendações práticas</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px">
+              <sc-for list="{{ recs }}" as="r" hint-placeholder-count="4">
+                <article style="flex: 1 1 240px; background: #FFFFFF; border-radius: 10px; padding: 12px 14px; border: 1px solid #DCE3EC; display: flex; flex-direction: column; gap: 4px"><div style="font-size: 14px; font-weight: 600">{{ r.t }}</div><div style="font-size: 14px; line-height: 1.45; color: #4A5568">{{ r.x }}</div><div style="font-size: 12px; color: #1F3A5F; font-weight: 600">Quem: {{ r.quem }} · Quando: {{ r.quando }}</div></article>
+              </sc-for>
+            </div>
+          </section>
+
+          <aside style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #1F3A5F; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <div style="font-size: 16px; font-weight: 700; color: #1F3A5F">Pergunte ao briefing</div>
+              <div style="font-size: 13px; color: #4A5568">Respostas só com dados oficiais. Se não houver dado, o assistente diz.</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{ perguntas }}" as="p" hint-placeholder-count="4">
+                <button onClick="{{ p.ir }}" style="font-family: inherit; font-size: 13px; text-align: left; background: {{ p.fundo }}; color: #1F3A5F; border: 1px solid #B8C2CF; border-radius: 999px; padding: 8px 12px; min-height: 40px; cursor: pointer">{{ p.q }}</button>
+              </sc-for>
+            </div>
+            <div style="display: flex; gap: 8px">
+              <label for="livre" style="position: absolute; left: -9999px">Sua pergunta</label>
+              <input id="livre" value="{{ livre }}" onInput="{{ digitar }}" placeholder="Ou escreva sua pergunta" style="flex: 1; min-width: 0; font-family: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid #B8C2CF; border-radius: 8px; min-height: 44px">
+              <button onClick="{{ enviar }}" style="font-family: inherit; font-size: 14px; font-weight: 600; background: #1F3A5F; color: #FFFFFF; border: none; border-radius: 8px; padding: 0 14px; min-height: 44px; cursor: pointer">Perguntar</button>
+            </div>
+            <sc-if value="{{ temResposta }}" hint-placeholder-val="{{ false }}">
+              <div style="background: #F4F6F9; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+                <div style="font-size: 13px; font-weight: 600; color: #4A5568">{{ resposta.q }}</div>
+                <div style="font-size: 14px; line-height: 1.55; white-space: pre-line">{{ resposta.a }}</div>
+                <div style="font-size: 12px; color: {{ resposta.corSelo }}; font-weight: 600">{{ resposta.selo }}</div>
+                <div style="font-size: 12px; color: #6B7280">{{ resposta.fonte }}</div>
+              </div>
+            </sc-if>
+          </aside>
+        </div>
+
+        <sc-if value="{{ emBR }}" hint-placeholder-val="{{ true }}">
+          <section style="background: #FFFFFF; border-radius: 12px; padding: 20px; border: 1px solid #DCE3EC; display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <h2 style="margin: 0; font-size: 20px; line-height: 1.3; color: #1F3A5F">{{ regiaoTitulo }}</h2>
+              <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #374151"><strong>Como ler:</strong> cada quadrado é um DR, na posição aproximada do mapa; a cor mostra a empregabilidade de egressos em relação à meta (2025). Escolha uma região ou clique em um estado.</p>
+            </div>
+            <div role="group" aria-label="Escolher região" style="display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{ regioes }}" as="g" hint-placeholder-count="6">
+                <button onClick="{{ g.ir }}" aria-pressed="{{ g.ativo }}" style="font-family: inherit; font-size: 14px; font-weight: 600; background: {{ g.fundo }}; color: {{ g.tinta }}; border: 1px solid #1F3A5F; border-radius: 999px; padding: 8px 16px; min-height: 44px; cursor: pointer">{{ g.n }}</button>
+              </sc-for>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+              <div style="flex: 1 1 340px; max-width: 420px; display: flex; flex-direction: column; gap: 10px">
+                <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px">
+                  <sc-for list="{{ mapa }}" as="m" hint-placeholder-count="54">
+                    <sc-if value="{{ m.vazio }}" hint-placeholder-val="{{ false }}"><span></span></sc-if>
+                    <sc-if value="{{ m.uf }}" hint-placeholder-val="{{ true }}">
+                      <button onClick="{{ m.abrir }}" title="{{ m.dica }}" style="font-family: inherit; aspect-ratio: 1; min-height: 44px; border: 2px solid #FFFFFF; border-radius: 6px; background: {{ m.cor }}; color: {{ m.tinta }}; opacity: {{ m.opac }}; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 2px">
+                        <span style="font-size: 13px; font-weight: 700">{{ m.sigla }}</span>
+                        <span style="font-size: 11px">{{ m.v }}</span>
+                      </button>
+                    </sc-if>
+                  </sc-for>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: #374151">
+                  <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #0aac23"></span>Atingido (≥100%)</span>
+                  <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #fbb315"></span>Atenção (80–99,9%)</span>
+                  <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #dc3c3d"></span>Crítico (&lt;80%)</span>
+                  <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #C5CEDA"></span>Sem dado</span>
+                </div>
+              </div>
+              <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <sc-for list="{{ regKpis }}" as="r" hint-placeholder-count="3">
+                    <div style="flex: 1 1 150px; background: #F4F6F9; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px">
+                      <span style="font-size: 12px; font-weight: 600; color: #4A5568">{{ r.rotulo }}</span>
+                      <span style="font-size: 24px; font-weight: 700">{{ r.valor }}</span>
+                      <span style="font-size: 12px; color: #4A5568">{{ r.nota }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="font-size: 13px; font-weight: 600; color: #4A5568">{{ regListaTitulo }}</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <sc-for list="{{ regDRs }}" as="x" hint-placeholder-count="9">
+                    <button onClick="{{ x.abrir }}" style="flex: 1 1 170px; font-family: inherit; text-align: left; background: #FFFFFF; border: 1px solid #DCE3EC; border-radius: 10px; padding: 10px 12px; min-height: 44px; cursor: pointer; display: flex; flex-direction: column; gap: 3px">
+                      <span style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600"><span style="width: 10px; height: 10px; border-radius: 999px; background: {{ x.cor }}"></span>{{ x.nome }}</span>
+                      <span style="font-size: 12px; color: #4A5568">Empregabilidade: {{ x.emp }} da meta</span>
+                      <span style="font-size: 12px; color: #4A5568">{{ x.ating }} · {{ x.crit }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ emDR }}" hint-placeholder-val="{{ false }}">
+          <section style="background: #FFFFFF; border-radius: 12px; padding: 20px; border: 1px solid #DCE3EC; display: flex; flex-wrap: wrap; gap: 24px; align-items: center">
+            <img src="{{ grafico }}" alt="Dispersão do índice de matrículas pelo índice de empregabilidade dos 27 DRs" style="flex: 1 1 400px; max-width: 520px; width: 100%; height: auto">
+            <div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px">
+              <h2 style="margin: 0; font-size: 20px; line-height: 1.3; color: #1F3A5F">{{ manchete }}</h2>
+              <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #374151"><strong>Como ler:</strong> cada ponto é um DR. Para a direita, mais matrículas em relação à meta; para cima, mais empregabilidade. A área sombreada reúne quem entrega volume sem resultado.</p>
+            </div>
+          </section>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <footer style="font-size: 12px; color: #6B7280">Fontes: Plano Estratégico Sistêmico e Atendimento Social (Portal da Transparência SENAI); Relatório de Gestão SENAI 2025. Revisado por: Wilton Costa.</footer>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { escopo: 'BR', aberto: null, selo: false, resp: null, livre: '', regiao: null }; }
+  renderVals() {
+    const C = { ok: '#0aac23', at: '#fbb315', cr: '#dc3c3d', ne: '#9AA5B4' };
+    const L = (nome, valor, st) => ({ nome, valor, cor: C[st] });
+    const PES = 'Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)';
+    const AT = 'Fonte: Atendimento Social 2025 (Portal da Transparência)';
+    const k = (rotulo, valor, comparacao, pct, st, fonte, detalhe) => ({ rotulo, valor, comparacao, fonte, detalhe, largura: (Math.min(Math.max(pct, 0), 150) / 1.5) + '%', cor: C[st], status: st === 'ok' ? 'Atingido' : st === 'at' ? 'Atenção' : 'Crítico' });
+    const FORA = { a: 'Não há dado oficial sobre isso nas fontes deste produto, então não vou estimar.\nPosso responder sobre empregabilidade, matrículas, consultorias, receitas, metas e comparações entre DRs.', selo: 'Sem dado oficial: nenhum número foi criado', corSelo: '#8E1B1B', fonte: '' };
+    const NOMES = { AC: 'Acre', AL: 'Alagoas', AM: 'Amazonas', AP: 'Amapá', BA: 'Bahia', CE: 'Ceará', DF: 'Distrito Federal', ES: 'Espírito Santo', GO: 'Goiás', MA: 'Maranhão', MG: 'Minas Gerais', MS: 'Mato Grosso do Sul', MT: 'Mato Grosso', PA: 'Pará', PB: 'Paraíba', PE: 'Pernambuco', PI: 'Piauí', PR: 'Paraná', RJ: 'Rio de Janeiro', RN: 'Rio Grande do Norte', RO: 'Rondônia', RR: 'Roraima', RS: 'Rio Grande do Sul', SC: 'Santa Catarina', SE: 'Sergipe', SP: 'São Paulo', TO: 'Tocantins', BR: 'Brasil' };
+    const D = {
+      BR: {
+        nome: 'Brasil', grafico: '/_blob/3e3a493ff7c028af6fe45011be5bafd5',
+        mensagem: 'O sistema entrega volume acima da meta, mas o resultado não acompanha: a empregabilidade de egressos ficou em 39,8% (meta 45,0%) e, em 13 dos 23 DRs com matrículas na meta, ela está em situação crítica.',
+        kpis: [
+          k('Matrículas (volume)', '117,8%', '3.257.251 de 2.765.635 previstas', 117.8, 'ok', AT, { titulo: 'Volume entregue em 2025 (Brasil)', nota: AT, linhas: [L('Matrículas — total', '3.257.251 de 2.765.635 · 117,8%', 'ok'), L('Técnico de nível médio', '337.112 de 314.084 · 107,3%', 'ok'), L('Formação inicial e continuada', '2.628.967 de 2.138.989 · 122,9%', 'ok'), L('Empresas atendidas', '39.527 de 31.756 · 124,5%', 'ok')] }),
+          k('Empregabilidade de egressos', '39,8%', 'meta 45,0% · índice 88,4%', 88.4, 'at', PES + '; confirmado no Relatório de Gestão, p. 31 do PDF', { titulo: 'Empregabilidade por região (mediana do realizado)', nota: 'Entre os DRs: 14 críticos, 5 em atenção e 7 atingidos.', linhas: [L('Sudeste', '45,1%', 'ok'), L('Sul', '42,1%', 'at'), L('Centro-Oeste', '32,3%', 'cr'), L('Nordeste', '30,4%', 'cr'), L('Norte', '25,9%', 'cr')] }),
+          k('DRs com volume sem resultado', '13 de 23', 'matrículas na meta, empregabilidade crítica', 13 / 23 * 100, 'cr', 'Cruzamento: Atendimento Social × Plano Estratégico, 2025', { titulo: 'DRs com matrículas na meta e empregabilidade abaixo de 80% da meta', nota: 'Associação não indica causa; cada caso pede diagnóstico com o DR.', linhas: [L('Norte', 'AC, PA, RO, TO', 'cr'), L('Nordeste', 'AL, MA, PB, PE, PI, RN, SE', 'cr'), L('Centro-Oeste', 'DF, MT', 'cr')] }),
+          k('Consultorias de produtividade 2026', '78,8%', 'projeção para dezembro, no ritmo atual', 78.8, 'cr', 'Fonte: Plano Estratégico Sistêmico 2026, até setembro', { titulo: 'Consultorias de produtividade em 2026', nota: 'Projeção linear; não considera sazonalidade do fim de ano.', linhas: [L('Realizado até setembro', '4.722 de 7.990', 'ne'), L('DRs em risco alto', '22', 'cr'), L('DRs no ritmo', '3', 'ok'), L('DRs com meta já atingida', '2', 'ok'), L('Aceleração mediana necessária', '3,9 vezes o ritmo atual', 'ne')] })
+        ],
+        destaques: [{ t: 'Consultorias acima da meta', x: '7.476 realizadas para meta de 6.175.' }, { t: 'Tecnologias educacionais disseminadas', x: '23 dos 27 DRs atingiram a meta.' }, { t: 'Jovens empregados na indústria', x: '34,1% para meta de 19,4%.' }],
+        atencao: [{ t: 'Empregabilidade desigual entre regiões', x: 'Mediana de 25,9% no Norte contra 45,1% no Sudeste.' }, { t: 'Fidelização é o resultado mais frágil', x: '17,7% para meta de 20,8%; 11 DRs críticos.' }, { t: '2026 pede correção de rota', x: '22 DRs precisam acelerar as consultorias, em média 3,9 vezes.' }],
+        recs: [{ t: 'Foco em empregabilidade e fidelização', x: 'Plano conjunto, começando pelos 13 DRs com volume sem resultado.', quem: 'DN e DR', quando: 'próximo ciclo' }, { t: 'Acelerar consultorias até dezembro', x: 'DRs em risco revisam agenda e capacidade; DN acompanha o ritmo.', quem: 'DN e DR', quando: 'imediato' }, { t: 'Calibrar metas abaixo do já entregue', x: 'Ex.: jovens empregados, meta 2026 de 14,4% contra 34,1% realizados.', quem: 'DN e DR', quando: 'próximo ciclo' }, { t: 'Trilha de apoio do DN', x: 'Apoio consultivo aos 10 DRs com 4 ou mais indicadores críticos.', quem: 'DN', quando: 'próximo ciclo' }],
+        manchete: '13 DRs entregam volume, mas não resultado',
+        perguntas: [
+          { q: 'Por que a empregabilidade está abaixo da meta?', a: 'Os dados não mostram a causa, mas mostram onde: a mediana é de 25,9% no Norte e 30,4% no Nordeste, contra 45,1% no Sudeste. Em 13 dos 23 DRs com matrículas na meta, a empregabilidade é crítica.\nHipótese a testar com os DRs: a oferta de cursos não acompanha a demanda industrial local.', fonte: 'Fontes: Plano Estratégico 2025; cruzamento com o Atendimento Social 2025.' },
+          { q: 'O que precisa acontecer até dezembro?', a: 'Prioridade: consultorias de produtividade. No ritmo atual, o país fecha 2026 em 78,8% da meta; 22 DRs estão em risco alto e precisam acelerar, em média, 3,9 vezes.\nReceitas: o consolidado nacional de 2026 está incompleto (11 DRs sem dado carregado); a leitura só é segura após a carga.', fonte: 'Fonte: Plano Estratégico 2026, até setembro (projeção linear).' },
+          { q: 'Prepare 3 pontos para a reunião com os DRs', a: '1. Volume no verde, resultado no amarelo: matrículas em 117,8% da meta, empregabilidade em 39,8% (meta 45,0%).\n2. Correção de rota em 2026: consultorias de produtividade projetadas em 78,8% da meta.\n3. Calibração: metas de 2026 abaixo do já entregue, como jovens empregados (14,4% contra 34,1%).', fonte: 'Fontes: Plano Estratégico 2025 e 2026; Atendimento Social 2025.' },
+          { q: 'Qual o salário médio dos egressos?', fora: true }
+        ]
+      },
+      AL: {
+        nome: 'Alagoas', grafico: '/_blob/213919f6ccba314115f1962f0a5a85cc',
+        mensagem: 'Alagoas entrega volume (matrículas em 138,0% da meta), mas o resultado depois da matrícula não acompanha: empregabilidade de egressos em 67,6% da meta e fidelização em 77,3%. O foco deve ir do volume para o resultado.',
+        kpis: [
+          k('Matrículas (volume)', '138,0%', '47.452 de 34.377 previstas', 138.0, 'ok', AT, { titulo: 'Volume entregue em 2025 (Alagoas)', nota: AT, linhas: [L('Matrículas — total', '47.452 de 34.377 · 138,0%', 'ok'), L('Técnico de nível médio', '3.160 de 1.959 · 161,3%', 'ok'), L('Formação inicial e continuada', '41.956 de 30.755 · 136,4%', 'ok'), L('Empresas atendidas', '679 de 350 · 194,0%', 'ok')] }),
+          k('Empregabilidade de egressos', '30,4%', 'meta 45,0% · índice 67,6%', 67.6, 'cr', PES, { titulo: 'Empregabilidade: Alagoas e referências (índice de realização)', nota: 'Medianas do índice entre os DRs, para referência; não é ranking.', linhas: [L('Alagoas', '67,6%', 'cr'), L('Mediana do Nordeste', '67,6%', 'cr'), L('Mediana nacional dos DRs', '75,2%', 'cr')] }),
+          k('Indicadores atingidos', '5 de 12', '6 indicadores em situação crítica', 5 / 12 * 100, 'cr', PES, { titulo: 'Os 12 indicadores de Alagoas em 2025 (índice de realização)', nota: PES, linhas: [L('Pesquisa aplicada', '1.166,7%', 'ok'), L('Tecnologias educacionais', '169,4%', 'ok'), L('Colaboradores capacitados', '165,0%', 'ok'), L('Consultorias em descarbonização', '160,0%', 'ok'), L('Empresas atendidas por STI', '133,5%', 'ok'), L('Jovens empregados na indústria', '83,3%', 'at'), L('Consultorias de produtividade', '77,3%', 'cr'), L('Fidelização de alunos', '77,3%', 'cr'), L('Gratuidade em áreas técnicas', '68,9%', 'cr'), L('Empregabilidade de egressos', '67,6%', 'cr'), L('Envio de dados ao Data Lake', '66,7%', 'cr'), L('Receitas de serviços e convênios', '-25,2%', 'cr')] }),
+          k('Receitas de serviços 2026', '16,7%', 'projeção para dezembro, no ritmo atual', 16.7, 'cr', 'Fonte: Plano Estratégico Sistêmico 2026, até setembro', { titulo: 'Receitas de serviços e convênios', nota: 'Projeção linear; não considera sazonalidade do fim de ano.', linhas: [L('2025: realizado', '-R$ 2,5 mi (meta R$ 10,0 mi)', 'cr'), L('2026: realizado até setembro', 'R$ 1,8 mi (meta R$ 14,0 mi)', 'cr'), L('Aceleração necessária', '20,9 vezes o ritmo atual', 'ne')] })
+        ],
+        destaques: [{ t: 'Técnico de nível médio em alta', x: '3.160 matrículas para 1.959 previstas.' }, { t: 'Indústria atendida acima da meta', x: '482 empresas atendidas para meta de 361.' }, { t: 'Pesquisa aplicada muito acima', x: '35 projetos para meta de 3: indício de meta subcalibrada (hipótese).' }],
+        atencao: [{ t: 'Empregabilidade é desafio regional', x: 'Índice de 67,6%, igual à mediana do Nordeste.' }, { t: 'Fidelização abaixo da meta', x: '16,3% para meta de 21,1%.' }, { t: 'Receitas em risco', x: '2025 fechou em -R$ 2,5 mi; 2026 exige 20,9 vezes o ritmo atual.' }],
+        recs: [{ t: 'Plano de empregabilidade e fidelização', x: 'Metas intermediárias e acompanhamento mensal, com práticas de DRs do Nordeste.', quem: 'DN e DR', quando: 'imediato' }, { t: 'Recuperar as receitas de 2026', x: 'Plano com marcos trimestrais; DN apoia a análise.', quem: 'DR', quando: 'imediato' }, { t: 'Calibrar metas abaixo do já entregue', x: 'Pesquisa aplicada: meta 2026 de 4 contra 35 realizados.', quem: 'DN e DR', quando: 'próximo ciclo' }, { t: 'Trilha de apoio do DN', x: 'Apoio aos 6 indicadores críticos; o DR define as prioridades.', quem: 'DN e DR', quando: 'imediato' }],
+        manchete: 'Alagoas está entre os DRs que entregam volume sem resultado',
+        perguntas: [
+          { q: 'Como Alagoas se compara ao Nordeste?', a: 'Empregabilidade: índice de 67,6%, igual à mediana do Nordeste; o desafio é regional.\nConsultorias de produtividade: 77,3% contra 95,8% da mediana do Nordeste.\nTecnologias educacionais: 169,4% contra 203,7% da mediana do Nordeste.', fonte: 'Fonte: Plano Estratégico 2025 (índice de realização; medianas para referência, não ranking).' },
+          { q: 'O que precisa acontecer até dezembro?', a: 'Receitas de serviços: no ritmo atual, 2026 fecha em 16,7% da meta; é preciso 20,9 vezes o ritmo atual.\nConsultorias de produtividade estão no ritmo: 101,6% projetado.', fonte: 'Fonte: Plano Estratégico 2026, até setembro (projeção linear).' },
+          { q: 'Prepare 3 pontos para a reunião com o DN', a: '1. Volume em alta: matrículas em 138,0% da meta.\n2. Resultado: 6 de 12 indicadores críticos; empregabilidade em 67,6% da meta, igual à mediana do Nordeste.\n3. Pedido ao DN: apoio na trilha de empregabilidade e revisão de metas, como pesquisa aplicada (meta 2026 de 4 contra 35 realizados).', fonte: 'Fontes: Plano Estratégico 2025 e 2026; Atendimento Social 2025.' },
+          { q: 'Qual o salário médio dos egressos?', fora: true }
+        ]
+      }
+    };
+    const EMP = { AC: 43.1, AL: 67.6, AM: 105.8, AP: 54.9, BA: 81.1, CE: 91.3, DF: 26.0, ES: 109.0, GO: 104.7, MA: 67.6, MG: 103.6, MS: 93.3, MT: 50.2, PA: 60.2, PB: 65.1, PE: 73.6, PI: 55.7, PR: 93.6, RJ: 111.1, RN: 60.9, RO: 76.9, RR: null, RS: 92.2, SC: 121.6, SE: 65.3, SP: 110.2, TO: 65.1 };
+    const LIN = [['', '', 'RR', 'AP', '', ''], ['', 'AM', 'PA', 'MA', 'CE', 'RN'], ['AC', 'RO', 'MT', 'TO', 'PI', 'PB'], ['', '', 'GO', 'DF', 'BA', 'PE'], ['', 'MS', 'MG', 'ES', 'SE', 'AL'], ['', '', 'SP', 'RJ', '', ''], ['', '', 'PR', '', '', ''], ['', '', 'SC', '', '', ''], ['', '', 'RS', '', '', '']];
+    const ir = (uf) => () => this.setState({ escopo: uf, aberto: null, resp: null, livre: '', regiao: null });
+    const REG = { Norte: ['AC', 'AM', 'AP', 'PA', 'RO', 'RR', 'TO'], Nordeste: ['AL', 'BA', 'CE', 'MA', 'PB', 'PE', 'PI', 'RN', 'SE'], 'Centro-Oeste': ['DF', 'GO', 'MS', 'MT'], Sudeste: ['ES', 'MG', 'RJ', 'SP'], Sul: ['PR', 'RS', 'SC'] };
+    const ATG = { DF: [6, 10, 4], GO: [6, 11, 2], MS: [5, 12, 3], MT: [9, 12, 2], AL: [5, 12, 6], BA: [6, 12, 4], CE: [10, 12, 0], MA: [3, 12, 5], PB: [8, 12, 2], PE: [9, 12, 2], PI: [6, 9, 3], RN: [4, 12, 7], SE: [7, 10, 1], AC: [6, 11, 4], AM: [7, 12, 5], AP: [5, 10, 4], PA: [4, 12, 4], RO: [8, 11, 3], RR: [3, 8, 4], TO: [7, 11, 2], ES: [8, 12, 2], MG: [7, 11, 1], RJ: [8, 12, 2], SP: [6, 12, 3], PR: [8, 12, 0], RS: [8, 12, 1], SC: [9, 11, 2] };
+    const RK = {
+      Brasil: [['Empregabilidade (Brasil)', '39,8%', 'meta 45,0%'], ['DRs críticos em empregabilidade', '14 de 26', 'com dado em 2025'], ['Matrículas (Brasil)', '117,8%', 'da meta']],
+      Norte: [['Empregabilidade (mediana)', '25,9%', 'meta nacional 45,0%'], ['DRs críticos em empregabilidade', '5 de 6', 'com dado; RR sem dado'], ['Matrículas (mediana)', '127,3%', 'da meta']],
+      Nordeste: [['Empregabilidade (mediana)', '30,4%', 'meta nacional 45,0%'], ['DRs críticos em empregabilidade', '7 de 9', 'com dado'], ['Matrículas (mediana)', '130,6%', 'da meta']],
+      'Centro-Oeste': [['Empregabilidade (mediana)', '32,3%', 'meta nacional 45,0%'], ['DRs críticos em empregabilidade', '2 de 4', 'com dado'], ['Matrículas (mediana)', '114,9%', 'da meta']],
+      Sudeste: [['Empregabilidade (mediana)', '45,1%', 'meta nacional 45,0%'], ['DRs críticos em empregabilidade', '0 de 4', 'com dado'], ['Matrículas (mediana)', '113,0%', 'da meta']],
+      Sul: [['Empregabilidade (mediana)', '42,1%', 'meta nacional 45,0%'], ['DRs críticos em empregabilidade', '0 de 3', 'com dado'], ['Matrículas (mediana)', '135,2%', 'da meta']]
+    };
+    const regSel = this.state.regiao;
+    const fmt = (v) => v === null ? 'sem dado' : String(v).replace('.', ',') + '%';
+    const corEmp = (v) => v === null ? '#C5CEDA' : v >= 100 ? '#0aac23' : v >= 80 ? '#fbb315' : '#dc3c3d';
+    const ufsSel = regSel ? REG[regSel] : Object.keys(ATG).filter((u) => EMP[u] !== null && EMP[u] < 80);
+    const regDRs = ufsSel.slice().sort((a, b) => (EMP[a] === null ? 999 : EMP[a]) - (EMP[b] === null ? 999 : EMP[b])).map((u) => ({ nome: NOMES[u], emp: fmt(EMP[u]), cor: corEmp(EMP[u]), ating: ATG[u][0] + ' de ' + ATG[u][1] + ' indicadores atingidos', crit: ATG[u][2] + ' críticos', abrir: ir(u) }));
+    const TIT = { Brasil: 'Empregabilidade crítica em 14 DRs, concentrados no Norte e no Nordeste', Norte: 'Norte: 5 de 6 DRs com dado estão críticos em empregabilidade', Nordeste: 'Nordeste: 7 de 9 DRs críticos em empregabilidade, com matrículas acima da meta', 'Centro-Oeste': 'Centro-Oeste: situação dividida, com DF e MT críticos', Sudeste: 'Sudeste: os 4 DRs atingiram a meta de empregabilidade', Sul: 'Sul: nenhum DR crítico em empregabilidade' };
+    const mapa = [];
+    LIN.forEach((linha) => linha.forEach((uf) => {
+      if (!uf) { mapa.push({ vazio: true, uf: false }); return; }
+      const v = EMP[uf];
+      const st = v === null ? 'sd' : v >= 100 ? 'ok' : v >= 80 ? 'at' : 'cr';
+      const cor = { ok: '#0aac23', at: '#fbb315', cr: '#dc3c3d', sd: '#C5CEDA' }[st];
+      const dentro = !regSel || REG[regSel].includes(uf);
+      mapa.push({ vazio: false, uf: true, sigla: uf, opac: dentro ? 1 : 0.25, v: v === null ? 's/d' : String(v).replace('.', ',') + '%', cor, tinta: st === 'at' || st === 'sd' ? '#0b0b0b' : '#FFFFFF', dica: NOMES[uf] + ': empregabilidade em ' + (v === null ? 'sem dado' : String(v).replace('.', ',') + '% da meta') + '. Clique para abrir.', abrir: ir(uf) });
+    }));
+    const esc = this.state.escopo;
+    const d = D[esc];
+    const ab = this.state.aberto;
+    const kpis = d ? d.kpis.map((x, i) => ({ ...x, borda: ab === i ? '2px solid #1F3A5F' : '1px solid #DCE3EC', acao: ab === i ? 'Ocultar' : 'Ver detalhe', abrir: () => this.setState({ aberto: ab === i ? null : i }) })) : [];
+    const responder = (p) => this.setState({ resp: p.fora ? { q: p.q, ...FORA } : { q: p.q, a: p.a, fonte: p.fonte, selo: '✓ Resposta verificada: todos os números conferem com a fonte', corSelo: '#1B5E20' } });
+    const perguntas = d ? d.perguntas.map((p) => ({ q: p.q, fundo: this.state.resp && this.state.resp.q === p.q ? '#E8EEF5' : '#FFFFFF', ir: () => responder(p) })) : [];
+    const enviar = () => {
+      const t = (this.state.livre || '').toLowerCase();
+      if (!d || !t.trim()) return;
+      const alvo = d.perguntas.find((p) => !p.fora && p.q.toLowerCase().split(' ').filter((w) => w.length > 5).some((w) => t.includes(w)));
+      responder(alvo || { q: this.state.livre, fora: true });
+    };
+    const r = this.state.resp;
+    return {
+      escopo: esc, emBR: esc === 'BR', emDR: esc !== 'BR',
+      trocar: (e) => ir(e.target.value)(),
+      voltarBR: ir('BR'),
+      alternarSelo: () => this.setState({ selo: !this.state.selo }), seloAberto: this.state.selo,
+      fechar: () => this.setState({ aberto: null }),
+      semDados: !d, temDados: !!d, nomeSel: NOMES[esc] || esc,
+      temDetalhe: !!d && ab !== null,
+      detalhe: d && ab !== null ? d.kpis[ab].detalhe : { titulo: '', nota: '', linhas: [] },
+      nome: d ? d.nome : '', mensagem: d ? d.mensagem : '', grafico: d ? d.grafico : '', manchete: d ? d.manchete : '',
+      destaques: d ? d.destaques : [], atencao: d ? d.atencao : [], recs: d ? d.recs : [],
+      kpis, mapa, perguntas,
+      regioes: ['Brasil', 'Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'].map((n) => { const at = (regSel || 'Brasil') === n; return { n, ativo: at ? 'true' : 'false', fundo: at ? '#1F3A5F' : '#FFFFFF', tinta: at ? '#FFFFFF' : '#1F3A5F', ir: () => this.setState({ regiao: n === 'Brasil' ? null : n }) }; }),
+      regiaoTitulo: TIT[regSel || 'Brasil'],
+      regKpis: RK[regSel || 'Brasil'].map(([rotulo, valor, nota]) => ({ rotulo, valor, nota })),
+      regListaTitulo: regSel ? 'DRs do ' + regSel + ' (clique para abrir o briefing)' : 'Os 14 DRs críticos em empregabilidade, do mais crítico ao menos (clique para abrir)',
+      regDRs,
+      opcoes: [{ v: 'BR', n: 'Brasil (Departamento Nacional)' }].concat(Object.keys(NOMES).filter((u) => u !== 'BR').sort((a, b) => NOMES[a].localeCompare(NOMES[b])).map((u) => ({ v: u, n: NOMES[u] }))),
+      livre: this.state.livre, digitar: (e) => this.setState({ livre: e.target.value }), enviar,
+      temResposta: !!r, resposta: r || { q: '', a: '', selo: '', corSelo: '#1B5E20', fonte: '' }
+    };
+  }
+}
+</script>
+</body>
+</html>

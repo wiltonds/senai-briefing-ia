@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing executivo SENAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-int">
+      <div>
+        <h1 class="topo-titulo">Inteligência de Gestão SENAI</h1>
+        <div class="topo-sub">Briefing executivo e assistente com dados oficiais verificados</div>
+      </div>
+      <div id="selo-dados" class="selo-dados" hidden></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="barra">
+      <div class="barra-esq">
+        <button type="button" id="voltar" class="btn" hidden>← Brasil</button>
+        <div class="campo">
+          <label for="escopo">Ver o briefing de</label>
+          <select id="escopo"></select>
+        </div>
+      </div>
+      <div class="barra-dir">
+        <button type="button" id="btn-selo" class="btn btn-selo" aria-expanded="false" aria-controls="confianca">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Números verificados
+        </button>
+        <a id="exportar" class="btn" hidden>Exportar PDF</a>
+      </div>
+    </div>
+
+    <section id="confianca" class="cartao confianca" aria-labelledby="confianca-titulo" hidden>
+      <h2 id="confianca-titulo">Por que você pode confiar nestes números</h2>
+      <div class="confianca-pontos">
+        <div><strong>1. Dados oficiais.</strong> Coletados do Portal da Transparência (27 DRs e DN)<span id="confianca-coleta"></span>.</div>
+        <div><strong>2. Conferência dupla.</strong> Números nacionais confirmados no Relatório de Gestão 2025 (12 de 12).</div>
+        <div><strong>3. A IA só redige.</strong> Usa apenas fatos conferidos; não calcula nem pesquisa fora.</div>
+        <div><strong>4. Verificação e revisão.</strong> Todo número é checado na fonte e um analista revisa.</div>
+      </div>
+    </section>
+
+    <section id="estado" class="cartao estado" role="status" aria-live="polite"></section>
+
+    <div id="conteudo" hidden>
+      <div id="briefing-topo"></div>
+
+      <section class="kpis-sec" aria-label="Indicadores-chave">
+        <div id="kpis" class="kpis"></div>
+        <div id="detalhe" class="detalhe" hidden tabindex="-1"></div>
+        <div class="legenda-kpi">Barra: resultado em relação à meta (o traço marca 100%). Clique em um cartão para ver o detalhe.</div>
+      </section>
+
+      <div id="briefing-blocos" class="briefing"></div>
+
+      <section id="visao-br" class="cartao visao-br" hidden></section>
+      <section id="visao-dr" class="cartao visao-dr" hidden></section>
+    </div>
+
+    <footer id="rodape" class="rodape">Fontes: Plano Estratégico Sistêmico e Atendimento Social (Portal da Transparência SENAI); Relatório de Gestão SENAI 2025.</footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
