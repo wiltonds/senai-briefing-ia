@@ -218,3 +218,73 @@ def test_ficha_dr_exclui_q02_do_farol_e_da_calibracao(dados):
 def test_escopo_invalido(dados):
     with pytest.raises(ValueError):
         gerar_fatos(dados, "XX")
+
+
+# --------------------------------------------------------------------------
+# Consistência: o mesmo número tem o mesmo texto em toda a ficha
+# --------------------------------------------------------------------------
+
+_PCT = r"-?[\d.]+(?:,\d+)?%"
+RE_RESULTADO = re.compile(
+    r"^Indicador (?P<cod>[\d.]+) \(.*\), 2025: meta (?P<meta>.+?), realizado (?P<real>.+?), "
+    rf"índice (?P<ind>{_PCT});"
+)
+RE_COMPARACAO = re.compile(
+    rf"^Indicador (?P<cod>[\d.]+): índice de (?P<uf>[A-Z]{{2}}) (?P<ind>{_PCT}); "
+    rf"mediana nacional dos DRs (?P<mn>{_PCT}); mediana da região (?P<reg>[\w-]+) (?P<mr>{_PCT})"
+)
+RE_CRUZAMENTO_DR = re.compile(
+    rf"^(?P<uf>[A-Z]{{2}}): índice de matrículas (?P<mat>{_PCT}), índice de empregabilidade "
+    rf"(?P<emp>{_PCT}), índice de fidelização (?P<fid>{_PCT})"
+)
+RE_APOIO = re.compile(r"^(?P<uf>[A-Z]{2}) \([\w-]+\): .*Críticos: (?P<lista>.+?)\.?$")
+RE_ITEM_CRITICO = re.compile(rf"([\d.]+) \(({_PCT})\)")
+RE_CALIBRACAO = re.compile(
+    r"^Indicador (?P<cod>[\d.]+) \(.*\), (?P<uf>[A-Z]{2}): realizado 2025 de (?P<real>.+?); meta 2026"
+)
+
+
+def observacoes(fatos: list[dict], escopo: str) -> list[tuple[tuple[str, str, str], str, str]]:
+    """((unidade, indicador, métrica), valor formatado, id do fato) para cada número reconhecido."""
+    unidade_escopo = "DN" if escopo == "BR" else escopo
+    obs = []
+    for f in fatos:
+        frase, fid = f["frase"], f["id"]
+        if m := RE_RESULTADO.match(frase):
+            for metrica, valor in (("meta_2025", m["meta"]), ("realizado_2025", m["real"]),
+                                   ("indice_2025", m["ind"])):
+                obs.append(((unidade_escopo, m["cod"], metrica), valor, fid))
+        if m := RE_COMPARACAO.match(frase):
+            obs += [((m["uf"], m["cod"], "indice_2025"), m["ind"], fid),
+                    (("DRs", m["cod"], "mediana_indice"), m["mn"], fid),
+                    ((m["reg"], m["cod"], "mediana_indice"), m["mr"], fid)]
+        if m := RE_CRUZAMENTO_DR.match(frase):
+            obs += [((m["uf"], "AT-matriculas", "indice_2025"), m["mat"], fid),
+                    ((m["uf"], "1", "indice_2025"), m["emp"], fid),
+                    ((m["uf"], "4.2", "indice_2025"), m["fid"], fid)]
+        if m := RE_APOIO.match(frase):
+            for cod, valor in RE_ITEM_CRITICO.findall(m["lista"]):
+                obs.append(((m["uf"], cod, "indice_2025"), valor, fid))
+        if m := RE_CALIBRACAO.match(frase):
+            obs.append(((m["uf"], m["cod"], "realizado_2025"), m["real"], fid))
+    return obs
+
+
+@requer_dados
+@pytest.mark.parametrize("escopo", ["BR", "AL"])
+def test_mesmo_numero_mesmo_texto_em_toda_a_ficha(dados, escopo):
+    obs = observacoes(gerar_fatos(dados, escopo), escopo)
+    por_chave: dict[tuple, dict[str, list[str]]] = {}
+    for chave, valor, fid in obs:
+        por_chave.setdefault(chave, {}).setdefault(valor, []).append(fid)
+    repetidas = [c for c, v in por_chave.items() if sum(map(len, v.values())) > 1]
+    assert repetidas, "nenhum número aparece em mais de uma frase; o teste não verificaria nada"
+    divergentes = {c: v for c, v in por_chave.items() if len(v) > 1}
+    assert not divergentes, f"mesmo (unidade, indicador, métrica) com textos diferentes: {divergentes}"
+
+
+@pytest.mark.parametrize("valor, esperado", [
+    (77.25, "77,3%"), (77.2511848, "77,3%"), (77.24999, "77,2%"), (-25.25, "-25,3%"), (0.05, "0,1%"),
+])
+def test_fmt_pct_round_half_up(valor, esperado):
+    assert fmt_pct(valor) == esperado

@@ -29,6 +29,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.formato import arredondar, fmt_pct
+
 logger = logging.getLogger("diagnostico")
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -107,11 +109,6 @@ def leitura_cruzamento(indice_volume: float | None, indice_resultado: float | No
 def chave_cod(cod: str) -> tuple[int, ...]:
     """Chave de ordenação natural de cod_indicador ("2.1" < "10")."""
     return tuple(int(p) for p in str(cod).split("."))
-
-
-def _pct_br(valor: float) -> str:
-    """Formata um índice como "86,3%"."""
-    return f"{valor:.1f}%".replace(".", ",")
 
 
 def filtrar_validos(df: pd.DataFrame, ano: int, col_meta: str) -> pd.DataFrame:
@@ -225,7 +222,8 @@ def diag_indicador(pes_validos: pd.DataFrame, pes_ano: pd.DataFrame) -> pd.DataF
             "dr_menor_indice": g.loc[idx.idxmin(), "uf"] if len(g) else None,
             "dr_maior_indice": g.loc[idx.idxmax(), "uf"] if len(g) else None,
         })
-    return pd.DataFrame(linhas, columns=COLUNAS_DIAG_INDICADOR).round(2)
+    # Sem arredondar: o valor é formatado uma única vez na exibição (src.formato).
+    return pd.DataFrame(linhas, columns=COLUNAS_DIAG_INDICADOR)
 
 
 def diag_dr(pes_validos: pd.DataFrame) -> pd.DataFrame:
@@ -246,13 +244,13 @@ def diag_dr(pes_validos: pd.DataFrame) -> pd.DataFrame:
             "uf": uf,
             "regiao": g["regiao"].iloc[0],
             "n_indicadores_com_dado": len(g),
-            "cobertura": round(len(g) / total_indicadores, 3),
+            "cobertura": arredondar(len(g) / total_indicadores, 3),
             **contagem,
             "n_meta_subcalibrada": int(g["meta_subcalibrada"].sum()),
-            "pct_atingido": round(100 * contagem["n_atingido"] / len(g), 1),
+            "pct_atingido": arredondar(100 * contagem["n_atingido"] / len(g), 1),
             "resumo": f"{contagem['n_atingido']} de {len(g)} atingidos",
             "indicadores_criticos": "; ".join(
-                f"{c} ({_pct_br(i)})"
+                f"{c} ({fmt_pct(i)})"
                 for c, i in zip(criticos["cod_indicador"], criticos["indice_analise"])
             ),
         })
@@ -277,7 +275,7 @@ def diag_regiao(pes_validos: pd.DataFrame) -> pd.DataFrame:
         ["regiao", "cod_indicador"],
         key=lambda s: s.map(chave_cod) if s.name == "cod_indicador" else s,
     )
-    return out[COLUNAS_DIAG_REGIAO].round(2).reset_index(drop=True)
+    return out[COLUNAS_DIAG_REGIAO].reset_index(drop=True)  # precisão total
 
 
 def cruzamento_volume_resultado(
@@ -308,7 +306,9 @@ def cruzamento_volume_resultado(
         leitura_cruzamento(v, r)
         for v, r in zip(out["indice_matriculas"], out["indice_empregabilidade"])
     ]
-    return out.reset_index()[COLUNAS_CRUZAMENTO].round(2)
+    # indice_analise com precisão total: arredondar aqui e de novo na ficha de fatos
+    # gerava divergência (ex.: 77,2511 -> 77,25 -> "77,2%" contra "77,3%").
+    return out.reset_index()[COLUNAS_CRUZAMENTO]
 
 
 def spearman(x: pd.Series, y: pd.Series) -> tuple[float | None, int]:

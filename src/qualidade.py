@@ -25,6 +25,8 @@ from typing import Any, TypedDict
 
 import pandas as pd
 
+from src.formato import arredondar, fmt_en
+
 logger = logging.getLogger("qualidade")
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -253,7 +255,7 @@ def tipo_unidade(df: pd.DataFrame) -> pd.Series:
 
 def _fmt(valor: float) -> str:
     """Formata número para evidência (sem casas decimais quando inteiro)."""
-    return f"{valor:.0f}" if float(valor).is_integer() else f"{valor:.2f}"
+    return fmt_en(valor, 2)
 
 
 def _consolidacao(
@@ -297,7 +299,7 @@ def _consolidacao(
                 "evidencia": (
                     f"{campo}: DN={_fmt(valor_dn)}; soma DRs+CETIQT={_fmt(soma)} "
                     f"({g[campo].notna().sum()} de {len(g)} unidades com dado); "
-                    f"diferença={dif_pct:+.1f}%{nota}"
+                    f"diferença={arredondar(dif_pct, 1):+.1f}%{nota}"
                 ),
             })
     return pd.DataFrame(linhas, columns=COLUNAS_OCORRENCIA)
@@ -335,7 +337,7 @@ def _meta_abaixo(
         "item": m[item],
         "descricao_item": descricao(m),
         "evidencia": [
-            f"meta {ano}={_fmt(meta)}; realizado {ano - 1}={_fmt(real)}; razão={meta / real:.2f}"
+            f"meta {ano}={_fmt(meta)}; realizado {ano - 1}={_fmt(real)}; razão={fmt_en(meta / real, 2)}"
             for ano, meta, real in zip(m["ano"], m[col_meta], m["realizado_ant"])
         ],
     }, columns=COLUNAS_OCORRENCIA).reset_index(drop=True)

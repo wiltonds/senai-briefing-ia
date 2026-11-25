@@ -32,6 +32,18 @@ from typing import Any
 
 import pandas as pd
 
+from src.formato import (  # noqa: F401  (reexportadas: API pública de src.fatos)
+    arredondar,
+    eh_monetario,
+    eh_percentual,
+    fmt_decimal,
+    fmt_int,
+    fmt_moeda,
+    fmt_num,
+    fmt_pct,
+    fmt_valor,
+    fmt_vezes,
+)
 from src.diagnostico import aplicar_achados, chave_cod, farol, filtrar_validos, spearman
 from src.projecao import SIT_ACELERACAO, SIT_RISCO
 from src.qualidade import so_polaridade_positiva
@@ -84,65 +96,6 @@ RE_NUMERO = re.compile(r"(?<![\w.,])-?\d+(?:[.,]\d+)*%?")
 # Formatação pt-BR
 # --------------------------------------------------------------------------
 
-def _milhar_br(texto_en: str) -> str:
-    """Troca separadores do formato en-US ("1,234.5") pelo pt-BR ("1.234,5")."""
-    return texto_en.replace(",", "_").replace(".", ",").replace("_", ".")
-
-
-def fmt_pct(valor: float, casas: int = 1) -> str:
-    """Percentual pt-BR: 39.8 -> "39,8%"."""
-    return _milhar_br(f"{valor:,.{casas}f}") + "%"
-
-
-def fmt_int(valor: float) -> str:
-    """Inteiro pt-BR com milhar: 7476 -> "7.476"."""
-    return _milhar_br(f"{round(valor):,d}")
-
-
-def fmt_num(valor: float) -> str:
-    """Número pt-BR: inteiro sem casas ("7.476"); fracionário com 1 casa ("23,5")."""
-    if float(valor).is_integer():
-        return fmt_int(valor)
-    return _milhar_br(f"{valor:,.1f}")
-
-
-def fmt_moeda(valor: float) -> str:
-    """Moeda compacta pt-BR: "R$ 1,06 bi" (2 casas), "R$ 336,0 mi" e "R$ 796,5 mil" (1 casa).
-
-    Negativos com "-R$"; abaixo de mil, valor com centavos ("R$ 512,00").
-    """
-    sinal = "-" if valor < 0 else ""
-    v = abs(valor)
-    for limite, sufixo, casas in ((1e9, " bi", 2), (1e6, " mi", 1), (1e3, " mil", 1)):
-        if v >= limite:
-            return f"{sinal}R$ {_milhar_br(f'{v / limite:,.{casas}f}')}{sufixo}"
-    return f"{sinal}R$ {_milhar_br(f'{v:,.2f}')}"
-
-
-def fmt_decimal(valor: float, casas: int = 2) -> str:
-    """Decimal pt-BR com casas fixas: -0.2612 -> "-0,26"."""
-    return _milhar_br(f"{valor:,.{casas}f}")
-
-
-def eh_monetario(unidade: Any) -> bool:
-    """Indica se a unidade do indicador é monetária ("(R$) Monetário")."""
-    return isinstance(unidade, str) and "R$" in unidade
-
-
-def eh_percentual(unidade: Any) -> bool:
-    """Indica se a unidade do indicador é percentual."""
-    return isinstance(unidade, str) and "%" in unidade
-
-
-def fmt_valor(valor: float, unidade: Any) -> str:
-    """Formata um valor numérico conforme a unidade do indicador."""
-    if eh_monetario(unidade):
-        return fmt_moeda(valor)
-    if eh_percentual(unidade):
-        return fmt_pct(valor)
-    return fmt_num(valor)
-
-
 def fmt_publicado(texto: Any, valor: float, unidade: Any) -> str:
     """Valor publicado: texto original (espaços normalizados) ou moeda compacta.
 
@@ -152,11 +105,6 @@ def fmt_publicado(texto: Any, valor: float, unidade: Any) -> str:
     if eh_monetario(unidade) or not isinstance(texto, str) or not texto.strip():
         return fmt_valor(valor, unidade)
     return " ".join(texto.split())
-
-
-def fmt_vezes(valor: float) -> str:
-    """Múltiplo do ritmo atual: 3.76 -> "3,8x"."""
-    return fmt_decimal(valor, 1) + "x"
 
 
 def extrair_numeros(texto: str) -> list[str]:

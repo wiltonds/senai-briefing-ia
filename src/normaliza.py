@@ -27,6 +27,8 @@ from typing import Any
 
 import pandas as pd
 
+from src.formato import fmt_en
+
 logger = logging.getLogger("normaliza")
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -388,7 +390,7 @@ def _logar_divergencias(nome: str, df: pd.DataFrame, chaves: list[str]) -> None:
         return
     detalhes = "\n".join(
         "  " + " | ".join(str(linha[c]) for c in chaves)
-        + f" | publicado={linha['indice_publicado']:.2f} calculado={linha['indice_calculado']:.2f}"
+        + f" | publicado={fmt_en(linha['indice_publicado'])} calculado={fmt_en(linha['indice_calculado'])}"
         for _, linha in divergentes.iterrows()
     )
     logger.warning(
