@@ -41,11 +41,16 @@ REGIAO_POR_UF: dict[str, str] = {
     **dict.fromkeys(["ES", "MG", "RJ", "SP"], "Sudeste"),
     **dict.fromkeys(["PR", "RS", "SC"], "Sul"),
     "DN": "Brasil",
+    "CETIQT": "Sudeste",  # SENAI CETIQT (Rio de Janeiro)
 }
+
+TIPO_DN = "DN"
+TIPO_CETIQT = "CETIQT"
+TIPO_DR = "DR"
 
 COLUNAS_PES = [
     "ano", "periodo_fechamento", "mes_referencia", "data_publicacao", "uf", "regiao",
-    "cod_indicador", "indicador", "objetivo_estrategico", "perspectiva", "foco_atuacao",
+    "tipo_unidade", "cod_indicador", "indicador", "objetivo_estrategico", "perspectiva", "foco_atuacao",
     "unidade", "polaridade", "acumulacao", "periodicidade", "fonte_dado",
     "meta_txt", "realizado_txt", "indice_txt",
     "meta", "realizado", "indice_publicado", "indice_calculado",
@@ -54,7 +59,7 @@ COLUNAS_PES = [
 ]
 
 COLUNAS_ATENDIMENTO = [
-    "ano", "periodo_fechamento", "mes_referencia", "uf", "regiao", "tema",
+    "ano", "periodo_fechamento", "mes_referencia", "uf", "regiao", "tipo_unidade", "tema",
     "linha_negocio", "acao", "previsto_txt", "realizado_txt", "previsto", "realizado",
     "indice_publicado", "indice_calculado", "divergencia_indice", "indice_analise",
     "status_dado", "arquivo_origem", "sha256_origem",
@@ -227,6 +232,15 @@ def _valores(meta_txt: str | None, realizado_txt: str | None, indice_txt: str | 
     }
 
 
+def tipo_unidade(dr: str) -> str:
+    """Tipo da unidade: "DN" (consolidado nacional), "CETIQT" ou "DR"."""
+    if dr == TIPO_DN:
+        return TIPO_DN
+    if dr == TIPO_CETIQT:
+        return TIPO_CETIQT
+    return TIPO_DR
+
+
 def linhas_pes(dados: list[dict[str, Any]], dr: str, origem: str, sha256: str) -> list[dict[str, Any]]:
     """Gera as linhas de ``pes.csv`` a partir de um JSON bruto da fonte "pes"."""
     linhas = []
@@ -244,6 +258,7 @@ def linhas_pes(dados: list[dict[str, Any]], dr: str, origem: str, sha256: str) -
                 "data_publicacao": converter_data(item.get("dataPublicacao")),
                 "uf": dr,
                 "regiao": REGIAO_POR_UF[dr],
+                "tipo_unidade": tipo_unidade(dr),
                 "cod_indicador": cod,
                 "indicador": _limpar(item.get("indicador")),
                 "objetivo_estrategico": _limpar(obj.get("objtEstrategico")),
@@ -296,6 +311,7 @@ def linhas_atendimento(dados: dict[str, Any], dr: str, origem: str, sha256: str)
         "mes_referencia": mes_referencia(dados.get("periodoFechamento")),
         "uf": dr,
         "regiao": REGIAO_POR_UF[dr],
+        "tipo_unidade": tipo_unidade(dr),
     }
     linhas = []
     for tema in dados["temas"].values():

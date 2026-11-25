@@ -1,0 +1,15 @@
+﻿regra_id,nome,gravidade,n_ocorrencias,n_drs_afetados
+Q01,Indicador não apurado,alta,20,29
+Q02,Percentual acima de 100,media,1,1
+Q03,Unidade absoluta com valor percentual,informativa,56,28
+Q04,Índice publicado divergente,media,1,1
+Q05,Realizado negativo,informativa,5,5
+Q06,Realizado sem meta,media,13,9
+Q07,Zero suspeito,media,13,12
+Q08,Índice acima de 200%,media,96,26
+Q09,Entrega não planejada,media,11,4
+Q10,Empresas atendidas diferem entre fontes,informativa,58,29
+Q11,Ano fechado sem realizado,media,1,1
+Q12,DN difere da soma das unidades,informativa,1,1
+Q13,Meta abaixo do realizado anterior,media,255,27
+Q14,TOTAL diferente da soma das ações,alta,0,0

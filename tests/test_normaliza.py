@@ -8,6 +8,7 @@ from src.normaliza import (
     mes_referencia,
     parse_numero_br,
     status_dado,
+    tipo_unidade,
 )
 
 
@@ -116,3 +117,13 @@ def test_divergencia_indice(publicado, calculado, esperado: bool) -> None:
 )
 def test_indice_analise(publicado, calculado, esperado) -> None:
     assert indice_analise(publicado, calculado) == esperado
+
+
+@pytest.mark.parametrize(("dr", "esperado"), [("DN", "DN"), ("CETIQT", "CETIQT"), ("SC", "DR")])
+def test_tipo_unidade(dr: str, esperado: str) -> None:
+    assert tipo_unidade(dr) == esperado
+
+
+def test_cetiqt_na_regiao_sudeste() -> None:
+    from src.normaliza import REGIAO_POR_UF
+    assert REGIAO_POR_UF["CETIQT"] == "Sudeste"

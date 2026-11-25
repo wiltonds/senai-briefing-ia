@@ -1,0 +1,8 @@
+﻿cod_indicador,indicador,n_drs,n_meta_ja_atingida,n_no_ritmo,n_exige_aceleracao,n_risco_alto,n_drs_zero_suspeito,situacao_dn,indice_projetado_dn
+2.1,Expansão de consultorias com aumento de produtividade,27,2,3,0,22,0,risco alto,78.79849812265331
+2.2,Expansão de consultorias com impacto em descarbonização,23,8,4,4,7,0,no ritmo,117.33333333333333
+6,Empresas industriais atendidas por STI,27,6,12,6,3,0,no ritmo,112.51463665256769
+14.2,Expansão das receitas de serviços e convênios,16,4,1,1,10,11,consolidado incompleto,
+2.3,Expansão de projetos ativos de pesquisa aplicada,19,13,4,1,1,0,meta já atingida,151.15026921194323
+AT-empresas_sti,Quantidade de empresas atendidas,27,18,4,3,2,0,meta já atingida,140.22975367205808
+AT-matriculas,Programas (matrículas) - TOTAL,27,7,14,4,2,0,no ritmo,115.56012454883107

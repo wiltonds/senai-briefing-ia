@@ -45,7 +45,7 @@ ENDPOINTS: dict[str, str] = {
 DRS: list[str] = [
     "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
     "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE",
-    "TO", "DN",
+    "TO", "DN", "CETIQT",
 ]
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"

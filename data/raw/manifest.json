@@ -47,6 +47,14 @@
     "status_http": 200,
     "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-CE&entidade=SENAI"
   },
+  "atendimento/2025/CETIQT.json": {
+    "coletado_em_utc": "2026-11-25T14:14:47+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "e3c25b44f97c7983a752d1d92702b229844b6831535be097e6af0627b425d7b9",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2025&departamento=SENAI-CETIQT&entidade=SENAI"
+  },
   "atendimento/2025/DF.json": {
     "coletado_em_utc": "2026-11-25T13:11:30+00:00",
     "erro": null,
@@ -270,6 +278,14 @@
     "sha256": "df0c06fe05b30e47b4018a386339d881057bd39c315ef415c353151807a0d069",
     "status_http": 200,
     "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-CE&entidade=SENAI"
+  },
+  "atendimento/2026/CETIQT.json": {
+    "coletado_em_utc": "2026-11-25T14:14:49+00:00",
+    "erro": null,
+    "num_registros": 7,
+    "sha256": "f0c606702046b709ec9f05709b408e840ab9f0270224eb2698f28f685d7b6dd4",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-atendimento-social/publico/atendimento-social?ano=2026&departamento=SENAI-CETIQT&entidade=SENAI"
   },
   "atendimento/2026/DF.json": {
     "coletado_em_utc": "2026-11-25T13:12:20+00:00",
@@ -495,6 +511,14 @@
     "status_http": 200,
     "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-CE&entidade=SENAI"
   },
+  "pes/2025/CETIQT.json": {
+    "coletado_em_utc": "2026-11-25T14:14:37+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "354cd08a354a2efd7ec6150f6c5023b074d56d011eb8e4646caead665a6a6988",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2025&departamento=SENAI-CETIQT&entidade=SENAI"
+  },
   "pes/2025/DF.json": {
     "coletado_em_utc": "2026-11-25T13:07:20+00:00",
     "erro": null,
@@ -719,6 +743,14 @@
     "status_http": 200,
     "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-CE&entidade=SENAI"
   },
+  "pes/2026/CETIQT.json": {
+    "coletado_em_utc": "2026-11-25T14:14:43+00:00",
+    "erro": null,
+    "num_registros": 22,
+    "sha256": "b2f77ee661e7f549689799ad7879b7b11dc9b48689ec67bff05e5825769bb59c",
+    "status_http": 200,
+    "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-CETIQT&entidade=SENAI"
+  },
   "pes/2026/DF.json": {
     "coletado_em_utc": "2026-11-25T13:09:49+00:00",
     "erro": null,
@@ -894,5 +926,13 @@
     "sha256": "1fe324713c8458ecaf38c042f847b2239bd9afc2048e002554753f7c6fd2d03a",
     "status_http": 200,
     "url": "https://sistematransparenciaweb.com.br/api-planejamento-estrategico/publico/planejamento-estrategico/sistemico?ano=2026&departamento=SENAI-TO&entidade=SENAI"
+  },
+  "relatorio/relatorio_gestao_2025.pdf": {
+    "bytes": 15419549,
+    "coletado_em_utc": "2026-11-25T14:23:56+00:00",
+    "erro": null,
+    "sha256": "9b707cf22c79ed43cdb8aab996eae345dabbac01eceb73d894f71193c3e260f7",
+    "status_http": 200,
+    "url": "https://static.portaldaindustria.com.br/media/filer_public/80/78/8078ff34-bb7d-4733-98b6-5a258a82ad37/relatorio_senai_2025_web.pdf"
   }
 }
