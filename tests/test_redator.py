@@ -63,7 +63,7 @@ def test_aprovado_na_primeira(dirs):
     assert len(cliente.chamadas) == 1
     msg = cliente.chamadas[0]["messages"][0]["content"]
     assert "<fatos>" in msg and "</fatos>" in msg and "F001" in msg
-    assert cliente.chamadas[0]["max_tokens"] == 4000
+    assert cliente.chamadas[0]["max_tokens"] == 6000
     salvo = json.loads((dirs["outputs_dir"] / "briefing_BR.json").read_text(encoding="utf-8"))
     assert salvo["status"] == "aprovado" and salvo["modelo"] == redator.MODELO_PADRAO
 
@@ -104,3 +104,37 @@ def test_extrair_json():
 def test_dry_run_nao_chama_api(dirs):
     info = redator.dry_run("BR", outputs_dir=dirs["outputs_dir"], prompt_path=dirs["prompt_path"])
     assert info["n_fatos"] == len(FATOS) and info["tokens_estimados"] > 0
+
+
+# ---------------------------------------------------------------- --prompt
+def test_caminho_prompt_por_versao(tmp_path):
+    (tmp_path / "briefing_v2.md").write_text("x", encoding="utf-8")
+    assert redator.caminho_prompt("v2", tmp_path) == tmp_path / "briefing_v2.md"
+    with pytest.raises(FileNotFoundError):
+        redator.caminho_prompt("v9", tmp_path)
+
+
+def test_padrao_e_v2_e_max_tokens():
+    assert redator.VERSAO_PROMPT_PADRAO == "v2"
+    assert redator.PROMPT_PATH.name == "briefing_v2.md"
+    assert redator.MAX_TOKENS == 6000
+
+
+def test_versao_do_prompt_no_briefing_e_no_log(dirs):
+    v2 = dirs["prompt_path"].with_name("briefing_v2.md")
+    v2.write_text("Prompt v2.", encoding="utf-8")
+    doc = redator.gerar_briefing("BR", ClienteFalso([_valido()]), **{**dirs, "prompt_path": v2})
+    assert doc["versao_prompt"] == "v2"
+    assert _log(dirs)["versao_prompt"] == "v2"
+
+
+def test_main_repassa_prompt(monkeypatch, tmp_path):
+    (tmp_path / "briefing_v1.md").write_text("x", encoding="utf-8")
+    monkeypatch.setattr(redator, "PROMPTS_DIR", tmp_path)
+    monkeypatch.setattr(redator.caminho_prompt, "__defaults__", (tmp_path,))
+    chamado = {}
+    monkeypatch.setattr(redator, "dry_run", lambda escopo, prompt_path: chamado.update(p=prompt_path))
+    redator.main(["--escopo", "br", "--dry-run", "--prompt", "v1"])
+    assert chamado["p"] == tmp_path / "briefing_v1.md"
+    with pytest.raises(SystemExit):
+        redator.main(["--escopo", "br", "--dry-run", "--prompt", "v9"])

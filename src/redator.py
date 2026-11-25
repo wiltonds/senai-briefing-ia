@@ -1,6 +1,7 @@
 """Redator: gera o briefing executivo com a IA a partir da ficha de fatos.
 
-Fluxo: lê ``outputs/fatos_{escopo}.json`` e ``prompts/briefing_v1.md`` (system),
+Fluxo: lê ``outputs/fatos_{escopo}.json`` e ``prompts/briefing_{versao}.md`` (system,
+padrão v2),
 envia os fatos (id, categoria, frase) entre ``<fatos>`` e ``</fatos>``, extrai o
 JSON da resposta e valida com ``src.validador``. Se houver erros, reenvia a lista
 pedindo correção (no máximo 3 tentativas). Se todas falharem, entra em "modo
@@ -14,6 +15,7 @@ Saídas:
 Uso:
     python -m src.redator --escopo BR
     python -m src.redator --escopo BR --dry-run
+    python -m src.redator --escopo BR --prompt v1
 """
 
 from __future__ import annotations
@@ -36,11 +38,12 @@ logger = logging.getLogger("redator")
 RAIZ = Path(__file__).resolve().parents[1]
 OUTPUTS_DIR = RAIZ / "outputs"
 LOGS_DIR = RAIZ / "logs"
-PROMPT_PATH = RAIZ / "prompts" / "briefing_v1.md"
+PROMPTS_DIR = RAIZ / "prompts"
+VERSAO_PROMPT_PADRAO = "v2"
 ENV_PATH = RAIZ / ".env"
 
 MODELO_PADRAO = "claude-sonnet-5-5"
-MAX_TOKENS = 4000
+MAX_TOKENS = 6000
 MAX_TENTATIVAS = 3
 CHARS_POR_TOKEN = 4  # estimativa grosseira para o --dry-run
 
@@ -61,6 +64,21 @@ def versao_prompt(caminho: Path) -> str:
     """Versão do prompt a partir do nome do arquivo (``briefing_v1.md`` -> ``v1``)."""
     m = re.search(r"_(v\d+)$", caminho.stem)
     return m.group(1) if m else caminho.stem
+
+
+def caminho_prompt(versao: str, prompts_dir: Path = PROMPTS_DIR) -> Path:
+    """Caminho do prompt da versão (``v2`` -> ``prompts/briefing_v2.md``).
+
+    Raises:
+        FileNotFoundError: se o arquivo da versão não existir.
+    """
+    caminho = prompts_dir / f"briefing_{versao}.md"
+    if not caminho.is_file():
+        raise FileNotFoundError(f"prompt da versão '{versao}' não encontrado: {caminho}")
+    return caminho
+
+
+PROMPT_PATH = PROMPTS_DIR / f"briefing_{VERSAO_PROMPT_PADRAO}.md"
 
 
 def sha256_arquivo(caminho: Path) -> str:
@@ -171,6 +189,7 @@ def gerar_briefing(
     fatos_path = outputs_dir / f"fatos_{escopo}.json"
     fatos = carregar_fatos(fatos_path)
     system = prompt_path.read_text(encoding="utf-8")
+    logger.info("Escopo %s: modelo %s, prompt %s.", escopo, modelo, versao_prompt(prompt_path))
     mensagens: list[dict] = [{"role": "user", "content": montar_mensagem(fatos, escopo)}]
 
     tentativas: list[dict] = []
@@ -252,7 +271,10 @@ def gerar_briefing(
     log_path = logs_dir / f"geracao_{escopo}_{agora.strftime('%Y%m%dT%H%M%SZ')}.json"
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    logger.info("Briefing salvo em %s (status %s); log em %s.", saida, doc["status"], log_path)
+    logger.info(
+        "Briefing salvo em %s (status %s, prompt %s); log em %s.",
+        saida, doc["status"], doc["versao_prompt"], log_path,
+    )
     return doc
 
 
@@ -265,9 +287,9 @@ def dry_run(escopo: str, outputs_dir: Path = OUTPUTS_DIR, prompt_path: Path = PR
     info = {"n_fatos": len(fatos), "chars_system": len(system), "chars_mensagem": len(mensagem),
             "tokens_estimados": chars // CHARS_POR_TOKEN}
     logger.info(
-        "Dry-run %s: %d fatos; system %d caracteres; mensagem %d caracteres; ~%d tokens de entrada "
+        "Dry-run %s (prompt %s): %d fatos; system %d caracteres; mensagem %d caracteres; ~%d tokens de entrada "
         "(estimativa %d caracteres/token). API não chamada.",
-        escopo, info["n_fatos"], info["chars_system"], info["chars_mensagem"],
+        escopo, versao_prompt(prompt_path), info["n_fatos"], info["chars_system"], info["chars_mensagem"],
         info["tokens_estimados"], CHARS_POR_TOKEN,
     )
     return info
@@ -278,12 +300,20 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Gera o briefing executivo com a IA.")
     parser.add_argument("--escopo", required=True, help='"BR" ou sigla do DR')
     parser.add_argument("--dry-run", action="store_true", help="monta a mensagem sem chamar a API")
+    parser.add_argument(
+        "--prompt", default=VERSAO_PROMPT_PADRAO,
+        help=f'versão do prompt (lê prompts/briefing_{{versao}}.md; padrão "{VERSAO_PROMPT_PADRAO}")',
+    )
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     escopo = args.escopo.upper()
+    try:
+        prompt_path = caminho_prompt(args.prompt)
+    except FileNotFoundError as exc:
+        parser.error(str(exc))
 
     if args.dry_run:
-        dry_run(escopo)
+        dry_run(escopo, prompt_path=prompt_path)
         return
 
     import anthropic
@@ -291,7 +321,7 @@ def main(argv: list[str] | None = None) -> None:
 
     load_dotenv(ENV_PATH)  # define ANTHROPIC_API_KEY sem expor o valor
     modelo = os.getenv("LLM_MODEL", MODELO_PADRAO)
-    gerar_briefing(escopo, anthropic.Anthropic(), modelo=modelo)
+    gerar_briefing(escopo, anthropic.Anthropic(), modelo=modelo, prompt_path=prompt_path)
 
 
 if __name__ == "__main__":

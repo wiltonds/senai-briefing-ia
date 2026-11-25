@@ -34,7 +34,7 @@ def _briefing() -> dict:
         ],
         "pontos_atencao": [
             item("10 de 27 DRs, entre eles AC e AL, têm 4 ou mais indicadores críticos.", ["F002"]),
-            item("Índice de 88,4% no indicador 1.", ["F001"]),
+            item("Índice de 88,4% na taxa de ocupação.", ["F001"]),
             item("Hipótese: a ocupação caiu devido ao mercado.", ["F001"]),
         ],
         "recomendacoes": [rec(["F001"]), rec(["F002"]), rec(["F003"])],
@@ -126,3 +126,47 @@ def test_nao_altera_entrada():
     original = copy.deepcopy(b)
     validar(b, FATOS)
     assert b == original
+
+
+# ---------------------------------------------------------------- ordinais
+@pytest.mark.parametrize("texto", ["4º", "1ª", "no 4º tri", "12º lugar", "3°"])
+def test_ordinais_nao_contam_como_numero(texto):
+    assert tokens_numericos(texto) == set()
+
+
+def test_ordinal_no_texto_nao_gera_erro():
+    b = _briefing()
+    b["destaques"][0]["texto"] = "No 4º tri, receita projetada de R$ 1,06 bi; 1ª revisão."
+    assert validar(b, FATOS) == []
+
+
+def test_numero_comum_continua_contando():
+    assert tokens_numericos("4 indicadores e 39,8%") == {"4", "39,8"}
+
+
+# ---------------------------------------------------------------- código de indicador
+@pytest.mark.parametrize("secao,idx", [("destaques", 0), ("pontos_atencao", 0)])
+@pytest.mark.parametrize("ref", ["indicador 3", "Indicador 2.1"])
+def test_codigo_de_indicador_rejeitado(secao, idx, ref):
+    b = _briefing()
+    b[secao][idx]["texto"] = f"O {ref} piorou."
+    erros = validar(b, FATOS)
+    assert any("código" in e and "nome do indicador" in e and f"{secao}[1]" in e for e in erros)
+
+
+def test_codigo_de_indicador_na_mensagem_central():
+    b = _briefing()
+    b["mensagem_central"]["texto"] = "O indicador 1 ficou abaixo da meta."
+    assert any(e.startswith("mensagem_central") and "código" in e for e in validar(b, FATOS))
+
+
+def test_codigo_de_indicador_permitido_em_recomendacoes():
+    b = _briefing()
+    b["recomendacoes"][0]["acao"] = "DN e DR revisam o indicador 1 em 2026."
+    assert not any("código" in e for e in validar(b, FATOS))
+
+
+def test_palavra_indicador_sem_codigo_permitida():
+    b = _briefing()
+    b["destaques"][0]["texto"] = "Receita projetada de R$ 1,06 bi; indicador de receita em alta."
+    assert validar(b, FATOS) == []

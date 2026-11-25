@@ -11,6 +11,10 @@
 4. Toda sigla de UF do item aparece nas frases dos fatos citados.
 5. Linguagem causal exige a palavra "hipótese".
 6. Jargão técnico proibido.
+7. Em ``mensagem_central``, ``destaques`` e ``pontos_atencao``, nada de
+   referência a código de indicador ("indicador 3", "indicador 2.1").
+
+Ordinais ("4º", "1ª", "4º tri") não contam como número na regra 3.
 """
 
 from __future__ import annotations
@@ -34,13 +38,17 @@ MAX_PALAVRAS_TEXTO = 45
 MAX_PALAVRAS_ACAO = 40
 
 # Número não pode começar colado a letra/dígito (evita "F001" e o "-" de "2025-2026").
-RE_NUMERO = re.compile(r"(?<![\w])-?\d[\d.,]*")
+# Quantificador possessivo + lookahead: ordinais ("4º", "1ª", "12°") não são números.
+RE_NUMERO = re.compile(r"(?<![\w])-?\d[\d.,]*+(?![ºª°])")
 RE_UF = re.compile(r"\b(" + "|".join(UFS) + r")\b")
 RE_CAUSAL = re.compile(
     r"\bporque\b|\bdevido\b|\bcausa(?:s|ram|ou)?\b|\bem razão de\b|\bpor conta de\b",
     re.IGNORECASE,
 )
 JARGAO_PROIBIDO = ("_txt", "CSV", "status_dado", "farol")
+# Referência a código de indicador ("indicador 3", "Indicadores 2.1").
+RE_CODIGO_INDICADOR = re.compile(r"\bindicador(?:es)?\s+(?:n[º°.]\s*)?\d+(?:\.\d+)*", re.IGNORECASE)
+SECOES_SEM_CODIGO = ("mensagem_central", "destaques", "pontos_atencao")
 
 
 # ---------------------------------------------------------------- esquema
@@ -181,6 +189,13 @@ def _validar_item(rotulo: str, item: dict, texto: str, frases: dict[str, str]) -
     for termo in JARGAO_PROIBIDO:
         if termo.lower() in baixo:
             erros.append(f"{rotulo}: contém o termo técnico proibido '{termo}'.")
+
+    if rotulo.split("[")[0] in SECOES_SEM_CODIGO:
+        for ref in RE_CODIGO_INDICADOR.findall(texto):
+            erros.append(
+                f"{rotulo}: cita o indicador pelo código ('{ref}'); use o nome do indicador "
+                "(ex.: 'taxa de ocupação dos egressos')."
+            )
     return erros
 
 
