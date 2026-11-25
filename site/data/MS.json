@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "escopo": "MS",
+    "nome": "Mato Grosso do Sul",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "82,6%",
+      "comparacao": "40.363 de 48.861 previstas",
+      "pct_barra": 82.6,
+      "status": "atencao",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Mato Grosso do Sul)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "40.363 de 48.861 · 82,6%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "8.624 de 9.718 · 88,7%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "17.645 de 20.300 · 86,9%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "13.914 de 18.717 · 74,3%",
+            "status": "critico"
+          },
+          {
+            "nome": "Educação superior",
+            "valor": "180 de 126 · 142,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "1.755 de 1.136 · 154,5%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "42,0%",
+      "comparacao": "meta 45,0% · índice 93,3%",
+      "pct_barra": 93.3,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Mato Grosso do Sul e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Mato Grosso do Sul",
+            "valor": "93,3%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Mediana da região Centro-Oeste",
+            "valor": "71,8%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "5 de 12",
+      "comparacao": "3 indicadores em situação crítica",
+      "pct_barra": 41.7,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Mato Grosso do Sul em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "162,7%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "128,9%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "123,7%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "120,7%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "118,4%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "97,2%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "93,3%",
+            "status": "atencao",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "89,2%",
+            "status": "atencao",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "80,7%",
+            "status": "atencao",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "50,0%",
+            "status": "critico",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "46,7%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "28,9%",
+            "status": "critico",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "17,8%",
+      "comparacao": "Consultorias em descarbonização: projeção para dezembro, no ritmo atual",
+      "pct_barra": 17.8,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias em descarbonização",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "4 (meta 30)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "19,5 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "índice projetado 72,4%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_MS.png",
+    "manchete": "Mato Grosso do Sul: volume em atenção, resultado em atenção"
+  }
+}

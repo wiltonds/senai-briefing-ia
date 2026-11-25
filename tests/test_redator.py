@@ -114,9 +114,10 @@ def test_caminho_prompt_por_versao(tmp_path):
         redator.caminho_prompt("v9", tmp_path)
 
 
-def test_padrao_e_v2_e_max_tokens():
-    assert redator.VERSAO_PROMPT_PADRAO == "v2"
-    assert redator.PROMPT_PATH.name == "briefing_v2.md"
+def test_padrao_e_v3_e_max_tokens():
+    assert redator.VERSAO_PROMPT_PADRAO == "v3"
+    assert redator.PROMPT_PATH.name == "briefing_v3.md"
+    assert redator.PROMPT_PATH.exists()
     assert redator.MAX_TOKENS == 6000
 
 
@@ -138,3 +139,11 @@ def test_main_repassa_prompt(monkeypatch, tmp_path):
     assert chamado["p"] == tmp_path / "briefing_v1.md"
     with pytest.raises(SystemExit):
         redator.main(["--escopo", "br", "--dry-run", "--prompt", "v9"])
+
+
+def test_v3_e_v2_mais_regra_de_ordem():
+    v2 = (redator.PROMPTS_DIR / "briefing_v2.md").read_text(encoding="utf-8")
+    v3 = (redator.PROMPTS_DIR / "briefing_v3.md").read_text(encoding="utf-8")
+    assert v3.startswith("# Prompt: Executive Briefing SENAI (v3)")
+    assert v2.split("\n", 1)[1].rstrip() in v3
+    assert "o primeiro item é o que aparece em destaque na tela" in v3

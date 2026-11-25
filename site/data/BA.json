@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "escopo": "BA",
+    "nome": "Bahia",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "105,8%",
+      "comparacao": "119.354 de 112.851 previstas",
+      "pct_barra": 105.8,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Bahia)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "119.354 de 112.851 · 105,8%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "24.943 de 19.723 · 126,5%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "80.359 de 74.923 · 107,3%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "8.088 de 14.740 · 54,9%",
+            "status": "critico"
+          },
+          {
+            "nome": "Educação superior",
+            "valor": "5.964 de 3.465 · 172,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "3.033 de 635 · 477,6%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "36,5%",
+      "comparacao": "meta 45,0% · índice 81,1%",
+      "pct_barra": 81.1,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Bahia e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Bahia",
+            "valor": "81,1%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Mediana da região Nordeste",
+            "valor": "67,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "6 de 12",
+      "comparacao": "4 indicadores em situação crítica",
+      "pct_barra": 50.0,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Bahia em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "411,1%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "168,2%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "163,9%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "140,0%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "115,5%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "88,1%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "81,1%",
+            "status": "atencao",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "71,8%",
+            "status": "critico",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "65,3%",
+            "status": "critico",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "53,6%",
+            "status": "critico",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "14,4%",
+            "status": "critico",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          }
+        ]
+      },
+      "rotulo_status": "Trilha de apoio"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "20,0%",
+      "comparacao": "Receitas de serviços e convênios: projeção para dezembro, no ritmo atual",
+      "pct_barra": 20.0,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Receitas de serviços e convênios",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "R$ 100,8 mi (meta R$ 670,4 mi)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "17,0 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "índice projetado 51,9%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "índice projetado 63,1%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão das receitas de serviços e convênios"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_BA.png",
+    "manchete": "Bahia: volume ok, resultado em atenção"
+  }
+}

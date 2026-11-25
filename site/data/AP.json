@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "escopo": "AP",
+    "nome": "Amapá",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "99,3%",
+      "comparacao": "12.515 de 12.601 previstas",
+      "pct_barra": 99.3,
+      "status": "atencao",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Amapá)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "12.515 de 12.601 · 99,3%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "1.232 de 979 · 125,8%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "10.500 de 8.872 · 118,3%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "783 de 2.750 · 28,5%",
+            "status": "critico"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "51 de 45 · 113,3%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "24,7%",
+      "comparacao": "meta 45,0% · índice 54,9%",
+      "pct_barra": 54.9,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Amapá e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Amapá",
+            "valor": "54,9%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Norte",
+            "valor": "62,7%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "5 de 10",
+      "comparacao": "4 indicadores em situação crítica",
+      "pct_barra": 50.0,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 10 indicadores de Amapá em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "334,9%",
+            "status": "atingido",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "271,2%",
+            "status": "atingido",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "209,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "207,4%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "102,5%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "94,7%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "77,6%",
+            "status": "critico",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "76,3%",
+            "status": "critico",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "54,9%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "50,0%",
+            "status": "critico",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          }
+        ]
+      },
+      "rotulo_status": "Trilha de apoio"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "59,3%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 59.3,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "12 (meta 27)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "3,8 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Matrículas (Atendimento Social)",
+            "valor": "índice projetado 68,6%",
+            "status": "critico",
+            "nome_oficial": "Programas (matrículas) - TOTAL"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_AP.png",
+    "manchete": "Amapá: volume em atenção, resultado crítico"
+  }
+}

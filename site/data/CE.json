@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "escopo": "CE",
+    "nome": "Ceará",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "87,5%",
+      "comparacao": "78.423 de 89.630 previstas",
+      "pct_barra": 87.5,
+      "status": "atencao",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Ceará)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "78.423 de 89.630 · 87,5%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "7.086 de 11.788 · 60,1%",
+            "status": "critico"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "66.659 de 71.474 · 93,3%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "4.678 de 6.368 · 73,5%",
+            "status": "critico"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "941 de 675 · 139,4%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "41,1%",
+      "comparacao": "meta 45,0% · índice 91,3%",
+      "pct_barra": 91.3,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Ceará e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Ceará",
+            "valor": "91,3%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Mediana da região Nordeste",
+            "valor": "67,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "10 de 12",
+      "comparacao": "0 indicadores em situação crítica",
+      "pct_barra": 83.3,
+      "status": "atingido",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Ceará em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "252,5%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "202,4%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "199,3%",
+            "status": "atingido",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "196,4%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "175,3%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "168,6%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "150,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "117,8%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "108,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "104,8%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "91,3%",
+            "status": "atencao",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "89,6%",
+            "status": "atencao",
+            "nome_oficial": "Fidelização de alunos"
+          }
+        ]
+      },
+      "rotulo_status": "Sem críticos"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "66,9%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 66.9,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "135 (meta 269)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "3,0 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Matrículas (Atendimento Social)",
+            "valor": "índice projetado 77,7%",
+            "status": "critico",
+            "nome_oficial": "Programas (matrículas) - TOTAL"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_CE.png",
+    "manchete": "Ceará: volume em atenção, resultado em atenção"
+  }
+}

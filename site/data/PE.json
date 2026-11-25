@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "escopo": "PE",
+    "nome": "Pernambuco",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "150,6%",
+      "comparacao": "86.838 de 57.650 previstas",
+      "pct_barra": 150.0,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Pernambuco)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "86.838 de 57.650 · 150,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "19.790 de 12.966 · 152,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "65.933 de 44.684 · 147,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "1.405 de 750 · 187,3%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "33,1%",
+      "comparacao": "meta 45,0% · índice 73,6%",
+      "pct_barra": 73.6,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Pernambuco e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Pernambuco",
+            "valor": "73,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Nordeste",
+            "valor": "67,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "9 de 12",
+      "comparacao": "2 indicadores em situação crítica",
+      "pct_barra": 75.0,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Pernambuco em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "203,7%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "161,9%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "151,2%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "150,9%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "135,6%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "131,2%",
+            "status": "atingido",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "101,9%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "101,0%",
+            "status": "atingido",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "99,6%",
+            "status": "atencao",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "77,6%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "73,6%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "79,1%",
+      "comparacao": "Consultorias em descarbonização: projeção para dezembro, no ritmo atual",
+      "pct_barra": 79.1,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias em descarbonização",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "73 (meta 123)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "2,1 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_PE.png",
+    "manchete": "Pernambuco está entre os DRs que entregam volume sem resultado"
+  }
+}

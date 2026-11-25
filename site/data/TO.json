@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "escopo": "TO",
+    "nome": "Tocantins",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "129,0%",
+      "comparacao": "27.671 de 21.453 previstas",
+      "pct_barra": 129.0,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Tocantins)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "27.671 de 21.453 · 129,0%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "3.534 de 4.157 · 85,0%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "19.334 de 12.812 · 150,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "4.803 de 4.484 · 107,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "434 de 203 · 213,8%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "22,8%",
+      "comparacao": "meta 35,0% · índice 65,1%",
+      "pct_barra": 65.1,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Tocantins e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Tocantins",
+            "valor": "65,1%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Norte",
+            "valor": "62,7%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "7 de 11",
+      "comparacao": "2 indicadores em situação crítica",
+      "pct_barra": 63.6,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 11 indicadores de Tocantins em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "547,4%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "381,2%",
+            "status": "atingido",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "163,3%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "153,2%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "111,8%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "105,2%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "87,6%",
+            "status": "atencao",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "83,5%",
+            "status": "atencao",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "65,1%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "0,0%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "39,1%",
+      "comparacao": "Receitas de serviços e convênios: projeção para dezembro, no ritmo atual",
+      "pct_barra": 39.1,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Receitas de serviços e convênios",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "R$ 412,8 mil (meta R$ 1,4 mi)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "7,2 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão das receitas de serviços e convênios"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_TO.png",
+    "manchete": "Tocantins está entre os DRs que entregam volume sem resultado"
+  }
+}

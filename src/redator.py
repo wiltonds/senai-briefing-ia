@@ -39,7 +39,7 @@ RAIZ = Path(__file__).resolve().parents[1]
 OUTPUTS_DIR = RAIZ / "outputs"
 LOGS_DIR = RAIZ / "logs"
 PROMPTS_DIR = RAIZ / "prompts"
-VERSAO_PROMPT_PADRAO = "v2"
+VERSAO_PROMPT_PADRAO = "v3"
 ENV_PATH = RAIZ / ".env"
 
 MODELO_PADRAO = "claude-sonnet-5-5"

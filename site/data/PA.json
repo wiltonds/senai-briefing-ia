@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "escopo": "PA",
+    "nome": "Pará",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "129,8%",
+      "comparacao": "90.885 de 70.000 previstas",
+      "pct_barra": 129.8,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Pará)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "90.885 de 70.000 · 129,8%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "3.990 de 3.020 · 132,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "84.860 de 61.107 · 138,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "2.035 de 5.873 · 34,7%",
+            "status": "critico"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "223 de 120 · 185,8%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "27,1%",
+      "comparacao": "meta 45,0% · índice 60,2%",
+      "pct_barra": 60.2,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Pará e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Pará",
+            "valor": "60,2%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Norte",
+            "valor": "62,7%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "4 de 12",
+      "comparacao": "4 indicadores em situação crítica",
+      "pct_barra": 33.3,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Pará em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "243,6%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "139,5%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "122,0%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "94,2%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "93,8%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "87,4%",
+            "status": "atencao",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "83,5%",
+            "status": "atencao",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "60,2%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "58,3%",
+            "status": "critico",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "50,2%",
+            "status": "critico",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "31,8%",
+            "status": "critico",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          }
+        ]
+      },
+      "rotulo_status": "Trilha de apoio"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "60,9%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 60.9,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "63 (meta 138)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "3,6 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_PA.png",
+    "manchete": "Pará está entre os DRs que entregam volume sem resultado"
+  }
+}

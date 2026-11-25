@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "escopo": "PR",
+    "nome": "Paraná",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "129,0%",
+      "comparacao": "188.549 de 146.158 previstas",
+      "pct_barra": 129.0,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Paraná)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "188.549 de 146.158 · 129,0%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "35.119 de 33.491 · 104,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "146.887 de 108.023 · 136,0%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação superior",
+            "valor": "5.724 de 4.644 · 123,3%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "2.624 de 2.400 · 109,3%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "42,1%",
+      "comparacao": "meta 45,0% · índice 93,6%",
+      "pct_barra": 93.6,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Paraná e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Paraná",
+            "valor": "93,6%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Mediana da região Sul",
+            "valor": "93,6%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "8 de 12",
+      "comparacao": "0 indicadores em situação crítica",
+      "pct_barra": 66.7,
+      "status": "atingido",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de Paraná em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "169,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "140,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "139,1%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "121,3%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "113,7%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "103,6%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "101,7%",
+            "status": "atingido",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "94,9%",
+            "status": "atencao",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "93,9%",
+            "status": "atencao",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "93,6%",
+            "status": "atencao",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "82,1%",
+            "status": "atencao",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          }
+        ]
+      },
+      "rotulo_status": "Sem críticos"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "52,2%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 52.2,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "292 (meta 746)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "4,7 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "índice projetado 58,8%",
+            "status": "critico",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_PR.png",
+    "manchete": "Paraná: volume ok, resultado em atenção"
+  }
+}

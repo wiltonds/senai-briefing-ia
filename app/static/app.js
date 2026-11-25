@@ -1,6 +1,9 @@
 /* Briefing executivo SENAI — página (JavaScript puro).
  *
- * Todos os dados vêm de /api/escopos, /api/escopo/{escopo} e /api/regioes.
+ * Dois modos de dados:
+ *  - api: FastAPI local (/api/escopos, /api/escopo/{escopo}, /api/regioes, /api/pdf/{escopo});
+ *  - estatico: Space estático (site/), por caminho relativo: data/*.json, figs/, pdf/.
+ * Começa em "api" só em localhost/127.0.0.1; se /api falhar, cai para "estatico".
  * A página NÃO calcula números: só exibe as strings recebidas. A única conta é a
  * largura da barra do KPI, derivada de pct_barra (0–150) para a escala da barra.
  * O escopo fica na URL (#AL) para link direto e para o botão voltar do navegador.
@@ -35,8 +38,25 @@
     regioes: null,   // JSON de /api/regioes
     aberto: null,    // índice do KPI com detalhe aberto
     regiao: null,    // região selecionada no mapa (null = Brasil)
+    expandido: {},   // colunas do briefing abertas ("Ver mais")
     pedido: 0        // descarta respostas antigas
   };
+
+  var ROTAS = {
+    api: {
+      escopos: function () { return '/api/escopos'; },
+      escopo: function (e) { return '/api/escopo/' + encodeURIComponent(e); },
+      regioes: function () { return '/api/regioes'; },
+      pdf: function (e) { return '/api/pdf/' + encodeURIComponent(e); }
+    },
+    estatico: {
+      escopos: function () { return 'data/escopos.json'; },
+      escopo: function (e) { return 'data/' + encodeURIComponent(e) + '.json'; },
+      regioes: function () { return 'data/regioes.json'; },
+      pdf: function (e) { return 'pdf/Executive_Briefing_SENAI_' + encodeURIComponent(e) + '.pdf'; }
+    }
+  };
+  var modo = ['localhost', '127.0.0.1'].indexOf(location.hostname) >= 0 ? 'api' : 'estatico';
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -73,6 +93,20 @@
     });
   }
 
+  var apiConfirmada = false; // após a 1ª resposta da API, um 404 é "sem dado", não "sem API"
+
+  /** Busca um recurso no modo atual; se a API (ainda não confirmada) falhar, passa ao modo estático. */
+  function buscarDado(recurso, arg) {
+    return buscar(ROTAS[modo][recurso](arg)).then(function (dado) {
+      if (modo === 'api') apiConfirmada = true;
+      return dado;
+    }, function (err) {
+      if (modo !== 'api' || apiConfirmada) throw err;
+      modo = 'estatico';
+      return buscar(ROTAS.estatico[recurso](arg));
+    });
+  }
+
   function escopoDaUrl() {
     var h = decodeURIComponent((location.hash || '').replace(/^#/, '')).toUpperCase();
     var validos = (estado.escopos || []).map(function (e) { return e.escopo; });
@@ -89,12 +123,12 @@
     var meu = ++estado.pedido;
     var mudou = escopo !== estado.escopo;
     estado.escopo = escopo;
-    if (mudou) { estado.aberto = null; estado.regiao = null; }
+    if (mudou) { estado.aberto = null; estado.regiao = null; estado.expandido = {}; }
     $('escopo').value = escopo;
     mostrarCarregando();
 
-    var pedidos = [buscar('/api/escopo/' + encodeURIComponent(escopo))];
-    if (escopo === 'BR' && !estado.regioes) pedidos.push(buscar('/api/regioes'));
+    var pedidos = [buscarDado('escopo', escopo)];
+    if (escopo === 'BR' && !estado.regioes) pedidos.push(buscarDado('regioes'));
     Promise.all(pedidos).then(function (res) {
       if (meu !== estado.pedido) return;
       estado.doc = res[0];
@@ -108,7 +142,7 @@
 
   function iniciar() {
     mostrarCarregando();
-    buscar('/api/escopos').then(function (lista) {
+    buscarDado('escopos').then(function (lista) {
       estado.escopos = lista;
       montarSeletor(lista);
       estado.escopo = null; // força o primeiro carregamento
@@ -161,7 +195,7 @@
     $('voltar').hidden = meta.escopo === 'BR';
     var pdf = $('exportar');
     if (meta.tem_pdf) {
-      pdf.href = '/api/pdf/' + encodeURIComponent(meta.escopo);
+      pdf.href = ROTAS[modo].pdf(meta.escopo);
       pdf.hidden = false;
     } else {
       pdf.removeAttribute('href');
@@ -252,24 +286,51 @@
     return el('article', { class: 'item' }, el('div', { class: 'item-t' }, t), el('div', { class: 'item-x' }, x), extra || null);
   }
 
+  /** Texto do botão de expandir ("Ver mais N ▾" / "Ver menos ▴"). N = itens além do 1º. */
+  function textoVerMais(aberto, n) { return aberto ? 'Ver menos ▴' : 'Ver mais ' + n + ' ▾'; }
+
+  /**
+   * Coluna do briefing: título com a contagem, 1º item completo e os demais
+   * recolhidos atrás de "Ver mais N ▾" (o 1º é o mais importante; ver prompt v3).
+   */
+  function colunaBriefing(chave, titulo, status, itens, montar) {
+    var aberto = !!estado.expandido[chave];
+    var idResto = 'resto-' + chave;
+    var col = el('section', { class: 'coluna', 'aria-labelledby': 'tit-' + chave },
+      el('h2', { class: 'sec', id: 'tit-' + chave }, status ? ponto(status) : null, titulo + ' · ' + itens.length));
+    if (!itens.length) return col;
+    col.appendChild(montar(itens[0]));
+    var resto = itens.slice(1);
+    if (!resto.length) return col;
+    var caixa = el('div', { class: 'coluna-resto', id: idResto }, resto.map(montar));
+    caixa.hidden = !aberto;
+    var botao = el('button', {
+      type: 'button', class: 'btn-ver-mais', 'aria-expanded': aberto ? 'true' : 'false', 'aria-controls': idResto,
+      onclick: function () {
+        var abrir = caixa.hidden;
+        estado.expandido[chave] = abrir;
+        caixa.hidden = !abrir;
+        botao.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+        botao.textContent = textoVerMais(abrir, resto.length);
+      }
+    }, textoVerMais(aberto, resto.length));
+    col.appendChild(caixa);
+    col.appendChild(botao);
+    return col;
+  }
+
   function renderBriefingBlocos(b) {
     var alvo = limpar($('briefing-blocos'));
     alvo.hidden = !b;
     if (!b) return;
-    var col = el('section', { class: 'briefing-col', 'aria-label': 'Briefing' },
-      el('div', { class: 'duas' },
-        el('div', { class: 'lista-bloco' },
-          el('h2', { class: 'sec' }, ponto('atingido'), 'Destaques'),
-          b.destaques.map(function (d) { return item(d.titulo, d.texto); })),
-        el('div', { class: 'lista-bloco' },
-          el('h2', { class: 'sec' }, ponto('atencao'), 'Pontos de atenção'),
-          b.pontos_atencao.map(function (d) { return item(d.titulo, d.texto); }))),
-      el('h2', { class: 'sec sec-recs' }, 'Recomendações práticas'),
-      el('div', { class: 'recs' }, b.recomendacoes.map(function (r) {
-        return item(r.titulo, r.texto, el('div', { class: 'item-quem' }, 'Quem: ' + r.quem + ' · Quando: ' + r.quando));
-      })));
-    alvo.appendChild(col);
-    // Passo 3: a seção "Pergunte ao briefing" entra aqui, ao lado da coluna.
+    var simples = function (d) { return item(d.titulo, d.texto); };
+    var rec = function (r) {
+      return item(r.titulo, r.texto, el('div', { class: 'item-quem' }, 'Quem: ' + r.quem + ' · Quando: ' + r.quando));
+    };
+    alvo.appendChild(colunaBriefing('destaques', 'Destaques', 'atingido', b.destaques, simples));
+    alvo.appendChild(colunaBriefing('atencao', 'Pontos de atenção', 'atencao', b.pontos_atencao, simples));
+    alvo.appendChild(colunaBriefing('recs', 'Recomendações práticas', null, b.recomendacoes, rec));
+    // Passo 3: a seção "Pergunte ao briefing" entra depois destas colunas.
   }
 
   // ------------------------------------------------------------------ visão Brasil
@@ -348,7 +409,8 @@
     var sec = limpar($('visao-dr'));
     var d = estado.doc;
     if (d.meta.escopo === 'BR' || !d.grafico) { sec.hidden = true; return; }
-    sec.appendChild(el('img', { src: '/' + d.grafico.figura, width: '520', height: '390',
+    // figura = "figs/x.png": relativo, serve no FastAPI (/figs) e no site estático.
+    sec.appendChild(el('img', { src: d.grafico.figura, width: '520', height: '390',
       alt: 'Dispersão do índice de matrículas pelo índice de empregabilidade dos 27 DRs' }));
     sec.appendChild(el('div', { class: 'visao-dr-texto' },
       el('h2', null, d.grafico.manchete),

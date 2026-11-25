@@ -1,0 +1,278 @@
+{
+  "publicado_em": "2026-11-25T18:56:58+00:00",
+  "revisado_por": "Wilton Costa",
+  "arquivos": [
+    {
+      "arquivo": "app.js",
+      "sha256": "d454e3ed829eff7244fcf0d1a40f516e907ceee97a14b1a4bee5a1df4e0fc67a"
+    },
+    {
+      "arquivo": "data/AC.json",
+      "sha256": "e08b6acd25ebd1b79168fc93988f31aa5d34a28dec3d63b2932c106b244b15c3"
+    },
+    {
+      "arquivo": "data/AL.json",
+      "sha256": "991bbe49205f0b1d894ca7cbec8d9c27bfcca25fb83fd0c6e6323af690c7f296"
+    },
+    {
+      "arquivo": "data/AM.json",
+      "sha256": "90859cc43003ba25c9933e5a604834243498fd014819c83b1494b442ff689a33"
+    },
+    {
+      "arquivo": "data/AP.json",
+      "sha256": "5a2a3311c5f08a8fb377b89753ed46c501229948407d4794cafb39c95e0b6589"
+    },
+    {
+      "arquivo": "data/BA.json",
+      "sha256": "2fc27b1afaf1a181ddb35c01d7816374d917525f8d0e1d3535687b6888e68fc7"
+    },
+    {
+      "arquivo": "data/BR.json",
+      "sha256": "ea393c1830ec3f152974f358c0e3ff993f233b099bd690dc7b0f8e4544bec994"
+    },
+    {
+      "arquivo": "data/CE.json",
+      "sha256": "80ae50a69459a673bfcc722c94cbe8c75b9d514dde4709a71b5463cc1601eaf5"
+    },
+    {
+      "arquivo": "data/DF.json",
+      "sha256": "5384bcc9048fb6c4787173365bd311b15adf0edfd8a68a46acc5415d01a4b76f"
+    },
+    {
+      "arquivo": "data/ES.json",
+      "sha256": "8d8dfe3ddba1d1a6aa9d8e47e9ba6b1b9bf29b51a289d4ac20f12701a9183e57"
+    },
+    {
+      "arquivo": "data/escopos.json",
+      "sha256": "12a623c49a7b119197d01b1079b7126ddb14d7bf8b3d2962e5d9706f334da8a1"
+    },
+    {
+      "arquivo": "data/GO.json",
+      "sha256": "a3ad3a32da7478bc087c5572728baddbae3bba3aa7ef95d70015e04c24df6aa2"
+    },
+    {
+      "arquivo": "data/MA.json",
+      "sha256": "f011b3f5d5484e8c0a7c1591e8dc30567fee11c3e81bb433fe9905a79843548e"
+    },
+    {
+      "arquivo": "data/MG.json",
+      "sha256": "b586b21a81f16c568bf612f027cdc2db7b995a844ae25f3ee1bb44c87ee7f04b"
+    },
+    {
+      "arquivo": "data/MS.json",
+      "sha256": "e9cfaf2ffe2c89f90f1462ae7171b711c9e113b30dec8203ccaef8ece12b8027"
+    },
+    {
+      "arquivo": "data/MT.json",
+      "sha256": "58647fade368d678635ca7b9f18605ebd11caa4b0d88fa4ce5735be2880c1aec"
+    },
+    {
+      "arquivo": "data/PA.json",
+      "sha256": "190029cebd355eb45ef6d26b38a39bb193cd83c7af5fb05a1cf5f7e88229cd94"
+    },
+    {
+      "arquivo": "data/PB.json",
+      "sha256": "5c83038e7efd8e0e06821cad6f42618fcf1597b9176216d88e9820be42e35444"
+    },
+    {
+      "arquivo": "data/PE.json",
+      "sha256": "94d3d623febd5181a73184050eaf49d6e3490f70620860d9984e1685bd5ce752"
+    },
+    {
+      "arquivo": "data/PI.json",
+      "sha256": "8c96e7796d4612fc22eb85e0421ae97348cc67ff5944cade353835583950c088"
+    },
+    {
+      "arquivo": "data/PR.json",
+      "sha256": "13edea677c45073685e8a139e1008eaae4179ebe957921b405c8d5ee41c8c027"
+    },
+    {
+      "arquivo": "data/regioes.json",
+      "sha256": "181db93e77df13aa58b81bff638912ce87670abe5893b2d0dd3aa13b7897ed37"
+    },
+    {
+      "arquivo": "data/RJ.json",
+      "sha256": "e46eb6510a4baa6ffe8614ed8942f81bb1e3e342f39d71bdb7d0e179c3d5e0d2"
+    },
+    {
+      "arquivo": "data/RN.json",
+      "sha256": "d749bb61c50814623d13d775ddceb5b4b16ae8b21b4641308e4549a7c9a43fc0"
+    },
+    {
+      "arquivo": "data/RO.json",
+      "sha256": "a37ed06edd1de90c916359f98653f8586bdd93b5f9325df142dd439842f54d9d"
+    },
+    {
+      "arquivo": "data/RR.json",
+      "sha256": "829910a453d575d047bd3edd4b00e52ad66a2c16dd15ce17585582574a528bbf"
+    },
+    {
+      "arquivo": "data/RS.json",
+      "sha256": "70476c2aaf9b1a8f400f897197e13cac948c3c0821221094eb6f21b9d8390d09"
+    },
+    {
+      "arquivo": "data/SC.json",
+      "sha256": "9ecf93bac19c958ee69e04f7e7f6b618c4b5d16a0e3a9b7d6631a660510fd089"
+    },
+    {
+      "arquivo": "data/SE.json",
+      "sha256": "5233853a56973c1c6d258d1ad919b8515a7596e13e9f425ff64e8b4aa4fc6468"
+    },
+    {
+      "arquivo": "data/SP.json",
+      "sha256": "bacfcd04a03aacb8da1aa9d561d2269592ac75b57c58b108e694205959ec40e4"
+    },
+    {
+      "arquivo": "data/TO.json",
+      "sha256": "fa1e2bd88f1ed2e057449c046b7c6f0eed42f32c9614d0747de55efe0fcd66a1"
+    },
+    {
+      "arquivo": "figs/empregabilidade_dr_AL.png",
+      "sha256": "131b218c5a1710efd5da27f3694f197eb44ebb2b3d2209e19bf68676073910b8"
+    },
+    {
+      "arquivo": "figs/empregabilidade_dr_BR.png",
+      "sha256": "90d12443fe62975b7685d0be0105ee9647debe84655023c6c4d47896addf749c"
+    },
+    {
+      "arquivo": "figs/empregabilidade_dr_RJ.png",
+      "sha256": "7b7aaf4c26154d62eba9017e34d2b6585efbbf5ea1e6da3d6970eed182becf00"
+    },
+    {
+      "arquivo": "figs/empregabilidade_dr_SP.png",
+      "sha256": "02027729f88ef905369716fa324f7571b04d49ac76dc3ad455bc84b823f2d80e"
+    },
+    {
+      "arquivo": "figs/volume_resultado_AC.png",
+      "sha256": "16d31424c9bacc6e887f50587d464715601a6498942aecfa2ae1b89c58f3db2b"
+    },
+    {
+      "arquivo": "figs/volume_resultado_AL.png",
+      "sha256": "c7d14fdd008e455f5acef6e6a74abc1869e725cd97e73437ebb4ff3dd70f05e0"
+    },
+    {
+      "arquivo": "figs/volume_resultado_AM.png",
+      "sha256": "5596124ea57e933934385b37f0f8307565b27de18882eb401101518446a17eb8"
+    },
+    {
+      "arquivo": "figs/volume_resultado_AP.png",
+      "sha256": "b63ff7c6b90932fe99fcdff70eaa57ef6d32ffe76fafd30dd4d40ed29954014e"
+    },
+    {
+      "arquivo": "figs/volume_resultado_BA.png",
+      "sha256": "ac2be016c836f5ca741f64057dcc74101a365615110e538a4f6511c4764c1144"
+    },
+    {
+      "arquivo": "figs/volume_resultado_BR.png",
+      "sha256": "d4f68dc514b16ed4bd0b17269fa5cf3ca1fd3bb819ec1291093acbdc9870cccf"
+    },
+    {
+      "arquivo": "figs/volume_resultado_CE.png",
+      "sha256": "f2f3208ffb1297d7968475c4299781865f296bc5a7a6b666fc79bebd7d3e8944"
+    },
+    {
+      "arquivo": "figs/volume_resultado_DF.png",
+      "sha256": "5597f80ca0d3ced27e2575b0b34261e7490c1de75770520ae75a3c0b7c370737"
+    },
+    {
+      "arquivo": "figs/volume_resultado_ES.png",
+      "sha256": "2235ec09be1a65ee7904f057219ea0e55b277ac5d681bc5f2b4c1bb16972ce5f"
+    },
+    {
+      "arquivo": "figs/volume_resultado_GO.png",
+      "sha256": "39af4ec5e2a1ce251e534865f949ac325ae77ba0d6669190684440e46d9eb86f"
+    },
+    {
+      "arquivo": "figs/volume_resultado_MA.png",
+      "sha256": "f0428727e2c8dd87de5d7ce774215f9d6fae726801e1135d6933f44f2fa48929"
+    },
+    {
+      "arquivo": "figs/volume_resultado_MG.png",
+      "sha256": "d904e354243b5900b6d9cb5f1d971b48724f5d9a0b8156d1d2a01e1ca9c726c5"
+    },
+    {
+      "arquivo": "figs/volume_resultado_MS.png",
+      "sha256": "51574b6214dfe48af03f289c755798d37d09cc69c73a41bd218fa7974dc123d6"
+    },
+    {
+      "arquivo": "figs/volume_resultado_MT.png",
+      "sha256": "e9c190e002bdf974adb9f0585de060b085a59eb4d878621f6f6072405e068ff6"
+    },
+    {
+      "arquivo": "figs/volume_resultado_PA.png",
+      "sha256": "74686db7d8c3ee9a6ad66c6fadd2614caf12b210a994907bd987198311a1d0cc"
+    },
+    {
+      "arquivo": "figs/volume_resultado_PB.png",
+      "sha256": "ee63b3277a8aad77cbe93aa2fa53270529ca5d3057324ddd82265f44668c50e6"
+    },
+    {
+      "arquivo": "figs/volume_resultado_PE.png",
+      "sha256": "55f4d5eea59cc1227986689711e07c9583d97a77b3cafca2b63f51bc0ba53705"
+    },
+    {
+      "arquivo": "figs/volume_resultado_PI.png",
+      "sha256": "a1757d651d96db76277a8afc062440b2ad8deb1cad6dfb49b13a5e292e2c9d07"
+    },
+    {
+      "arquivo": "figs/volume_resultado_PR.png",
+      "sha256": "a0ffde9756dbe21e55744500d71e3ab81c613f4bf05634de49268e86e765c0da"
+    },
+    {
+      "arquivo": "figs/volume_resultado_RJ.png",
+      "sha256": "752fe11bbe6ae97be42ac9d56799d75f381d8e40c6b467f8a28ed3dfd31482d8"
+    },
+    {
+      "arquivo": "figs/volume_resultado_RN.png",
+      "sha256": "1c773eceb6589c1339e4451c66090508a9bcc8a18de2ec9f936a20f4972a5089"
+    },
+    {
+      "arquivo": "figs/volume_resultado_RO.png",
+      "sha256": "4cc735cc1a7d1d51370c420193068666ef6e39372ae082de10e6a9fdbde35be6"
+    },
+    {
+      "arquivo": "figs/volume_resultado_RR.png",
+      "sha256": "bf8275c1965c3fce10bef09b9245674e18bb0290bb8b44234533c2183492ed19"
+    },
+    {
+      "arquivo": "figs/volume_resultado_RS.png",
+      "sha256": "f6a547014ab09035fd1cabdf9222d82f2200c08ad18d50f42693b036a4d61762"
+    },
+    {
+      "arquivo": "figs/volume_resultado_SC.png",
+      "sha256": "93a0e3d017a82baabf648d740ade4c9d411fe8ad5b48f6a4211eb8a018a1f0df"
+    },
+    {
+      "arquivo": "figs/volume_resultado_SE.png",
+      "sha256": "36512e262e31d5fd5b6df5cda50539ea2e6fc888aa410f87ebfe11b850d9b6f1"
+    },
+    {
+      "arquivo": "figs/volume_resultado_SP.png",
+      "sha256": "28c2f91daf5229334cfe2dfe3ad83c6b0bd273713e6b0614d994c9652a8afca5"
+    },
+    {
+      "arquivo": "figs/volume_resultado_TO.png",
+      "sha256": "31fdf67dd8e0d5cd4cfcb57ad6031fe0409a2cb59e0e1298b4665bb16b4e7857"
+    },
+    {
+      "arquivo": "index.html",
+      "sha256": "d4a597639638d2e50488a0017d853e07b9a2d5d0078626fdfa119700c6f6d6a3"
+    },
+    {
+      "arquivo": "pdf/Executive_Briefing_SENAI_AL.pdf",
+      "sha256": "54c22cef2d506d9a698530f08ad500181f0f1cd7e3b467b4d07677ca58349e31"
+    },
+    {
+      "arquivo": "pdf/Executive_Briefing_SENAI_BR.pdf",
+      "sha256": "b70907f683bbdf1d7043bf924acdbbb0adf831978f1a1daaa8ca654fc4166978"
+    },
+    {
+      "arquivo": "README.md",
+      "sha256": "7282e1591ba383ca399fce5a1912404cc239cae2f0691e66dc1bef85261cb209"
+    },
+    {
+      "arquivo": "styles.css",
+      "sha256": "119f2836753fe0395a88595dba5c217eb53a86a1c8a727b58c6b58bd74f28703"
+    }
+  ]
+}

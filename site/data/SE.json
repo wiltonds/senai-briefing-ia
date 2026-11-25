@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "escopo": "SE",
+    "nome": "Sergipe",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "134,5%",
+      "comparacao": "21.081 de 15.670 previstas",
+      "pct_barra": 134.5,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Sergipe)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "21.081 de 15.670 · 134,5%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "2.710 de 2.717 · 99,7%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "17.502 de 11.833 · 147,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "869 de 1.120 · 77,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "186 de 167 · 111,4%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "29,4%",
+      "comparacao": "meta 45,0% · índice 65,3%",
+      "pct_barra": 65.3,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Sergipe e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Sergipe",
+            "valor": "65,3%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Nordeste",
+            "valor": "67,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "7 de 10",
+      "comparacao": "1 indicadores em situação crítica",
+      "pct_barra": 70.0,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 10 indicadores de Sergipe em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "474,5%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "182,7%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "135,1%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "130,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "119,4%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "103,0%",
+            "status": "atingido",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "91,7%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "85,0%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "65,3%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "44,4%",
+      "comparacao": "Consultorias em descarbonização: projeção para dezembro, no ritmo atual",
+      "pct_barra": 44.4,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias em descarbonização",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "8 (meta 24)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "6,0 vezes o ritmo atual",
+            "status": "neutro"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "índice projetado 55,6%",
+            "status": "critico",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_SE.png",
+    "manchete": "Sergipe está entre os DRs que entregam volume sem resultado"
+  }
+}

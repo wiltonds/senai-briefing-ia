@@ -103,19 +103,16 @@ main { max-width: 1160px; margin: 0 auto; padding: 20px 24px 48px; display: flex
 [title].tem-dica { text-decoration: underline dotted #9AA5B4; text-underline-offset: 3px; cursor: help; }
 
 /* Briefing */
-.briefing { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
-.briefing-col { flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
-.duas { display: flex; flex-wrap: wrap; gap: 14px; }
-.lista-bloco { flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px; }
+.briefing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.coluna { min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.coluna-resto { display: flex; flex-direction: column; gap: 8px; }
 h2.sec { margin: 0; font-size: 16px; color: var(--marinho); display: flex; align-items: center; gap: 8px; }
-h2.sec-recs { margin-top: 4px; }
-.item { background: #FFFFFF; border-radius: 10px; padding: 12px 14px; border: 1px solid var(--borda); }
+.item { background: #FFFFFF; border-radius: 10px; padding: 12px 14px; border: 1px solid var(--borda); display: flex; flex-direction: column; gap: 4px; }
 .item-t { font-size: 14px; font-weight: 600; }
-.item-x { font-size: 14px; line-height: 1.45; color: var(--texto-3); margin-top: 3px; }
-.recs { display: flex; flex-wrap: wrap; gap: 10px; }
-.recs .item { flex: 1 1 240px; display: flex; flex-direction: column; gap: 4px; }
-.recs .item-x { margin-top: 0; }
+.item-x { font-size: 14px; line-height: 1.45; color: var(--texto-3); }
 .item-quem { font-size: 12px; color: var(--marinho); font-weight: 600; }
+.btn-ver-mais { align-self: flex-start; font-size: 14px; font-weight: 600; background: none; border: none; color: var(--marinho); cursor: pointer; min-height: 44px; padding: 0 4px; text-decoration: underline; text-underline-offset: 3px; }
+.btn-ver-mais:hover { color: var(--marinho-escuro); }
 
 /* Visão Brasil */
 .visao-br { display: flex; flex-direction: column; gap: 16px; }
@@ -162,7 +159,8 @@ footer.rodape { font-size: 12px; color: var(--texto-mudo); }
   .barra, .barra-esq, .barra-dir { flex-direction: column; align-items: stretch; }
   .campo select { min-width: 0; width: 100%; }
   .btn { justify-content: center; }
-  .kpis, .duas, .recs, .briefing, .br-corpo, .numeros, .drs, .visao-dr, .confianca-pontos { flex-direction: column; }
-  .kpi, .lista-bloco, .recs .item, .briefing-col, .mapa-col, .reg-col, .numero, .dr, .visao-dr img, .visao-dr-texto, .confianca-pontos > div { flex: 0 0 auto; width: 100%; max-width: none; }
+  .kpis, .br-corpo, .numeros, .drs, .visao-dr, .confianca-pontos { flex-direction: column; }
+  .briefing { grid-template-columns: minmax(0, 1fr); }
+  .kpi, .mapa-col, .reg-col, .numero, .dr, .visao-dr img, .visao-dr-texto, .confianca-pontos > div { flex: 0 0 auto; width: 100%; max-width: none; }
   .msg-central p { font-size: 18px; }
 }

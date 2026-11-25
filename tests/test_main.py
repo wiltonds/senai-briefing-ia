@@ -11,14 +11,15 @@ from app import main
 
 @pytest.fixture
 def cliente(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> TestClient:
-    """App apontando para dados e PDF temporários."""
-    dados = tmp_path / "app_data"
+    """App apontando para um site/ temporário."""
+    dados = tmp_path / "data"
     dados.mkdir()
     (dados / "BR.json").write_text(json.dumps({"meta": {"escopo": "BR"}}), encoding="utf-8")
     (dados / "regioes.json").write_text(json.dumps({"regioes": []}), encoding="utf-8")
-    (tmp_path / "Executive_Briefing_SENAI_BR.pdf").write_bytes(b"%PDF-1.4 teste")
+    (tmp_path / "pdf").mkdir()
+    (tmp_path / "pdf" / "Executive_Briefing_SENAI_BR.pdf").write_bytes(b"%PDF-1.4 teste")
     monkeypatch.setattr(main, "APP_DATA_DIR", dados)
-    monkeypatch.setattr(main, "OUTPUTS_DIR", tmp_path)
+    monkeypatch.setattr(main, "PDF_DIR", tmp_path / "pdf")
     return TestClient(main.app)
 
 
@@ -63,10 +64,36 @@ def test_figs_nao_sai_do_diretorio(cliente: TestClient) -> None:
 
 @pytest.mark.parametrize("arquivo,tipo", [("app.js", "javascript"), ("styles.css", "text/css")])
 def test_arquivos_estaticos(cliente: TestClient, arquivo: str, tipo: str) -> None:
-    r = cliente.get(f"/static/{arquivo}")
-    assert r.status_code == 200 and tipo in r.headers["content-type"]
+    for url in (f"/static/{arquivo}", f"/{arquivo}"):
+        r = cliente.get(url)
+        assert r.status_code == 200 and tipo in r.headers["content-type"]
 
 
-def test_pagina_referencia_js_e_css(cliente: TestClient) -> None:
+def test_pagina_referencia_js_e_css_relativos(cliente: TestClient) -> None:
+    """Caminhos relativos: a mesma página funciona no FastAPI e no Space estático."""
     html = cliente.get("/").text
-    assert "/static/app.js" in html and "/static/styles.css" in html
+    assert 'src="app.js"' in html and 'href="styles.css"' in html
+    assert "/static/" not in html
+
+
+def test_escopos_iguais_ao_produto() -> None:
+    from src import produto
+
+    assert main.ESCOPOS == produto.ESCOPOS and main.NOMES == produto.NOMES
+
+
+def test_app_le_so_de_site() -> None:
+    assert main.SITE_DIR == main.RAIZ / "site"
+    assert main.APP_DATA_DIR == main.SITE_DIR / "data"
+    assert main.FIGS_DIR == main.SITE_DIR / "figs" and main.PDF_DIR == main.SITE_DIR / "pdf"
+
+
+def test_app_nao_importa_src() -> None:
+    """O app só depende de site/: importar app.main não pode puxar src."""
+    import subprocess
+    import sys
+
+    codigo = ("import sys, app.main; "
+              "assert not [m for m in sys.modules if m == 'src' or m.startswith('src.')]")
+    r = subprocess.run([sys.executable, "-c", codigo], cwd=main.RAIZ, capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr

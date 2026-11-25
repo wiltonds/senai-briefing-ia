@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "escopo": "PI",
+    "nome": "Piauí",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "130,6%",
+      "comparacao": "13.720 de 10.506 previstas",
+      "pct_barra": 130.6,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Piauí)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "13.720 de 10.506 · 130,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "673 de 839 · 80,2%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "11.265 de 9.456 · 119,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "1.782 de 211 · 844,5%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "200 de 296 · 67,6%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "19,5%",
+      "comparacao": "meta 35,0% · índice 55,7%",
+      "pct_barra": 55.7,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Piauí e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Piauí",
+            "valor": "55,7%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana da região Nordeste",
+            "valor": "67,6%",
+            "status": "critico"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "6 de 9",
+      "comparacao": "3 indicadores em situação crítica",
+      "pct_barra": 66.7,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 9 indicadores de Piauí em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "167,6%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "149,0%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "120,0%",
+            "status": "atingido",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "116,9%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "104,6%",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "69,1%",
+            "status": "critico",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "55,7%",
+            "status": "critico",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "50,0%",
+            "status": "critico",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "31,3%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 31.3,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "19 (meta 81)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "9,8 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_PI.png",
+    "manchete": "Piauí está entre os DRs que entregam volume sem resultado"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "escopo": "SP",
+    "nome": "São Paulo",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "114,1%",
+      "comparacao": "1.146.602 de 1.004.475 previstas",
+      "pct_barra": 114.1,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (São Paulo)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "1.146.602 de 1.004.475 · 114,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "41.858 de 40.103 · 104,4%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "1.033.513 de 871.904 · 118,5%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "65.059 de 87.550 · 74,3%",
+            "status": "critico"
+          },
+          {
+            "nome": "Educação superior",
+            "valor": "6.172 de 4.918 · 125,5%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "12.497 de 11.850 · 105,5%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "49,6%",
+      "comparacao": "meta 45,0% · índice 110,2%",
+      "pct_barra": 110.2,
+      "status": "atingido",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: São Paulo e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "São Paulo",
+            "valor": "110,2%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Mediana da região Sudeste",
+            "valor": "109,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "6 de 12",
+      "comparacao": "3 indicadores em situação crítica",
+      "pct_barra": 50.0,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 12 indicadores de São Paulo em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "273,8%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "225,3%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "194,8%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "172,4%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "110,2%",
+            "status": "atingido",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "102,9%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "93,0%",
+            "status": "atencao",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Receitas de serviços e convênios",
+            "valor": "86,3%",
+            "status": "atencao",
+            "nome_oficial": "Expansão das receitas de serviços e convênios"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "85,4%",
+            "status": "atencao",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "79,7%",
+            "status": "critico",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "50,0%",
+            "status": "critico",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "8,5%",
+            "status": "critico",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "sem risco alto em 2026",
+      "comparacao": "nenhum indicador projetado em risco alto",
+      "pct_barra": 100.0,
+      "status": "atingido",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Projeção 2026 de São Paulo",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "111,9% · no ritmo",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "104,6% · no ritmo",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "226,7% · meta já atingida",
+            "status": "atingido",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "109,2% · no ritmo",
+            "status": "atingido",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Empresas atendidas (Atendimento Social)",
+            "valor": "105,8% · no ritmo",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de empresas atendidas"
+          },
+          {
+            "nome": "Matrículas (Atendimento Social)",
+            "valor": "109,5% · no ritmo",
+            "status": "atingido",
+            "nome_oficial": "Programas (matrículas) - TOTAL"
+          }
+        ]
+      }
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_SP.png",
+    "manchete": "São Paulo entrega volume e resultado"
+  }
+}

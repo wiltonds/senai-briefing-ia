@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "escopo": "MG",
+    "nome": "Minas Gerais",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": null,
+    "tem_pdf": false
+  },
+  "briefing": null,
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "107,8%",
+      "comparacao": "271.615 de 251.872 previstas",
+      "pct_barra": 107.8,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Minas Gerais)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "271.615 de 251.872 · 107,8%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "51.471 de 50.451 · 102,0%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "213.690 de 195.708 · 109,2%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação para o trabalho",
+            "valor": "6.298 de 5.556 · 113,4%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Educação superior",
+            "valor": "156 de 157 · 99,4%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "3.062 de 2.596 · 118,0%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "46,6%",
+      "comparacao": "meta 45,0% · índice 103,6%",
+      "pct_barra": 103.6,
+      "status": "atingido",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Empregabilidade: Minas Gerais e referências (índice de realização)",
+        "nota": "Medianas do índice entre os DRs, para referência; não é ranking.",
+        "linhas": [
+          {
+            "nome": "Minas Gerais",
+            "valor": "103,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Mediana da região Sudeste",
+            "valor": "109,6%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Mediana nacional dos DRs",
+            "valor": "75,2%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Indicadores atingidos",
+      "valor": "7 de 11",
+      "comparacao": "1 indicadores em situação crítica",
+      "pct_barra": 63.6,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Os 11 indicadores de Minas Gerais em 2025 (índice de realização)",
+        "nota": "Status pelo número de indicadores críticos: nenhum = sem críticos; 1 a 3 = atenção; 4 ou mais = trilha de apoio do DN. A barra mostra a parcela de indicadores atingidos. Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência).",
+        "linhas": [
+          {
+            "nome": "Colaboradores capacitados",
+            "valor": "318,0%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de colaboradores capacitados nas competências digitais e ambientais"
+          },
+          {
+            "nome": "Jovens empregados na indústria",
+            "valor": "242,3%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de jovens de 14 a 24 anos egressos em cursos de qualificação e técnicos de nível médio, incluindo a Aprend. Ind., empregados na indústria"
+          },
+          {
+            "nome": "Tecnologias educacionais",
+            "valor": "176,0%",
+            "status": "atingido",
+            "nome_oficial": "Percentual de estudantes usuários de tecnologias educacionais focadas nos processos de ensino e de aprendizagem do SENAI"
+          },
+          {
+            "nome": "Consultorias em descarbonização",
+            "valor": "116,7%",
+            "status": "atingido",
+            "nome_oficial": "Expansão de consultorias com impacto em descarbonização"
+          },
+          {
+            "nome": "Gratuidade em áreas técnicas",
+            "valor": "115,2%",
+            "status": "atingido",
+            "nome_oficial": "Percentual da destinação da gratuidade para áreas técnicas e estratégicas para a indústria"
+          },
+          {
+            "nome": "Empregabilidade de egressos",
+            "valor": "103,6%",
+            "status": "atingido",
+            "nome_oficial": "Taxa de ocupação de egressos no setor industrial"
+          },
+          {
+            "nome": "Envio de dados ao Data Lake",
+            "valor": "100,0%",
+            "status": "atingido",
+            "nome_oficial": "Quantidade de etapas do processo de envio de dados ao Data Lake Nacional (via serviço)"
+          },
+          {
+            "nome": "Consultorias de produtividade",
+            "valor": "97,5%",
+            "status": "atencao",
+            "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+          },
+          {
+            "nome": "Fidelização de alunos",
+            "valor": "95,0%",
+            "status": "atencao",
+            "nome_oficial": "Fidelização de alunos"
+          },
+          {
+            "nome": "Empresas atendidas por STI",
+            "valor": "91,8%",
+            "status": "atencao",
+            "nome_oficial": "Empresas industriais atendidas por STI"
+          },
+          {
+            "nome": "Pesquisa aplicada",
+            "valor": "74,1%",
+            "status": "critico",
+            "nome_oficial": "Expansão de projetos ativos de pesquisa aplicada"
+          }
+        ]
+      },
+      "rotulo_status": "Atenção"
+    },
+    {
+      "rotulo": "Principal risco 2026",
+      "valor": "79,6%",
+      "comparacao": "Consultorias de produtividade: projeção para dezembro, no ritmo atual",
+      "pct_barra": 79.6,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "519 (meta 869)",
+            "status": "neutro"
+          },
+          {
+            "nome": "Aceleração necessária",
+            "valor": "2,0 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      },
+      "nome_oficial": "Expansão de consultorias com aumento de produtividade"
+    }
+  ],
+  "mapa": null,
+  "grafico": {
+    "figura": "figs/volume_resultado_MG.png",
+    "manchete": "Minas Gerais entrega volume e resultado"
+  }
+}

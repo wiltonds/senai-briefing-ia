@@ -1,0 +1,414 @@
+{
+  "meta": {
+    "escopo": "BR",
+    "nome": "Brasil",
+    "mes_referencia": "setembro de 2026",
+    "data_coleta": "25/11/2026 14:23 (UTC)",
+    "revisado_por": "Wilton Costa",
+    "tem_pdf": true
+  },
+  "briefing": {
+    "mensagem_central": "O SENAI entrega volume acima do planejado, mas a empregabilidade de egressos ficou em 39,8%, abaixo da meta de 45,0%. Dos 23 DRs com índice de matrículas maior ou igual a 100%, 13 têm índice de empregabilidade abaixo de 80%.",
+    "destaques": [
+      {
+        "titulo": "Consultorias e pesquisa aplicada superaram as metas de 2025",
+        "texto": "Consultorias de produtividade chegaram a 7.476 (meta 6.175, índice 121,1%). As de descarbonização, a 1.218 (meta 1.037, índice 117,5%). Projetos de pesquisa aplicada, a 1.399 (meta 1.333, índice 105,0%)."
+      },
+      {
+        "titulo": "Jovens egressos empregados e tecnologias educacionais bem acima da meta",
+        "texto": "Jovens de 14 a 24 anos egressos empregados na indústria: 34,1% (meta 19,4%, índice 175,8%). Estudantes usuários de tecnologias educacionais: 23,5% (meta 9,9%, índice 237,4%). Hipótese: parte da folga vem de metas conservadoras."
+      },
+      {
+        "titulo": "Capacitação, gratuidade e dados nacionais consistentes",
+        "texto": "Colaboradores capacitados em competências digitais e ambientais: 34,7% (meta 30,0%). Gratuidade para áreas técnicas e estratégicas: 26,3% (meta 22,7%). 12 de 12 valores nacionais de 2025 foram confirmados no Relatório de Gestão."
+      }
+    ],
+    "pontos_atencao": [
+      {
+        "titulo": "Empregabilidade de egressos abaixo da meta",
+        "texto": "Realizado de 39,8% contra meta de 45,0% (índice 88,4%). Dos 26 DRs com dado, 14 estão críticos, 5 em atenção e 7 atingiram a meta. A mediana regional varia de 25,9% (Norte) a 45,1% (Sudeste)."
+      },
+      {
+        "titulo": "Volume de matrículas sem resultado correspondente em emprego",
+        "texto": "23 DRs têm índice de matrículas maior ou igual a 100%; 13 deles têm índice de empregabilidade abaixo de 80%. A correlação é -0,26 e não indica causa. Hipótese: a expansão de matrículas não acompanha a demanda de emprego da indústria."
+      },
+      {
+        "titulo": "Consultorias de produtividade em risco para 2026",
+        "texto": "Com dados até o mês 9, 22 de 27 DRs estão em risco alto; o índice projetado nacional é 78,8%, com aceleração mediana de 3,9x o ritmo atual. Descarbonização está no ritmo; pesquisa aplicada já atingiu a meta."
+      },
+      {
+        "titulo": "Fidelização de alunos e receitas abaixo da meta",
+        "texto": "Fidelização de alunos: 17,7% contra meta de 20,8% (índice 85,1%); 11 DRs críticos, 7 em atenção e 9 atingiram. Receitas de serviços e convênios: R$ 1,06 bi contra R$ 1,13 bi (índice 93,7%)."
+      }
+    ],
+    "recomendacoes": [
+      {
+        "titulo": "Ligar matrícula a resultado: empregabilidade e fidelização",
+        "texto": "DN e DR montam plano conjunto de empregabilidade e fidelização, começando pelos 13 DRs com matrículas altas e empregabilidade abaixo de 80%, e testam a hipótese de desencontro entre cursos ofertados e demanda industrial.",
+        "quem": "DN e DR",
+        "quando": "próximo ciclo de planejamento"
+      },
+      {
+        "titulo": "Corrigir a rota de 2026 em consultorias e receitas",
+        "texto": "DN e DR revisam, ainda no 4º trimestre, as carteiras de consultoria de produtividade e de receitas de serviços nos DRs em risco alto. A aceleração mediana necessária é 3,9x e 3,7x o ritmo atual, respectivamente.",
+        "quem": "DN e DR",
+        "quando": "imediato (4º tri/2026)"
+      },
+      {
+        "titulo": "Recalibrar metas abaixo do já entregue",
+        "texto": "O DN revisa as metas de 2026 abaixo do realizado de 2025 ou registra justificativa. Exemplo: pesquisa aplicada tem meta de 1.362 contra 1.399 realizados. Nos DRs, são 255 ocorrências.",
+        "quem": "DN",
+        "quando": "próximo ciclo de planejamento"
+      },
+      {
+        "titulo": "Trilha de apoio do DN aos DRs com 4 ou mais indicadores críticos",
+        "texto": "O DN oferece apoio consultivo sob medida aos 10 de 27 DRs com 4 ou mais indicadores críticos, partindo do perfil de críticos de cada um e de diagnóstico conjunto, sem comparação entre DRs.",
+        "quem": "DN",
+        "quando": "imediato (4º tri/2026)"
+      }
+    ]
+  },
+  "kpis": [
+    {
+      "rotulo": "Matrículas (volume)",
+      "valor": "117,8%",
+      "comparacao": "3.257.251 de 2.765.635 previstas",
+      "pct_barra": 117.8,
+      "status": "atingido",
+      "fonte": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+      "detalhe": {
+        "titulo": "Volume entregue em 2025 (Brasil)",
+        "nota": "Fonte: Atendimento Social 2025 (Portal da Transparência)",
+        "linhas": [
+          {
+            "nome": "Matrículas — total",
+            "valor": "3.257.251 de 2.765.635 · 117,8%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Técnico de nível médio",
+            "valor": "337.112 de 314.084 · 107,3%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Formação inicial e continuada",
+            "valor": "2.628.967 de 2.138.989 · 122,9%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Empresas atendidas",
+            "valor": "39.527 de 31.756 · 124,5%",
+            "status": "atingido"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Empregabilidade de egressos",
+      "valor": "39,8%",
+      "comparacao": "meta 45,0% · índice 88,4%",
+      "pct_barra": 88.4,
+      "status": "atencao",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2025 (Portal da Transparência); confirmado no Relatório de Gestão, p. 31, 73 do PDF",
+      "detalhe": {
+        "titulo": "Empregabilidade por região (mediana do realizado)",
+        "nota": "Entre os DRs: 14 críticos, 5 em atenção e 7 atingidos.",
+        "linhas": [
+          {
+            "nome": "Sudeste",
+            "valor": "45,1%",
+            "status": "atingido"
+          },
+          {
+            "nome": "Sul",
+            "valor": "42,1%",
+            "status": "atencao"
+          },
+          {
+            "nome": "Centro-Oeste",
+            "valor": "32,3%",
+            "status": "critico"
+          },
+          {
+            "nome": "Nordeste",
+            "valor": "30,4%",
+            "status": "critico"
+          },
+          {
+            "nome": "Norte",
+            "valor": "25,9%",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "DRs com volume sem resultado",
+      "valor": "13 de 23",
+      "comparacao": "matrículas na meta, empregabilidade crítica",
+      "pct_barra": 56.5,
+      "status": "critico",
+      "fonte": "Cruzamento: Atendimento Social × Plano Estratégico, 2025",
+      "detalhe": {
+        "titulo": "DRs com matrículas na meta e empregabilidade abaixo de 80% da meta",
+        "nota": "Associação não indica causa; cada caso pede diagnóstico com o DR.",
+        "linhas": [
+          {
+            "nome": "Norte",
+            "valor": "AC, PA, RO, TO",
+            "status": "critico"
+          },
+          {
+            "nome": "Nordeste",
+            "valor": "AL, MA, PB, PE, PI, RN, SE",
+            "status": "critico"
+          },
+          {
+            "nome": "Centro-Oeste",
+            "valor": "DF, MT",
+            "status": "critico"
+          }
+        ]
+      }
+    },
+    {
+      "rotulo": "Consultorias de produtividade 2026",
+      "valor": "78,8%",
+      "comparacao": "projeção para dezembro, no ritmo atual",
+      "pct_barra": 78.8,
+      "status": "critico",
+      "fonte": "Fonte: Plano Estratégico Sistêmico 2026, até setembro",
+      "detalhe": {
+        "titulo": "Consultorias de produtividade em 2026",
+        "nota": "Projeção linear; não considera sazonalidade do fim de ano.",
+        "linhas": [
+          {
+            "nome": "Realizado até setembro",
+            "valor": "4.722 de 7.990",
+            "status": "neutro"
+          },
+          {
+            "nome": "DRs em risco alto",
+            "valor": "22",
+            "status": "critico"
+          },
+          {
+            "nome": "DRs que exige aceleração",
+            "valor": "0",
+            "status": "atencao"
+          },
+          {
+            "nome": "DRs no ritmo",
+            "valor": "3",
+            "status": "atingido"
+          },
+          {
+            "nome": "DRs com meta já atingida",
+            "valor": "2",
+            "status": "atingido"
+          },
+          {
+            "nome": "Aceleração mediana necessária",
+            "valor": "3,9 vezes o ritmo atual",
+            "status": "neutro"
+          }
+        ]
+      }
+    }
+  ],
+  "mapa": [
+    {
+      "uf": "AC",
+      "nome": "Acre",
+      "regiao": "Norte",
+      "valor": "43,1%",
+      "status": "critico"
+    },
+    {
+      "uf": "AL",
+      "nome": "Alagoas",
+      "regiao": "Nordeste",
+      "valor": "67,6%",
+      "status": "critico"
+    },
+    {
+      "uf": "AM",
+      "nome": "Amazonas",
+      "regiao": "Norte",
+      "valor": "105,8%",
+      "status": "atingido"
+    },
+    {
+      "uf": "AP",
+      "nome": "Amapá",
+      "regiao": "Norte",
+      "valor": "54,9%",
+      "status": "critico"
+    },
+    {
+      "uf": "BA",
+      "nome": "Bahia",
+      "regiao": "Nordeste",
+      "valor": "81,1%",
+      "status": "atencao"
+    },
+    {
+      "uf": "CE",
+      "nome": "Ceará",
+      "regiao": "Nordeste",
+      "valor": "91,3%",
+      "status": "atencao"
+    },
+    {
+      "uf": "DF",
+      "nome": "Distrito Federal",
+      "regiao": "Centro-Oeste",
+      "valor": "26,0%",
+      "status": "critico"
+    },
+    {
+      "uf": "ES",
+      "nome": "Espírito Santo",
+      "regiao": "Sudeste",
+      "valor": "109,0%",
+      "status": "atingido"
+    },
+    {
+      "uf": "GO",
+      "nome": "Goiás",
+      "regiao": "Centro-Oeste",
+      "valor": "104,7%",
+      "status": "atingido"
+    },
+    {
+      "uf": "MA",
+      "nome": "Maranhão",
+      "regiao": "Nordeste",
+      "valor": "67,6%",
+      "status": "critico"
+    },
+    {
+      "uf": "MG",
+      "nome": "Minas Gerais",
+      "regiao": "Sudeste",
+      "valor": "103,6%",
+      "status": "atingido"
+    },
+    {
+      "uf": "MS",
+      "nome": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste",
+      "valor": "93,3%",
+      "status": "atencao"
+    },
+    {
+      "uf": "MT",
+      "nome": "Mato Grosso",
+      "regiao": "Centro-Oeste",
+      "valor": "50,2%",
+      "status": "critico"
+    },
+    {
+      "uf": "PA",
+      "nome": "Pará",
+      "regiao": "Norte",
+      "valor": "60,2%",
+      "status": "critico"
+    },
+    {
+      "uf": "PB",
+      "nome": "Paraíba",
+      "regiao": "Nordeste",
+      "valor": "65,1%",
+      "status": "critico"
+    },
+    {
+      "uf": "PE",
+      "nome": "Pernambuco",
+      "regiao": "Nordeste",
+      "valor": "73,6%",
+      "status": "critico"
+    },
+    {
+      "uf": "PI",
+      "nome": "Piauí",
+      "regiao": "Nordeste",
+      "valor": "55,7%",
+      "status": "critico"
+    },
+    {
+      "uf": "PR",
+      "nome": "Paraná",
+      "regiao": "Sul",
+      "valor": "93,6%",
+      "status": "atencao"
+    },
+    {
+      "uf": "RJ",
+      "nome": "Rio de Janeiro",
+      "regiao": "Sudeste",
+      "valor": "111,1%",
+      "status": "atingido"
+    },
+    {
+      "uf": "RN",
+      "nome": "Rio Grande do Norte",
+      "regiao": "Nordeste",
+      "valor": "60,9%",
+      "status": "critico"
+    },
+    {
+      "uf": "RO",
+      "nome": "Rondônia",
+      "regiao": "Norte",
+      "valor": "76,9%",
+      "status": "critico"
+    },
+    {
+      "uf": "RR",
+      "nome": "Roraima",
+      "regiao": "Norte",
+      "valor": "sem dado",
+      "status": "sem_dado"
+    },
+    {
+      "uf": "RS",
+      "nome": "Rio Grande do Sul",
+      "regiao": "Sul",
+      "valor": "92,2%",
+      "status": "atencao"
+    },
+    {
+      "uf": "SC",
+      "nome": "Santa Catarina",
+      "regiao": "Sul",
+      "valor": "121,6%",
+      "status": "atingido"
+    },
+    {
+      "uf": "SE",
+      "nome": "Sergipe",
+      "regiao": "Nordeste",
+      "valor": "65,3%",
+      "status": "critico"
+    },
+    {
+      "uf": "SP",
+      "nome": "São Paulo",
+      "regiao": "Sudeste",
+      "valor": "110,2%",
+      "status": "atingido"
+    },
+    {
+      "uf": "TO",
+      "nome": "Tocantins",
+      "regiao": "Norte",
+      "valor": "65,1%",
+      "status": "critico"
+    }
+  ],
+  "grafico": {
+    "figura": "figs/volume_resultado_BR.png",
+    "manchete": "13 DRs entregam volume, mas não resultado"
+  }
+}

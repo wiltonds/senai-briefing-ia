@@ -1,0 +1,489 @@
+{
+  "brasil": {
+    "titulo": "Empregabilidade crítica em 14 DRs, concentrados no Nordeste e no Norte",
+    "lista_titulo": "Os 14 DRs críticos em empregabilidade (clique para abrir o briefing)",
+    "empregabilidade": "39,8%",
+    "meta_empregabilidade": "45,0%",
+    "criticos_empregabilidade": "14 de 26",
+    "matriculas": "117,8%",
+    "numeros": [
+      {
+        "rotulo": "Empregabilidade (Brasil)",
+        "valor": "39,8%",
+        "nota": "meta 45,0%"
+      },
+      {
+        "rotulo": "DRs críticos em empregabilidade",
+        "valor": "14 de 26",
+        "nota": "com dado em 2025"
+      },
+      {
+        "rotulo": "Matrículas (Brasil)",
+        "valor": "117,8%",
+        "nota": "da meta"
+      }
+    ],
+    "drs": [
+      {
+        "uf": "AC",
+        "nome": "Acre",
+        "empregabilidade": "43,1%",
+        "status": "critico",
+        "atingidos": "6 de 11",
+        "criticos": "4 críticos"
+      },
+      {
+        "uf": "AL",
+        "nome": "Alagoas",
+        "empregabilidade": "67,6%",
+        "status": "critico",
+        "atingidos": "5 de 12",
+        "criticos": "6 críticos"
+      },
+      {
+        "uf": "AP",
+        "nome": "Amapá",
+        "empregabilidade": "54,9%",
+        "status": "critico",
+        "atingidos": "5 de 10",
+        "criticos": "4 críticos"
+      },
+      {
+        "uf": "DF",
+        "nome": "Distrito Federal",
+        "empregabilidade": "26,0%",
+        "status": "critico",
+        "atingidos": "6 de 10",
+        "criticos": "4 críticos"
+      },
+      {
+        "uf": "MA",
+        "nome": "Maranhão",
+        "empregabilidade": "67,6%",
+        "status": "critico",
+        "atingidos": "3 de 12",
+        "criticos": "5 críticos"
+      },
+      {
+        "uf": "MT",
+        "nome": "Mato Grosso",
+        "empregabilidade": "50,2%",
+        "status": "critico",
+        "atingidos": "9 de 12",
+        "criticos": "2 críticos"
+      },
+      {
+        "uf": "PA",
+        "nome": "Pará",
+        "empregabilidade": "60,2%",
+        "status": "critico",
+        "atingidos": "4 de 12",
+        "criticos": "4 críticos"
+      },
+      {
+        "uf": "PB",
+        "nome": "Paraíba",
+        "empregabilidade": "65,1%",
+        "status": "critico",
+        "atingidos": "8 de 12",
+        "criticos": "2 críticos"
+      },
+      {
+        "uf": "PE",
+        "nome": "Pernambuco",
+        "empregabilidade": "73,6%",
+        "status": "critico",
+        "atingidos": "9 de 12",
+        "criticos": "2 críticos"
+      },
+      {
+        "uf": "PI",
+        "nome": "Piauí",
+        "empregabilidade": "55,7%",
+        "status": "critico",
+        "atingidos": "6 de 9",
+        "criticos": "3 críticos"
+      },
+      {
+        "uf": "RN",
+        "nome": "Rio Grande do Norte",
+        "empregabilidade": "60,9%",
+        "status": "critico",
+        "atingidos": "4 de 12",
+        "criticos": "7 críticos"
+      },
+      {
+        "uf": "RO",
+        "nome": "Rondônia",
+        "empregabilidade": "76,9%",
+        "status": "critico",
+        "atingidos": "8 de 11",
+        "criticos": "3 críticos"
+      },
+      {
+        "uf": "SE",
+        "nome": "Sergipe",
+        "empregabilidade": "65,3%",
+        "status": "critico",
+        "atingidos": "7 de 10",
+        "criticos": "1 críticos"
+      },
+      {
+        "uf": "TO",
+        "nome": "Tocantins",
+        "empregabilidade": "65,1%",
+        "status": "critico",
+        "atingidos": "7 de 11",
+        "criticos": "2 críticos"
+      }
+    ]
+  },
+  "regioes": [
+    {
+      "regiao": "Norte",
+      "titulo": "Norte: 5 de 6 DRs com dado estão críticos em empregabilidade",
+      "empregabilidade_mediana": "25,9%",
+      "criticos_empregabilidade": "5 de 6",
+      "matriculas_mediana": "127,3%",
+      "numeros": [
+        {
+          "rotulo": "Empregabilidade (mediana)",
+          "valor": "25,9%",
+          "nota": "meta nacional 45,0%"
+        },
+        {
+          "rotulo": "DRs críticos em empregabilidade",
+          "valor": "5 de 6",
+          "nota": "com dado; RR sem dado"
+        },
+        {
+          "rotulo": "Matrículas (mediana)",
+          "valor": "127,3%",
+          "nota": "da meta"
+        }
+      ],
+      "drs": [
+        {
+          "uf": "AC",
+          "nome": "Acre",
+          "empregabilidade": "43,1%",
+          "status": "critico",
+          "atingidos": "6 de 11",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "AM",
+          "nome": "Amazonas",
+          "empregabilidade": "105,8%",
+          "status": "atingido",
+          "atingidos": "7 de 12",
+          "criticos": "5 críticos"
+        },
+        {
+          "uf": "AP",
+          "nome": "Amapá",
+          "empregabilidade": "54,9%",
+          "status": "critico",
+          "atingidos": "5 de 10",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "PA",
+          "nome": "Pará",
+          "empregabilidade": "60,2%",
+          "status": "critico",
+          "atingidos": "4 de 12",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "RO",
+          "nome": "Rondônia",
+          "empregabilidade": "76,9%",
+          "status": "critico",
+          "atingidos": "8 de 11",
+          "criticos": "3 críticos"
+        },
+        {
+          "uf": "RR",
+          "nome": "Roraima",
+          "empregabilidade": "sem dado",
+          "status": "sem_dado",
+          "atingidos": "3 de 8",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "TO",
+          "nome": "Tocantins",
+          "empregabilidade": "65,1%",
+          "status": "critico",
+          "atingidos": "7 de 11",
+          "criticos": "2 críticos"
+        }
+      ]
+    },
+    {
+      "regiao": "Nordeste",
+      "titulo": "Nordeste: 7 de 9 DRs com dado estão críticos em empregabilidade",
+      "empregabilidade_mediana": "30,4%",
+      "criticos_empregabilidade": "7 de 9",
+      "matriculas_mediana": "130,6%",
+      "numeros": [
+        {
+          "rotulo": "Empregabilidade (mediana)",
+          "valor": "30,4%",
+          "nota": "meta nacional 45,0%"
+        },
+        {
+          "rotulo": "DRs críticos em empregabilidade",
+          "valor": "7 de 9",
+          "nota": "com dado"
+        },
+        {
+          "rotulo": "Matrículas (mediana)",
+          "valor": "130,6%",
+          "nota": "da meta"
+        }
+      ],
+      "drs": [
+        {
+          "uf": "AL",
+          "nome": "Alagoas",
+          "empregabilidade": "67,6%",
+          "status": "critico",
+          "atingidos": "5 de 12",
+          "criticos": "6 críticos"
+        },
+        {
+          "uf": "BA",
+          "nome": "Bahia",
+          "empregabilidade": "81,1%",
+          "status": "atencao",
+          "atingidos": "6 de 12",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "CE",
+          "nome": "Ceará",
+          "empregabilidade": "91,3%",
+          "status": "atencao",
+          "atingidos": "10 de 12",
+          "criticos": "0 críticos"
+        },
+        {
+          "uf": "MA",
+          "nome": "Maranhão",
+          "empregabilidade": "67,6%",
+          "status": "critico",
+          "atingidos": "3 de 12",
+          "criticos": "5 críticos"
+        },
+        {
+          "uf": "PB",
+          "nome": "Paraíba",
+          "empregabilidade": "65,1%",
+          "status": "critico",
+          "atingidos": "8 de 12",
+          "criticos": "2 críticos"
+        },
+        {
+          "uf": "PE",
+          "nome": "Pernambuco",
+          "empregabilidade": "73,6%",
+          "status": "critico",
+          "atingidos": "9 de 12",
+          "criticos": "2 críticos"
+        },
+        {
+          "uf": "PI",
+          "nome": "Piauí",
+          "empregabilidade": "55,7%",
+          "status": "critico",
+          "atingidos": "6 de 9",
+          "criticos": "3 críticos"
+        },
+        {
+          "uf": "RN",
+          "nome": "Rio Grande do Norte",
+          "empregabilidade": "60,9%",
+          "status": "critico",
+          "atingidos": "4 de 12",
+          "criticos": "7 críticos"
+        },
+        {
+          "uf": "SE",
+          "nome": "Sergipe",
+          "empregabilidade": "65,3%",
+          "status": "critico",
+          "atingidos": "7 de 10",
+          "criticos": "1 críticos"
+        }
+      ]
+    },
+    {
+      "regiao": "Centro-Oeste",
+      "titulo": "Centro-Oeste: 2 de 4 DRs com dado estão críticos em empregabilidade",
+      "empregabilidade_mediana": "32,3%",
+      "criticos_empregabilidade": "2 de 4",
+      "matriculas_mediana": "114,9%",
+      "numeros": [
+        {
+          "rotulo": "Empregabilidade (mediana)",
+          "valor": "32,3%",
+          "nota": "meta nacional 45,0%"
+        },
+        {
+          "rotulo": "DRs críticos em empregabilidade",
+          "valor": "2 de 4",
+          "nota": "com dado"
+        },
+        {
+          "rotulo": "Matrículas (mediana)",
+          "valor": "114,9%",
+          "nota": "da meta"
+        }
+      ],
+      "drs": [
+        {
+          "uf": "DF",
+          "nome": "Distrito Federal",
+          "empregabilidade": "26,0%",
+          "status": "critico",
+          "atingidos": "6 de 10",
+          "criticos": "4 críticos"
+        },
+        {
+          "uf": "GO",
+          "nome": "Goiás",
+          "empregabilidade": "104,7%",
+          "status": "atingido",
+          "atingidos": "6 de 11",
+          "criticos": "2 críticos"
+        },
+        {
+          "uf": "MS",
+          "nome": "Mato Grosso do Sul",
+          "empregabilidade": "93,3%",
+          "status": "atencao",
+          "atingidos": "5 de 12",
+          "criticos": "3 críticos"
+        },
+        {
+          "uf": "MT",
+          "nome": "Mato Grosso",
+          "empregabilidade": "50,2%",
+          "status": "critico",
+          "atingidos": "9 de 12",
+          "criticos": "2 críticos"
+        }
+      ]
+    },
+    {
+      "regiao": "Sudeste",
+      "titulo": "Sudeste: nenhum DR crítico em empregabilidade",
+      "empregabilidade_mediana": "45,1%",
+      "criticos_empregabilidade": "0 de 4",
+      "matriculas_mediana": "113,0%",
+      "numeros": [
+        {
+          "rotulo": "Empregabilidade (mediana)",
+          "valor": "45,1%",
+          "nota": "meta nacional 45,0%"
+        },
+        {
+          "rotulo": "DRs críticos em empregabilidade",
+          "valor": "0 de 4",
+          "nota": "com dado"
+        },
+        {
+          "rotulo": "Matrículas (mediana)",
+          "valor": "113,0%",
+          "nota": "da meta"
+        }
+      ],
+      "drs": [
+        {
+          "uf": "ES",
+          "nome": "Espírito Santo",
+          "empregabilidade": "109,0%",
+          "status": "atingido",
+          "atingidos": "8 de 12",
+          "criticos": "2 críticos"
+        },
+        {
+          "uf": "MG",
+          "nome": "Minas Gerais",
+          "empregabilidade": "103,6%",
+          "status": "atingido",
+          "atingidos": "7 de 11",
+          "criticos": "1 críticos"
+        },
+        {
+          "uf": "RJ",
+          "nome": "Rio de Janeiro",
+          "empregabilidade": "111,1%",
+          "status": "atingido",
+          "atingidos": "8 de 12",
+          "criticos": "2 críticos"
+        },
+        {
+          "uf": "SP",
+          "nome": "São Paulo",
+          "empregabilidade": "110,2%",
+          "status": "atingido",
+          "atingidos": "6 de 12",
+          "criticos": "3 críticos"
+        }
+      ]
+    },
+    {
+      "regiao": "Sul",
+      "titulo": "Sul: nenhum DR crítico em empregabilidade",
+      "empregabilidade_mediana": "42,1%",
+      "criticos_empregabilidade": "0 de 3",
+      "matriculas_mediana": "135,3%",
+      "numeros": [
+        {
+          "rotulo": "Empregabilidade (mediana)",
+          "valor": "42,1%",
+          "nota": "meta nacional 45,0%"
+        },
+        {
+          "rotulo": "DRs críticos em empregabilidade",
+          "valor": "0 de 3",
+          "nota": "com dado"
+        },
+        {
+          "rotulo": "Matrículas (mediana)",
+          "valor": "135,3%",
+          "nota": "da meta"
+        }
+      ],
+      "drs": [
+        {
+          "uf": "PR",
+          "nome": "Paraná",
+          "empregabilidade": "93,6%",
+          "status": "atencao",
+          "atingidos": "8 de 12",
+          "criticos": "0 críticos"
+        },
+        {
+          "uf": "RS",
+          "nome": "Rio Grande do Sul",
+          "empregabilidade": "92,2%",
+          "status": "atencao",
+          "atingidos": "8 de 12",
+          "criticos": "1 críticos"
+        },
+        {
+          "uf": "SC",
+          "nome": "Santa Catarina",
+          "empregabilidade": "121,6%",
+          "status": "atingido",
+          "atingidos": "9 de 11",
+          "criticos": "2 críticos"
+        }
+      ]
+    }
+  ]
+}
