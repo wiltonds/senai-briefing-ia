@@ -45,6 +45,7 @@ TIPO_DR = "DR"
 TIPO_CETIQT = "CETIQT"
 INDICADORES_CONSOLIDACAO = ["2.1", "2.2", "2.3", "6", "14.2"]
 LIMITE_CONSOLIDACAO_PCT = 5.0
+PREFIXO_POLARIDADE_POSITIVA = "(+)"  # "(+) Maior, melhor"
 TOLERANCIA_SOMA = 0.005  # meio centavo
 
 COLUNAS_OCORRENCIA = [
@@ -340,8 +341,28 @@ def _meta_abaixo(
     }, columns=COLUNAS_OCORRENCIA).reset_index(drop=True)
 
 
+def so_polaridade_positiva(pes: pd.DataFrame, contexto: str) -> pd.DataFrame:
+    """Mantém só linhas com polaridade "(+) Maior, melhor"; as demais são logadas e ignoradas.
+
+    "Meta abaixo do realizado anterior" só indica meta frouxa quando maior é melhor;
+    com outra polaridade (ou vazia) a conclusão sairia invertida.
+    """
+    pol = pes["polaridade"] if "polaridade" in pes.columns else pd.Series("", index=pes.index)
+    positiva = pol.fillna("").astype(str).str.startswith(PREFIXO_POLARIDADE_POSITIVA)
+    ignoradas = pes.loc[~positiva].assign(_pol=pol[~positiva].fillna("(vazia)"))
+    for (cod, p), g in ignoradas.groupby(["cod_indicador", "_pol"], sort=True):
+        logger.warning("%s: indicador %s ignorado (polaridade %r; %d linha(s))",
+                       contexto, cod, p, len(g))
+    return pes[positiva]
+
+
 def q13_meta_abaixo_realizado_anterior(pes: pd.DataFrame, atend: pd.DataFrame) -> pd.DataFrame:
-    """Meta do ano N menor que o realizado de N-1 no mesmo DR e indicador."""
+    """Meta do ano N menor que o realizado de N-1 no mesmo DR e indicador.
+
+    No PES, só indicadores "(+) Maior, melhor" (ver ``so_polaridade_positiva``).
+    O Atendimento não tem polaridade: são volumes (maior, melhor).
+    """
+    pes = so_polaridade_positiva(pes, "Q13")
     return pd.concat([
         _meta_abaixo(pes, "pes", ["cod_indicador"], "meta", "cod_indicador",
                      lambda m: m["indicador"]),

@@ -21,6 +21,7 @@ def linha_pes(**campos: Any) -> dict[str, Any]:
     base = {
         "ano": 2025, "mes_referencia": 12, "uf": "SC", "cod_indicador": "1",
         "indicador": "Indicador teste", "unidade": "Valor absoluto",
+        "polaridade": "(+) Maior, melhor",
         "meta_txt": "100", "realizado_txt": "90", "indice_txt": "90,0%",
         "meta": 100.0, "realizado": 90.0, "indice_publicado": 90.0,
         "indice_calculado": 90.0, "divergencia_indice": False,
@@ -287,6 +288,18 @@ def test_q13_negativo_meta_maior_zero_ou_nao_dr() -> None:
     for uf in ("DN", "CETIQT"):
         assert rodar("Q13", pes_df(linha_pes(uf=uf, ano=2025, realizado=120.0),
                                    linha_pes(uf=uf, ano=2026, meta=100.0))).empty
+
+
+def test_q13_ignora_polaridade_nao_positiva(caplog: pytest.LogCaptureFixture) -> None:
+    for pol in ("(-) Menor, melhor", None):
+        pes = pes_df(
+            linha_pes(ano=2025, realizado=120.0, polaridade=pol),
+            linha_pes(ano=2026, mes_referencia=9, meta=100.0, polaridade=pol),
+        )
+        with caplog.at_level("WARNING", logger="qualidade"):
+            assert rodar("Q13", pes).empty
+        assert "polaridade" in caplog.text
+        caplog.clear()
 
 
 # Q14 -----------------------------------------------------------------------
