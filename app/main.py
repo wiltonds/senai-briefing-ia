@@ -94,8 +94,14 @@ def styles_css() -> FileResponse:
 
 
 @app.get("/api/escopos")
-def escopos() -> list[dict[str, str]]:
-    """Escopos disponíveis (BR primeiro, DRs em ordem alfabética)."""
+def escopos() -> Any:
+    """Escopos disponíveis (BR primeiro, DRs em ordem alfabética), com ``tem_briefing``.
+
+    Lê ``site/data/escopos.json`` (gerado por ``src.publicar``); se ausente, devolve a lista
+    sem ``tem_briefing``.
+    """
+    if (APP_DATA_DIR / "escopos.json").exists():
+        return ler_json("escopos")
     return [{"escopo": e, "nome": NOMES[e]} for e in ESCOPOS]
 
 

@@ -1,114 +1,142 @@
 [
   {
     "escopo": "BR",
-    "nome": "Brasil"
+    "nome": "Brasil",
+    "tem_briefing": true
   },
   {
     "escopo": "AC",
-    "nome": "Acre"
+    "nome": "Acre",
+    "tem_briefing": false
   },
   {
     "escopo": "AL",
-    "nome": "Alagoas"
+    "nome": "Alagoas",
+    "tem_briefing": true
   },
   {
     "escopo": "AM",
-    "nome": "Amazonas"
+    "nome": "Amazonas",
+    "tem_briefing": false
   },
   {
     "escopo": "AP",
-    "nome": "Amapá"
+    "nome": "Amapá",
+    "tem_briefing": false
   },
   {
     "escopo": "BA",
-    "nome": "Bahia"
+    "nome": "Bahia",
+    "tem_briefing": false
   },
   {
     "escopo": "CE",
-    "nome": "Ceará"
+    "nome": "Ceará",
+    "tem_briefing": false
   },
   {
     "escopo": "DF",
-    "nome": "Distrito Federal"
+    "nome": "Distrito Federal",
+    "tem_briefing": false
   },
   {
     "escopo": "ES",
-    "nome": "Espírito Santo"
+    "nome": "Espírito Santo",
+    "tem_briefing": false
   },
   {
     "escopo": "GO",
-    "nome": "Goiás"
+    "nome": "Goiás",
+    "tem_briefing": false
   },
   {
     "escopo": "MA",
-    "nome": "Maranhão"
+    "nome": "Maranhão",
+    "tem_briefing": false
   },
   {
     "escopo": "MG",
-    "nome": "Minas Gerais"
+    "nome": "Minas Gerais",
+    "tem_briefing": false
   },
   {
     "escopo": "MS",
-    "nome": "Mato Grosso do Sul"
+    "nome": "Mato Grosso do Sul",
+    "tem_briefing": false
   },
   {
     "escopo": "MT",
-    "nome": "Mato Grosso"
+    "nome": "Mato Grosso",
+    "tem_briefing": false
   },
   {
     "escopo": "PA",
-    "nome": "Pará"
+    "nome": "Pará",
+    "tem_briefing": false
   },
   {
     "escopo": "PB",
-    "nome": "Paraíba"
+    "nome": "Paraíba",
+    "tem_briefing": false
   },
   {
     "escopo": "PE",
-    "nome": "Pernambuco"
+    "nome": "Pernambuco",
+    "tem_briefing": false
   },
   {
     "escopo": "PI",
-    "nome": "Piauí"
+    "nome": "Piauí",
+    "tem_briefing": false
   },
   {
     "escopo": "PR",
-    "nome": "Paraná"
+    "nome": "Paraná",
+    "tem_briefing": false
   },
   {
     "escopo": "RJ",
-    "nome": "Rio de Janeiro"
+    "nome": "Rio de Janeiro",
+    "tem_briefing": false
   },
   {
     "escopo": "RN",
-    "nome": "Rio Grande do Norte"
+    "nome": "Rio Grande do Norte",
+    "tem_briefing": false
   },
   {
     "escopo": "RO",
-    "nome": "Rondônia"
+    "nome": "Rondônia",
+    "tem_briefing": false
   },
   {
     "escopo": "RR",
-    "nome": "Roraima"
+    "nome": "Roraima",
+    "tem_briefing": false
   },
   {
     "escopo": "RS",
-    "nome": "Rio Grande do Sul"
+    "nome": "Rio Grande do Sul",
+    "tem_briefing": false
   },
   {
     "escopo": "SC",
-    "nome": "Santa Catarina"
+    "nome": "Santa Catarina",
+    "tem_briefing": false
   },
   {
     "escopo": "SE",
-    "nome": "Sergipe"
+    "nome": "Sergipe",
+    "tem_briefing": false
   },
   {
     "escopo": "SP",
-    "nome": "São Paulo"
+    "nome": "São Paulo",
+    "tem_briefing": true
   },
   {
     "escopo": "TO",
-    "nome": "Tocantins"
+    "nome": "Tocantins",
+    "tem_briefing": false
   }
 ]

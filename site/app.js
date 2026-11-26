@@ -194,8 +194,9 @@
     var br = lista.filter(function (e) { return e.escopo === 'BR'; })[0];
     var drs = lista.filter(function (e) { return e.escopo !== 'BR'; })
       .sort(function (a, b) { return a.nome.localeCompare(b.nome, 'pt-BR'); });
-    if (br) sel.appendChild(el('option', { value: 'BR' }, br.nome + ' (Departamento Nacional)'));
-    drs.forEach(function (e) { sel.appendChild(el('option', { value: e.escopo }, e.nome)); });
+    var suf = function (e) { return e.tem_briefing ? ' · briefing' : ''; };
+    if (br) sel.appendChild(el('option', { value: 'BR' }, br.nome + ' (Departamento Nacional)' + suf(br)));
+    drs.forEach(function (e) { sel.appendChild(el('option', { value: e.escopo }, e.nome + suf(e))); });
   }
 
   function renderCabecalho(meta) {
@@ -248,9 +249,7 @@
         el('div', { class: 'msg-central-rot' }, 'Mensagem central · ' + d.meta.nome),
         el('p', null, d.briefing.mensagem_central)));
     } else {
-      alvo.appendChild(el('section', { class: 'cartao aviso', role: 'note' },
-        d.meta.escopo === 'BR' ? 'Briefing ainda não gerado para o Brasil'
-          : 'Briefing ainda não gerado para este DR'));
+      alvo.appendChild(faixaPiloto(d.meta.escopo));
     }
   }
 
@@ -350,10 +349,43 @@
     alvo.appendChild(colunaBriefing('recs', 'Recomendações práticas', null, b.recomendacoes, rec));
   }
 
+  /** Escopos com briefing publicado (BR primeiro, depois ordem alfabética), vindos de escopos.json. */
+  function escoposComBriefing() {
+    var lista = (estado.escopos || []).filter(function (e) { return e.tem_briefing; });
+    return lista.filter(function (e) { return e.escopo === 'BR'; })
+      .concat(lista.filter(function (e) { return e.escopo !== 'BR'; })
+        .sort(function (a, b) { return a.nome.localeCompare(b.nome, 'pt-BR'); }));
+  }
+
+  function juntarNomes(nomes) {
+    if (nomes.length <= 1) return nomes.join('');
+    return nomes.slice(0, -1).join(', ') + ' e ' + nomes[nomes.length - 1];
+  }
+
+  /** Faixa da edição piloto para escopos sem briefing: diz onde há briefing e que os indicadores estão completos. */
+  function faixaPiloto(escopo) {
+    var com = escoposComBriefing();
+    var nomes = com.map(function (e) { return e.escopo === 'BR' ? 'Brasil' : e.nome; });
+    var texto = com.length
+      ? 'Edição piloto: o briefing por IA está disponível para ' + juntarNomes(nomes) + '. '
+      : 'Edição piloto: o briefing por IA ainda não está disponível. ';
+    var links = com.filter(function (e) { return e.escopo !== escopo && e.escopo !== 'BR'; })
+      .map(function (e) {
+        return el('a', { href: '#' + e.escopo, class: 'faixa-piloto-link' }, 'Ver ' + e.nome);
+      });
+    return el('section', { class: 'cartao aviso faixa-piloto', role: 'note' },
+      el('p', null, el('strong', null, texto),
+        'Os indicadores deste ' + (escopo === 'BR' ? 'escopo' : 'Departamento Regional') + ' estão completos abaixo.'),
+      links.length ? el('p', { class: 'faixa-piloto-links' }, links) : null);
+  }
+
   // ------------------------------------------------------------------ perguntas verificadas
   /** Botões das perguntas; ao abrir, resposta + selo + "Ver base". Só exibe o que vem do JSON. */
   function renderPerguntas(focarId) {
+    var secao = $('perguntas');
+    secao.hidden = !(estado.doc && estado.doc.briefing);
     var corpo = limpar($('perguntas-corpo'));
+    if (secao.hidden) return;
     var doc = estado.perguntas;
     var lista = doc && Array.isArray(doc.perguntas) ? doc.perguntas : [];
     if (!lista.length) {

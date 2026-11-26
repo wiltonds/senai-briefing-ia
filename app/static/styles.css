@@ -189,3 +189,9 @@ footer.rodape { font-size: 12px; color: var(--texto-mudo); }
   .kpi, .mapa-col, .reg-col, .numero, .dr, .visao-dr img, .visao-dr-texto, .confianca-pontos > div { flex: 0 0 auto; width: 100%; max-width: none; }
   .msg-central p { font-size: 18px; }
 }
+
+/* Edição piloto: escopos sem briefing */
+.faixa-piloto { border-left: 4px solid var(--marinho); }
+.faixa-piloto p { margin: 0; }
+.faixa-piloto-links { margin-top: 10px !important; display: flex; gap: 16px; flex-wrap: wrap; }
+.faixa-piloto-link { color: var(--marinho); font-weight: 600; font-size: 15px; }

@@ -1,10 +1,10 @@
 {
-  "publicado_em": "2026-11-25T20:06:21+00:00",
+  "publicado_em": "2026-11-26T11:41:43+00:00",
   "revisado_por": "Wilton Costa",
   "arquivos": [
     {
       "arquivo": "app.js",
-      "sha256": "1a86ee4db07d3381b2c80246df4d4afe2b49df79848515b4f821c4c943e23281"
+      "sha256": "8c4054fd66d74b6fb8898fa8202ed527dce6ed282f870e9402e8a7585b68ed44"
     },
     {
       "arquivo": "data/AC.json",
@@ -44,7 +44,7 @@
     },
     {
       "arquivo": "data/escopos.json",
-      "sha256": "12a623c49a7b119197d01b1079b7126ddb14d7bf8b3d2962e5d9706f334da8a1"
+      "sha256": "3073821adc48cde7b765eff5a04e77305d4ea86d5338f7dc7897d87f31001dbb"
     },
     {
       "arquivo": "data/GO.json",
@@ -288,7 +288,7 @@
     },
     {
       "arquivo": "styles.css",
-      "sha256": "0965ee2a8a64a1069ea3dd53cc4c7c8b59fa25bc5abf0ca3830ed2acd79d1dea"
+      "sha256": "d482ff04dd33ead64774a9dfc4149a1ad81faad0f42cf3b71989f52a20e38a12"
     }
   ]
 }

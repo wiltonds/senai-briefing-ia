@@ -3,7 +3,7 @@
 Painel e briefing executivo do desempenho do SENAI (Brasil e os 27 Departamentos Regionais), gerado a partir de dados públicos oficiais, com textos de IA que só são publicados depois de checados contra os números e revisados por uma pessoa.
 
 - **App:** https://wiltonbyu-senai-briefing.static.hf.space
-- **PDF de exemplo (Brasil):** https://wiltonbyu-senai-briefing.static.hf.space/pdf/Executive_Briefing_SENAI_BR.pdf
+- **PDFs executivos:** [Brasil](https://wiltonbyu-senai-briefing.static.hf.space/pdf/Executive_Briefing_SENAI_BR.pdf) · [São Paulo](https://wiltonbyu-senai-briefing.static.hf.space/pdf/Executive_Briefing_SENAI_SP.pdf) · [Alagoas](https://wiltonbyu-senai-briefing.static.hf.space/pdf/Executive_Briefing_SENAI_AL.pdf)
 
 ## 1. O problema
 
@@ -13,10 +13,11 @@ Ninguém deveria precisar lembrar o que é o "indicador 2.1" para entender onde 
 
 ## 2. A solução
 
-Três entregas, a partir das mesmas fontes oficiais:
+Quatro entregas, a partir das mesmas fontes oficiais:
 
 - **Painel:** visão Brasil, por região e por DR, com a situação de cada indicador e a fonte de cada número.
 - **Briefing por IA:** mensagem central, destaques, pontos de atenção e recomendações, em linguagem de gestão.
+- **Perguntas verificadas:** seis perguntas típicas de um diretor ("Qual é o principal problema hoje?", "Vamos bater as metas de 2026?", "O que fazer agora?"…), com respostas preparadas e conferidas número a número. O botão **Ver base** mostra os fatos e a fonte de cada número. Não é um chat livre: o catálogo é fechado justamente para que toda resposta seja auditável.
 - **PDF executivo:** o mesmo briefing pronto para circular, com a revisão registrada.
 
 ## 3. O que os dados mostram
@@ -42,6 +43,20 @@ Três entregas, a partir das mesmas fontes oficiais:
 | Registro com hash | Cada geração guarda prompt, modelo, respostas, erros e a impressão digital (sha256) dos arquivos usados, em `logs/`. |
 
 Detalhes em [SEGURANCA_IA.md](SEGURANCA_IA.md).
+
+### Prova de que funciona
+
+Cada camada já pegou um problema real nesta edição. O registro completo, com a evidência de cada caso (log ou teste), está em [SEGURANCA_IA.md](SEGURANCA_IA.md#registro-de-verificações).
+
+| O que aconteceu | Quem pegou | O que foi feito |
+|---|---|---|
+| A fidelização de AL aparecia como 77,2% num fato e 77,3% em outro (arredondamento duplo). | Teste de consistência | Arredondamento único para todo o projeto. |
+| Uma resposta de SP trazia um número que não estava nos fatos citados. | Validador automático | Reprovada na 1ª tentativa e refeita; aprovada na 2ª. |
+| A fidelização de SP aparecia como 85,4% e 85,5% em fichas diferentes. | **Revisão humana** | Corrigido na origem; o teste de consistência passou a cobrir os 28 escopos e a comparar as fichas entre si. |
+| A correção acima mudou medianas nacionais em 0,1 ponto, e o briefing de AL ficou com 2 números desatualizados. | Revalidação antes de publicar | Briefing regerado. A publicação agora é bloqueada se algum texto não bater com a ficha atual. |
+| GO publicou 138,1% num indicador que é uma proporção. | Regra de qualidade Q02 | Excluído do farol e sinalizado. |
+
+A lição é a premissa do projeto: nenhuma camada sozinha basta, e por isso são várias.
 
 ## 5. Qualidade dos dados
 
@@ -122,14 +137,21 @@ site/       o que vai ao ar (Space estático no Hugging Face)
 docs/       protótipo aprovado da interface
 ```
 
-## 9. Limitações
+## 9. Roadmap
+
+- **Edição piloto (atual):** briefing e perguntas verificadas por IA para Brasil, São Paulo e Alagoas; indicadores, farol, mapa e gráficos completos para os 27 DRs.
+- **Custo:** cerca de US$ 0,06 por briefing (Claude Sonnet), ou seja, cerca de US$ 3 para gerar briefing e perguntas dos 27 DRs. O visitante não gera custo: o site é estático e só exibe textos já validados.
+- **Próximo passo:** geração em lote dos 27 DRs (retoma de onde parou e para se o crédito acabar), mantendo validador, revalidação e revisão humana.
+- **Evolução:** atualização trimestral junto com o portal e alerta automático quando um DR mudar de situação.
+
+## 10. Limitações
 
 - 2026 tem dados só até setembro; a projeção é linear (ritmo atual até dezembro) e não considera a sazonalidade do fim do ano.
 - Parte dos dados financeiros de 2026 aparece no portal como "R$ - 0", provavelmente ainda não apurada; esses DRs ficam fora da projeção, e isso é dito no briefing.
 - Os números descrevem o que aconteceu; relações de causa aparecem sempre como hipótese.
 - Só dados públicos: nenhuma informação interna foi usada.
 
-## 10. Fontes oficiais
+## 11. Fontes oficiais
 
 Portal da Transparência do SENAI (https://sistematransparenciaweb.com.br):
 - Plano Estratégico Sistêmico 2025–2027 (API): meta, realizado e índice por DR.

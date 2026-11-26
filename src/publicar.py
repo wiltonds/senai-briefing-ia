@@ -5,7 +5,7 @@ Conteúdo de ``site/`` (recriado do zero a cada publicação; entra no Git):
 - ``README.md``: cabeçalho do Spaces + descrição curta;
 - ``data/{escopo}.json`` (BR + 27 UFs) e ``data/regioes.json``: de ``outputs/app_data``;
 - ``data/perguntas_{escopo}.json``: os que existirem em ``outputs/app_data`` (opcionais);
-- ``data/escopos.json``: lista ``[{escopo, nome}]`` (a mesma de ``/api/escopos``);
+- ``data/escopos.json``: lista ``[{escopo, nome, tem_briefing}]`` (a mesma de ``/api/escopos``);
 - ``figs/*.png``: de ``outputs/figs``;
 - ``pdf/Executive_Briefing_SENAI_{escopo}.pdf``: os que existirem em ``outputs/``;
 - ``MANIFESTO.json``: data/hora, revisor e sha256 de cada arquivo.
@@ -31,7 +31,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from src.produto import ESCOPOS, NOMES
+from src.produto import ESCOPOS, NOMES, briefing_aprovado
 from src.revalidar import revalidar
 
 logger = logging.getLogger("publicar")
@@ -152,7 +152,8 @@ def publicar(revisado_por: str, outputs_dir: Path = OUTPUTS_DIR,
         destino = site_dir / rel
         destino.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(origem, destino)
-    escopos = [{"escopo": e, "nome": NOMES[e]} for e in ESCOPOS]
+    escopos = [{"escopo": e, "nome": NOMES[e],
+                "tem_briefing": briefing_aprovado(e, outputs_dir) is not None} for e in ESCOPOS]
     (site_dir / "data" / "escopos.json").write_text(
         json.dumps(escopos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (site_dir / "README.md").write_text(README_SPACE, encoding="utf-8")
